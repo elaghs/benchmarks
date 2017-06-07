@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <UcRuntime unit="sec">0.021</UcRuntime>
+   <Timeout unit="sec">30.32</Timeout>
+   <ProofTime unit="sec">0.043</ProofTime>
+   <Runtime unit="sec">0.064</Runtime>
+   <IVC>OK</IVC>
+   <IVC>cruise_controller_CruiseController_SetDesiredSpeed_IncreaseDesiredSpeed</IVC>
+   <TRIVC>cruise_controller_CruiseController_SetDesiredSpeed_IncreaseDesiredSpeed</TRIVC>
+   <TRIVC>OK</TRIVC>
+</Results>
