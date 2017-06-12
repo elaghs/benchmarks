@@ -79,11 +79,11 @@ let
     (-2.9 <= equalization1 + equalization2 + equalization3       ) and
     (        equalization1 + equalization2 + equalization3 <= 2.9);
 
---%PROPERTY out_stable;
+----%PROPERTY out_stable;
   
---%PROPERTY eqs_stable;
+----%PROPERTY eqs_stable;
   
---%PROPERTY str_invariant;
+----%PROPERTY str_invariant;
   
 
 tel
@@ -180,7 +180,7 @@ let
 
   out_stable = (-25.0 <= output) and (output <= 25.0);
 
-  --%PROPERTY out_stable;
+  ----%PROPERTY out_stable;
   
 
 tel

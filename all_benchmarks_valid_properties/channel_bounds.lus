@@ -173,8 +173,5 @@ let
 
   out_stable = (-25.0 <= output) and (output <= 25.0);
 
-  --%PROPERTY out_stable;
-  
-
 tel
 
