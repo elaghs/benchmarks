@@ -1,0 +1,1 @@
+FOR %%f IN (*.lus) DO jfaultseeder -total_faults 20 %%f

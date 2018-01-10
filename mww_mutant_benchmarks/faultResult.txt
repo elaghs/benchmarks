@@ -1,0 +1,903 @@
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>FOR %f IN (*.lus) DO jfaultseeder -total_faults 20 %f 
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ccp01.lus 
+Wrote ccp01.arithmeticFault0.lus
+Wrote ccp01.arithmeticFault1.lus
+Wrote ccp01.relationalFault0.lus
+Wrote ccp01.relationalFault1.lus
+Wrote ccp01.relationalFault2.lus
+Wrote ccp01.relationalFault3.lus
+Wrote ccp01.relationalFault4.lus
+Wrote ccp01.equalityFault0.lus
+Wrote ccp01.equalityFault1.lus
+Wrote ccp01.booleanFault0.lus
+Wrote ccp01.booleanFault1.lus
+Wrote ccp01.booleanFault2.lus
+Wrote ccp01.booleanFault3.lus
+Wrote ccp01.booleanFault4.lus
+Wrote ccp01.constantFault0.lus
+Wrote ccp01.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ccp02.lus 
+Wrote ccp02.arithmeticFault0.lus
+Wrote ccp02.arithmeticFault1.lus
+Wrote ccp02.relationalFault0.lus
+Wrote ccp02.relationalFault1.lus
+Wrote ccp02.relationalFault2.lus
+Wrote ccp02.relationalFault3.lus
+Wrote ccp02.relationalFault4.lus
+Wrote ccp02.equalityFault0.lus
+Wrote ccp02.equalityFault1.lus
+Wrote ccp02.booleanFault0.lus
+Wrote ccp02.booleanFault1.lus
+Wrote ccp02.booleanFault2.lus
+Wrote ccp02.booleanFault3.lus
+Wrote ccp02.booleanFault4.lus
+Wrote ccp02.constantFault0.lus
+Wrote ccp02.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ccp03.lus 
+Wrote ccp03.arithmeticFault0.lus
+Wrote ccp03.arithmeticFault1.lus
+Wrote ccp03.relationalFault0.lus
+Wrote ccp03.relationalFault1.lus
+Wrote ccp03.relationalFault2.lus
+Wrote ccp03.relationalFault3.lus
+Wrote ccp03.relationalFault4.lus
+Wrote ccp03.equalityFault0.lus
+Wrote ccp03.equalityFault1.lus
+Wrote ccp03.booleanFault0.lus
+Wrote ccp03.booleanFault1.lus
+Wrote ccp03.booleanFault2.lus
+Wrote ccp03.booleanFault3.lus
+Wrote ccp03.booleanFault4.lus
+Wrote ccp03.constantFault0.lus
+Wrote ccp03.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ccp08.lus 
+Wrote ccp08.arithmeticFault0.lus
+Wrote ccp08.arithmeticFault1.lus
+Wrote ccp08.relationalFault0.lus
+Wrote ccp08.relationalFault1.lus
+Wrote ccp08.relationalFault2.lus
+Wrote ccp08.relationalFault3.lus
+Wrote ccp08.relationalFault4.lus
+Wrote ccp08.equalityFault0.lus
+Wrote ccp08.equalityFault1.lus
+Wrote ccp08.booleanFault0.lus
+Wrote ccp08.booleanFault1.lus
+Wrote ccp08.booleanFault2.lus
+Wrote ccp08.booleanFault3.lus
+Wrote ccp08.booleanFault4.lus
+Wrote ccp08.constantFault0.lus
+Wrote ccp08.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ccp17.lus 
+Wrote ccp17.arithmeticFault0.lus
+Wrote ccp17.arithmeticFault1.lus
+Wrote ccp17.arithmeticFault2.lus
+Wrote ccp17.arithmeticFault3.lus
+Wrote ccp17.arithmeticFault4.lus
+Wrote ccp17.relationalFault0.lus
+Wrote ccp17.relationalFault1.lus
+Wrote ccp17.relationalFault2.lus
+Wrote ccp17.relationalFault3.lus
+Wrote ccp17.relationalFault4.lus
+Wrote ccp17.equalityFault0.lus
+Wrote ccp17.equalityFault1.lus
+Wrote ccp17.booleanFault0.lus
+Wrote ccp17.booleanFault1.lus
+Wrote ccp17.booleanFault2.lus
+Wrote ccp17.booleanFault3.lus
+Wrote ccp17.booleanFault4.lus
+Wrote ccp17.constantFault0.lus
+Wrote ccp17.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ccp18.lus 
+Wrote ccp18.arithmeticFault0.lus
+Wrote ccp18.arithmeticFault1.lus
+Wrote ccp18.relationalFault0.lus
+Wrote ccp18.relationalFault1.lus
+Wrote ccp18.relationalFault2.lus
+Wrote ccp18.relationalFault3.lus
+Wrote ccp18.relationalFault4.lus
+Wrote ccp18.equalityFault0.lus
+Wrote ccp18.equalityFault1.lus
+Wrote ccp18.booleanFault0.lus
+Wrote ccp18.booleanFault1.lus
+Wrote ccp18.booleanFault2.lus
+Wrote ccp18.booleanFault3.lus
+Wrote ccp18.booleanFault4.lus
+Wrote ccp18.constantFault0.lus
+Wrote ccp18.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ccp20.lus 
+Wrote ccp20.arithmeticFault0.lus
+Wrote ccp20.arithmeticFault1.lus
+Wrote ccp20.arithmeticFault2.lus
+Wrote ccp20.arithmeticFault3.lus
+Wrote ccp20.arithmeticFault4.lus
+Wrote ccp20.relationalFault0.lus
+Wrote ccp20.relationalFault1.lus
+Wrote ccp20.relationalFault2.lus
+Wrote ccp20.relationalFault3.lus
+Wrote ccp20.relationalFault4.lus
+Wrote ccp20.equalityFault0.lus
+Wrote ccp20.equalityFault1.lus
+Wrote ccp20.booleanFault0.lus
+Wrote ccp20.booleanFault1.lus
+Wrote ccp20.booleanFault2.lus
+Wrote ccp20.booleanFault3.lus
+Wrote ccp20.booleanFault4.lus
+Wrote ccp20.constantFault0.lus
+Wrote ccp20.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 cruise_controller_01.lus 
+Wrote cruise_controller_01.arithmeticFault0.lus
+Wrote cruise_controller_01.arithmeticFault1.lus
+Wrote cruise_controller_01.arithmeticFault2.lus
+Wrote cruise_controller_01.arithmeticFault3.lus
+Wrote cruise_controller_01.arithmeticFault4.lus
+Wrote cruise_controller_01.relationalFault0.lus
+Wrote cruise_controller_01.relationalFault1.lus
+Wrote cruise_controller_01.relationalFault2.lus
+Wrote cruise_controller_01.relationalFault3.lus
+Wrote cruise_controller_01.relationalFault4.lus
+Wrote cruise_controller_01.equalityFault0.lus
+Wrote cruise_controller_01.equalityFault1.lus
+Wrote cruise_controller_01.booleanFault0.lus
+Wrote cruise_controller_01.booleanFault1.lus
+Wrote cruise_controller_01.booleanFault2.lus
+Wrote cruise_controller_01.booleanFault3.lus
+Wrote cruise_controller_01.booleanFault4.lus
+Wrote cruise_controller_01.constantFault0.lus
+Wrote cruise_controller_01.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 cruise_controller_02.lus 
+Wrote cruise_controller_02.arithmeticFault0.lus
+Wrote cruise_controller_02.arithmeticFault1.lus
+Wrote cruise_controller_02.arithmeticFault2.lus
+Wrote cruise_controller_02.arithmeticFault3.lus
+Wrote cruise_controller_02.arithmeticFault4.lus
+Wrote cruise_controller_02.relationalFault0.lus
+Wrote cruise_controller_02.relationalFault1.lus
+Wrote cruise_controller_02.relationalFault2.lus
+Wrote cruise_controller_02.relationalFault3.lus
+Wrote cruise_controller_02.relationalFault4.lus
+Wrote cruise_controller_02.equalityFault0.lus
+Wrote cruise_controller_02.equalityFault1.lus
+Wrote cruise_controller_02.booleanFault0.lus
+Wrote cruise_controller_02.booleanFault1.lus
+Wrote cruise_controller_02.booleanFault2.lus
+Wrote cruise_controller_02.booleanFault3.lus
+Wrote cruise_controller_02.booleanFault4.lus
+Wrote cruise_controller_02.constantFault0.lus
+Wrote cruise_controller_02.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 cruise_controller_03.lus 
+Wrote cruise_controller_03.arithmeticFault0.lus
+Wrote cruise_controller_03.arithmeticFault1.lus
+Wrote cruise_controller_03.arithmeticFault2.lus
+Wrote cruise_controller_03.arithmeticFault3.lus
+Wrote cruise_controller_03.arithmeticFault4.lus
+Wrote cruise_controller_03.relationalFault0.lus
+Wrote cruise_controller_03.relationalFault1.lus
+Wrote cruise_controller_03.relationalFault2.lus
+Wrote cruise_controller_03.relationalFault3.lus
+Wrote cruise_controller_03.relationalFault4.lus
+Wrote cruise_controller_03.equalityFault0.lus
+Wrote cruise_controller_03.equalityFault1.lus
+Wrote cruise_controller_03.booleanFault0.lus
+Wrote cruise_controller_03.booleanFault1.lus
+Wrote cruise_controller_03.booleanFault2.lus
+Wrote cruise_controller_03.booleanFault3.lus
+Wrote cruise_controller_03.booleanFault4.lus
+Wrote cruise_controller_03.constantFault0.lus
+Wrote cruise_controller_03.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 cruise_controller_12.lus 
+Wrote cruise_controller_12.arithmeticFault0.lus
+Wrote cruise_controller_12.arithmeticFault1.lus
+Wrote cruise_controller_12.arithmeticFault2.lus
+Wrote cruise_controller_12.arithmeticFault3.lus
+Wrote cruise_controller_12.arithmeticFault4.lus
+Wrote cruise_controller_12.relationalFault0.lus
+Wrote cruise_controller_12.relationalFault1.lus
+Wrote cruise_controller_12.relationalFault2.lus
+Wrote cruise_controller_12.relationalFault3.lus
+Wrote cruise_controller_12.relationalFault4.lus
+Wrote cruise_controller_12.equalityFault0.lus
+Wrote cruise_controller_12.equalityFault1.lus
+Wrote cruise_controller_12.booleanFault0.lus
+Wrote cruise_controller_12.booleanFault1.lus
+Wrote cruise_controller_12.booleanFault2.lus
+Wrote cruise_controller_12.booleanFault3.lus
+Wrote cruise_controller_12.booleanFault4.lus
+Wrote cruise_controller_12.constantFault0.lus
+Wrote cruise_controller_12.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 cruise_controller_18.lus 
+Wrote cruise_controller_18.arithmeticFault0.lus
+Wrote cruise_controller_18.arithmeticFault1.lus
+Wrote cruise_controller_18.arithmeticFault2.lus
+Wrote cruise_controller_18.arithmeticFault3.lus
+Wrote cruise_controller_18.arithmeticFault4.lus
+Wrote cruise_controller_18.relationalFault0.lus
+Wrote cruise_controller_18.relationalFault1.lus
+Wrote cruise_controller_18.relationalFault2.lus
+Wrote cruise_controller_18.relationalFault3.lus
+Wrote cruise_controller_18.relationalFault4.lus
+Wrote cruise_controller_18.equalityFault0.lus
+Wrote cruise_controller_18.equalityFault1.lus
+Wrote cruise_controller_18.booleanFault0.lus
+Wrote cruise_controller_18.booleanFault1.lus
+Wrote cruise_controller_18.booleanFault2.lus
+Wrote cruise_controller_18.booleanFault3.lus
+Wrote cruise_controller_18.booleanFault4.lus
+Wrote cruise_controller_18.constantFault0.lus
+Wrote cruise_controller_18.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 cruise_controller_19.lus 
+Wrote cruise_controller_19.arithmeticFault0.lus
+Wrote cruise_controller_19.arithmeticFault1.lus
+Wrote cruise_controller_19.arithmeticFault2.lus
+Wrote cruise_controller_19.arithmeticFault3.lus
+Wrote cruise_controller_19.arithmeticFault4.lus
+Wrote cruise_controller_19.relationalFault0.lus
+Wrote cruise_controller_19.relationalFault1.lus
+Wrote cruise_controller_19.relationalFault2.lus
+Wrote cruise_controller_19.relationalFault3.lus
+Wrote cruise_controller_19.relationalFault4.lus
+Wrote cruise_controller_19.equalityFault0.lus
+Wrote cruise_controller_19.equalityFault1.lus
+Wrote cruise_controller_19.booleanFault0.lus
+Wrote cruise_controller_19.booleanFault1.lus
+Wrote cruise_controller_19.booleanFault2.lus
+Wrote cruise_controller_19.booleanFault3.lus
+Wrote cruise_controller_19.booleanFault4.lus
+Wrote cruise_controller_19.constantFault0.lus
+Wrote cruise_controller_19.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 cruise_controller_24.lus 
+Wrote cruise_controller_24.arithmeticFault0.lus
+Wrote cruise_controller_24.arithmeticFault1.lus
+Wrote cruise_controller_24.arithmeticFault2.lus
+Wrote cruise_controller_24.arithmeticFault3.lus
+Wrote cruise_controller_24.arithmeticFault4.lus
+Wrote cruise_controller_24.relationalFault0.lus
+Wrote cruise_controller_24.relationalFault1.lus
+Wrote cruise_controller_24.relationalFault2.lus
+Wrote cruise_controller_24.relationalFault3.lus
+Wrote cruise_controller_24.relationalFault4.lus
+Wrote cruise_controller_24.equalityFault0.lus
+Wrote cruise_controller_24.equalityFault1.lus
+Wrote cruise_controller_24.booleanFault0.lus
+Wrote cruise_controller_24.booleanFault1.lus
+Wrote cruise_controller_24.booleanFault2.lus
+Wrote cruise_controller_24.booleanFault3.lus
+Wrote cruise_controller_24.booleanFault4.lus
+Wrote cruise_controller_24.constantFault0.lus
+Wrote cruise_controller_24.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 Display_Control-Gaurantee0.lus 
+Wrote Display_Control-Gaurantee0.arithmeticFault0.lus
+Wrote Display_Control-Gaurantee0.arithmeticFault1.lus
+Wrote Display_Control-Gaurantee0.arithmeticFault2.lus
+Wrote Display_Control-Gaurantee0.arithmeticFault3.lus
+Wrote Display_Control-Gaurantee0.arithmeticFault4.lus
+Wrote Display_Control-Gaurantee0.relationalFault0.lus
+Wrote Display_Control-Gaurantee0.relationalFault1.lus
+Wrote Display_Control-Gaurantee0.relationalFault2.lus
+Wrote Display_Control-Gaurantee0.relationalFault3.lus
+Wrote Display_Control-Gaurantee0.relationalFault4.lus
+Wrote Display_Control-Gaurantee0.equalityFault0.lus
+Wrote Display_Control-Gaurantee0.equalityFault1.lus
+Wrote Display_Control-Gaurantee0.booleanFault0.lus
+Wrote Display_Control-Gaurantee0.booleanFault1.lus
+Wrote Display_Control-Gaurantee0.booleanFault2.lus
+Wrote Display_Control-Gaurantee0.booleanFault3.lus
+Wrote Display_Control-Gaurantee0.booleanFault4.lus
+Wrote Display_Control-Gaurantee0.constantFault0.lus
+Wrote Display_Control-Gaurantee0.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 Display_Control-Gaurantee5.lus 
+Wrote Display_Control-Gaurantee5.arithmeticFault0.lus
+Wrote Display_Control-Gaurantee5.arithmeticFault1.lus
+Wrote Display_Control-Gaurantee5.arithmeticFault2.lus
+Wrote Display_Control-Gaurantee5.arithmeticFault3.lus
+Wrote Display_Control-Gaurantee5.arithmeticFault4.lus
+Wrote Display_Control-Gaurantee5.relationalFault0.lus
+Wrote Display_Control-Gaurantee5.relationalFault1.lus
+Wrote Display_Control-Gaurantee5.relationalFault2.lus
+Wrote Display_Control-Gaurantee5.relationalFault3.lus
+Wrote Display_Control-Gaurantee5.relationalFault4.lus
+Wrote Display_Control-Gaurantee5.equalityFault0.lus
+Wrote Display_Control-Gaurantee5.equalityFault1.lus
+Wrote Display_Control-Gaurantee5.booleanFault0.lus
+Wrote Display_Control-Gaurantee5.booleanFault1.lus
+Wrote Display_Control-Gaurantee5.booleanFault2.lus
+Wrote Display_Control-Gaurantee5.booleanFault3.lus
+Wrote Display_Control-Gaurantee5.booleanFault4.lus
+Wrote Display_Control-Gaurantee5.constantFault0.lus
+Wrote Display_Control-Gaurantee5.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 DRAGON_12.lus 
+Wrote DRAGON_12.arithmeticFault0.lus
+Wrote DRAGON_12.arithmeticFault1.lus
+Wrote DRAGON_12.arithmeticFault2.lus
+Wrote DRAGON_12.arithmeticFault3.lus
+Wrote DRAGON_12.arithmeticFault4.lus
+Wrote DRAGON_12.relationalFault0.lus
+Wrote DRAGON_12.relationalFault1.lus
+Wrote DRAGON_12.relationalFault2.lus
+Wrote DRAGON_12.relationalFault3.lus
+Wrote DRAGON_12.relationalFault4.lus
+Wrote DRAGON_12.equalityFault0.lus
+Wrote DRAGON_12.equalityFault1.lus
+Wrote DRAGON_12.booleanFault0.lus
+Wrote DRAGON_12.booleanFault1.lus
+Wrote DRAGON_12.booleanFault2.lus
+Wrote DRAGON_12.booleanFault3.lus
+Wrote DRAGON_12.booleanFault4.lus
+Wrote DRAGON_12.constantFault0.lus
+Wrote DRAGON_12.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 DRAGON_13.lus 
+Wrote DRAGON_13.arithmeticFault0.lus
+Wrote DRAGON_13.arithmeticFault1.lus
+Wrote DRAGON_13.arithmeticFault2.lus
+Wrote DRAGON_13.arithmeticFault3.lus
+Wrote DRAGON_13.arithmeticFault4.lus
+Wrote DRAGON_13.relationalFault0.lus
+Wrote DRAGON_13.relationalFault1.lus
+Wrote DRAGON_13.relationalFault2.lus
+Wrote DRAGON_13.relationalFault3.lus
+Wrote DRAGON_13.relationalFault4.lus
+Wrote DRAGON_13.equalityFault0.lus
+Wrote DRAGON_13.equalityFault1.lus
+Wrote DRAGON_13.booleanFault0.lus
+Wrote DRAGON_13.booleanFault1.lus
+Wrote DRAGON_13.booleanFault2.lus
+Wrote DRAGON_13.booleanFault3.lus
+Wrote DRAGON_13.booleanFault4.lus
+Wrote DRAGON_13.constantFault0.lus
+Wrote DRAGON_13.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 FIREFLY_4.lus 
+Wrote FIREFLY_4.arithmeticFault0.lus
+Wrote FIREFLY_4.arithmeticFault1.lus
+Wrote FIREFLY_4.arithmeticFault2.lus
+Wrote FIREFLY_4.arithmeticFault3.lus
+Wrote FIREFLY_4.arithmeticFault4.lus
+Wrote FIREFLY_4.relationalFault0.lus
+Wrote FIREFLY_4.relationalFault1.lus
+Wrote FIREFLY_4.relationalFault2.lus
+Wrote FIREFLY_4.relationalFault3.lus
+Wrote FIREFLY_4.relationalFault4.lus
+Wrote FIREFLY_4.equalityFault0.lus
+Wrote FIREFLY_4.equalityFault1.lus
+Wrote FIREFLY_4.booleanFault0.lus
+Wrote FIREFLY_4.booleanFault1.lus
+Wrote FIREFLY_4.booleanFault2.lus
+Wrote FIREFLY_4.booleanFault3.lus
+Wrote FIREFLY_4.booleanFault4.lus
+Wrote FIREFLY_4.constantFault0.lus
+Wrote FIREFLY_4.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 FIREFLY_4_e3_3511.lus 
+Wrote FIREFLY_4_e3_3511.arithmeticFault0.lus
+Wrote FIREFLY_4_e3_3511.arithmeticFault1.lus
+Wrote FIREFLY_4_e3_3511.arithmeticFault2.lus
+Wrote FIREFLY_4_e3_3511.arithmeticFault3.lus
+Wrote FIREFLY_4_e3_3511.arithmeticFault4.lus
+Wrote FIREFLY_4_e3_3511.relationalFault0.lus
+Wrote FIREFLY_4_e3_3511.relationalFault1.lus
+Wrote FIREFLY_4_e3_3511.relationalFault2.lus
+Wrote FIREFLY_4_e3_3511.relationalFault3.lus
+Wrote FIREFLY_4_e3_3511.relationalFault4.lus
+Wrote FIREFLY_4_e3_3511.equalityFault0.lus
+Wrote FIREFLY_4_e3_3511.equalityFault1.lus
+Wrote FIREFLY_4_e3_3511.booleanFault0.lus
+Wrote FIREFLY_4_e3_3511.booleanFault1.lus
+Wrote FIREFLY_4_e3_3511.booleanFault2.lus
+Wrote FIREFLY_4_e3_3511.booleanFault3.lus
+Wrote FIREFLY_4_e3_3511.booleanFault4.lus
+Wrote FIREFLY_4_e3_3511.constantFault0.lus
+Wrote FIREFLY_4_e3_3511.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 FIREFLY_luke_4.lus 
+Wrote FIREFLY_luke_4.arithmeticFault0.lus
+Wrote FIREFLY_luke_4.arithmeticFault1.lus
+Wrote FIREFLY_luke_4.arithmeticFault2.lus
+Wrote FIREFLY_luke_4.arithmeticFault3.lus
+Wrote FIREFLY_luke_4.arithmeticFault4.lus
+Wrote FIREFLY_luke_4.relationalFault0.lus
+Wrote FIREFLY_luke_4.relationalFault1.lus
+Wrote FIREFLY_luke_4.relationalFault2.lus
+Wrote FIREFLY_luke_4.relationalFault3.lus
+Wrote FIREFLY_luke_4.relationalFault4.lus
+Wrote FIREFLY_luke_4.equalityFault0.lus
+Wrote FIREFLY_luke_4.equalityFault1.lus
+Wrote FIREFLY_luke_4.booleanFault0.lus
+Wrote FIREFLY_luke_4.booleanFault1.lus
+Wrote FIREFLY_luke_4.booleanFault2.lus
+Wrote FIREFLY_luke_4.booleanFault3.lus
+Wrote FIREFLY_luke_4.booleanFault4.lus
+Wrote FIREFLY_luke_4.constantFault0.lus
+Wrote FIREFLY_luke_4.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property10.lus 
+Wrote GPCA_SW-property10.arithmeticFault0.lus
+Wrote GPCA_SW-property10.arithmeticFault1.lus
+Wrote GPCA_SW-property10.arithmeticFault2.lus
+Wrote GPCA_SW-property10.arithmeticFault3.lus
+Wrote GPCA_SW-property10.arithmeticFault4.lus
+Wrote GPCA_SW-property10.relationalFault0.lus
+Wrote GPCA_SW-property10.relationalFault1.lus
+Wrote GPCA_SW-property10.relationalFault2.lus
+Wrote GPCA_SW-property10.relationalFault3.lus
+Wrote GPCA_SW-property10.relationalFault4.lus
+Wrote GPCA_SW-property10.equalityFault0.lus
+Wrote GPCA_SW-property10.equalityFault1.lus
+Wrote GPCA_SW-property10.booleanFault0.lus
+Wrote GPCA_SW-property10.booleanFault1.lus
+Wrote GPCA_SW-property10.booleanFault2.lus
+Wrote GPCA_SW-property10.booleanFault3.lus
+Wrote GPCA_SW-property10.booleanFault4.lus
+Wrote GPCA_SW-property10.constantFault0.lus
+Wrote GPCA_SW-property10.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property11.lus 
+Wrote GPCA_SW-property11.arithmeticFault0.lus
+Wrote GPCA_SW-property11.arithmeticFault1.lus
+Wrote GPCA_SW-property11.arithmeticFault2.lus
+Wrote GPCA_SW-property11.arithmeticFault3.lus
+Wrote GPCA_SW-property11.arithmeticFault4.lus
+Wrote GPCA_SW-property11.relationalFault0.lus
+Wrote GPCA_SW-property11.relationalFault1.lus
+Wrote GPCA_SW-property11.relationalFault2.lus
+Wrote GPCA_SW-property11.relationalFault3.lus
+Wrote GPCA_SW-property11.relationalFault4.lus
+Wrote GPCA_SW-property11.equalityFault0.lus
+Wrote GPCA_SW-property11.equalityFault1.lus
+Wrote GPCA_SW-property11.booleanFault0.lus
+Wrote GPCA_SW-property11.booleanFault1.lus
+Wrote GPCA_SW-property11.booleanFault2.lus
+Wrote GPCA_SW-property11.booleanFault3.lus
+Wrote GPCA_SW-property11.booleanFault4.lus
+Wrote GPCA_SW-property11.constantFault0.lus
+Wrote GPCA_SW-property11.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property12.lus 
+Wrote GPCA_SW-property12.arithmeticFault0.lus
+Wrote GPCA_SW-property12.arithmeticFault1.lus
+Wrote GPCA_SW-property12.arithmeticFault2.lus
+Wrote GPCA_SW-property12.arithmeticFault3.lus
+Wrote GPCA_SW-property12.arithmeticFault4.lus
+Wrote GPCA_SW-property12.relationalFault0.lus
+Wrote GPCA_SW-property12.relationalFault1.lus
+Wrote GPCA_SW-property12.relationalFault2.lus
+Wrote GPCA_SW-property12.relationalFault3.lus
+Wrote GPCA_SW-property12.relationalFault4.lus
+Wrote GPCA_SW-property12.equalityFault0.lus
+Wrote GPCA_SW-property12.equalityFault1.lus
+Wrote GPCA_SW-property12.booleanFault0.lus
+Wrote GPCA_SW-property12.booleanFault1.lus
+Wrote GPCA_SW-property12.booleanFault2.lus
+Wrote GPCA_SW-property12.booleanFault3.lus
+Wrote GPCA_SW-property12.booleanFault4.lus
+Wrote GPCA_SW-property12.constantFault0.lus
+Wrote GPCA_SW-property12.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property23.lus 
+Wrote GPCA_SW-property23.arithmeticFault0.lus
+Wrote GPCA_SW-property23.arithmeticFault1.lus
+Wrote GPCA_SW-property23.arithmeticFault2.lus
+Wrote GPCA_SW-property23.arithmeticFault3.lus
+Wrote GPCA_SW-property23.arithmeticFault4.lus
+Wrote GPCA_SW-property23.relationalFault0.lus
+Wrote GPCA_SW-property23.relationalFault1.lus
+Wrote GPCA_SW-property23.relationalFault2.lus
+Wrote GPCA_SW-property23.relationalFault3.lus
+Wrote GPCA_SW-property23.relationalFault4.lus
+Wrote GPCA_SW-property23.equalityFault0.lus
+Wrote GPCA_SW-property23.equalityFault1.lus
+Wrote GPCA_SW-property23.booleanFault0.lus
+Wrote GPCA_SW-property23.booleanFault1.lus
+Wrote GPCA_SW-property23.booleanFault2.lus
+Wrote GPCA_SW-property23.booleanFault3.lus
+Wrote GPCA_SW-property23.booleanFault4.lus
+Wrote GPCA_SW-property23.constantFault0.lus
+Wrote GPCA_SW-property23.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property25.lus 
+Wrote GPCA_SW-property25.arithmeticFault0.lus
+Wrote GPCA_SW-property25.arithmeticFault1.lus
+Wrote GPCA_SW-property25.arithmeticFault2.lus
+Wrote GPCA_SW-property25.arithmeticFault3.lus
+Wrote GPCA_SW-property25.arithmeticFault4.lus
+Wrote GPCA_SW-property25.relationalFault0.lus
+Wrote GPCA_SW-property25.relationalFault1.lus
+Wrote GPCA_SW-property25.relationalFault2.lus
+Wrote GPCA_SW-property25.relationalFault3.lus
+Wrote GPCA_SW-property25.relationalFault4.lus
+Wrote GPCA_SW-property25.equalityFault0.lus
+Wrote GPCA_SW-property25.equalityFault1.lus
+Wrote GPCA_SW-property25.booleanFault0.lus
+Wrote GPCA_SW-property25.booleanFault1.lus
+Wrote GPCA_SW-property25.booleanFault2.lus
+Wrote GPCA_SW-property25.booleanFault3.lus
+Wrote GPCA_SW-property25.booleanFault4.lus
+Wrote GPCA_SW-property25.constantFault0.lus
+Wrote GPCA_SW-property25.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property31.lus 
+Wrote GPCA_SW-property31.arithmeticFault0.lus
+Wrote GPCA_SW-property31.arithmeticFault1.lus
+Wrote GPCA_SW-property31.arithmeticFault2.lus
+Wrote GPCA_SW-property31.arithmeticFault3.lus
+Wrote GPCA_SW-property31.arithmeticFault4.lus
+Wrote GPCA_SW-property31.relationalFault0.lus
+Wrote GPCA_SW-property31.relationalFault1.lus
+Wrote GPCA_SW-property31.relationalFault2.lus
+Wrote GPCA_SW-property31.relationalFault3.lus
+Wrote GPCA_SW-property31.relationalFault4.lus
+Wrote GPCA_SW-property31.equalityFault0.lus
+Wrote GPCA_SW-property31.equalityFault1.lus
+Wrote GPCA_SW-property31.booleanFault0.lus
+Wrote GPCA_SW-property31.booleanFault1.lus
+Wrote GPCA_SW-property31.booleanFault2.lus
+Wrote GPCA_SW-property31.booleanFault3.lus
+Wrote GPCA_SW-property31.booleanFault4.lus
+Wrote GPCA_SW-property31.constantFault0.lus
+Wrote GPCA_SW-property31.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property34.lus 
+Wrote GPCA_SW-property34.arithmeticFault0.lus
+Wrote GPCA_SW-property34.arithmeticFault1.lus
+Wrote GPCA_SW-property34.arithmeticFault2.lus
+Wrote GPCA_SW-property34.arithmeticFault3.lus
+Wrote GPCA_SW-property34.arithmeticFault4.lus
+Wrote GPCA_SW-property34.relationalFault0.lus
+Wrote GPCA_SW-property34.relationalFault1.lus
+Wrote GPCA_SW-property34.relationalFault2.lus
+Wrote GPCA_SW-property34.relationalFault3.lus
+Wrote GPCA_SW-property34.relationalFault4.lus
+Wrote GPCA_SW-property34.equalityFault0.lus
+Wrote GPCA_SW-property34.equalityFault1.lus
+Wrote GPCA_SW-property34.booleanFault0.lus
+Wrote GPCA_SW-property34.booleanFault1.lus
+Wrote GPCA_SW-property34.booleanFault2.lus
+Wrote GPCA_SW-property34.booleanFault3.lus
+Wrote GPCA_SW-property34.booleanFault4.lus
+Wrote GPCA_SW-property34.constantFault0.lus
+Wrote GPCA_SW-property34.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property35.lus 
+Wrote GPCA_SW-property35.arithmeticFault0.lus
+Wrote GPCA_SW-property35.arithmeticFault1.lus
+Wrote GPCA_SW-property35.arithmeticFault2.lus
+Wrote GPCA_SW-property35.arithmeticFault3.lus
+Wrote GPCA_SW-property35.arithmeticFault4.lus
+Wrote GPCA_SW-property35.relationalFault0.lus
+Wrote GPCA_SW-property35.relationalFault1.lus
+Wrote GPCA_SW-property35.relationalFault2.lus
+Wrote GPCA_SW-property35.relationalFault3.lus
+Wrote GPCA_SW-property35.relationalFault4.lus
+Wrote GPCA_SW-property35.equalityFault0.lus
+Wrote GPCA_SW-property35.equalityFault1.lus
+Wrote GPCA_SW-property35.booleanFault0.lus
+Wrote GPCA_SW-property35.booleanFault1.lus
+Wrote GPCA_SW-property35.booleanFault2.lus
+Wrote GPCA_SW-property35.booleanFault3.lus
+Wrote GPCA_SW-property35.booleanFault4.lus
+Wrote GPCA_SW-property35.constantFault0.lus
+Wrote GPCA_SW-property35.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property40.lus 
+Wrote GPCA_SW-property40.arithmeticFault0.lus
+Wrote GPCA_SW-property40.arithmeticFault1.lus
+Wrote GPCA_SW-property40.arithmeticFault2.lus
+Wrote GPCA_SW-property40.arithmeticFault3.lus
+Wrote GPCA_SW-property40.arithmeticFault4.lus
+Wrote GPCA_SW-property40.relationalFault0.lus
+Wrote GPCA_SW-property40.relationalFault1.lus
+Wrote GPCA_SW-property40.relationalFault2.lus
+Wrote GPCA_SW-property40.relationalFault3.lus
+Wrote GPCA_SW-property40.relationalFault4.lus
+Wrote GPCA_SW-property40.equalityFault0.lus
+Wrote GPCA_SW-property40.equalityFault1.lus
+Wrote GPCA_SW-property40.booleanFault0.lus
+Wrote GPCA_SW-property40.booleanFault1.lus
+Wrote GPCA_SW-property40.booleanFault2.lus
+Wrote GPCA_SW-property40.booleanFault3.lus
+Wrote GPCA_SW-property40.booleanFault4.lus
+Wrote GPCA_SW-property40.constantFault0.lus
+Wrote GPCA_SW-property40.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property46.lus 
+Wrote GPCA_SW-property46.arithmeticFault0.lus
+Wrote GPCA_SW-property46.arithmeticFault1.lus
+Wrote GPCA_SW-property46.arithmeticFault2.lus
+Wrote GPCA_SW-property46.arithmeticFault3.lus
+Wrote GPCA_SW-property46.arithmeticFault4.lus
+Wrote GPCA_SW-property46.relationalFault0.lus
+Wrote GPCA_SW-property46.relationalFault1.lus
+Wrote GPCA_SW-property46.relationalFault2.lus
+Wrote GPCA_SW-property46.relationalFault3.lus
+Wrote GPCA_SW-property46.relationalFault4.lus
+Wrote GPCA_SW-property46.equalityFault0.lus
+Wrote GPCA_SW-property46.equalityFault1.lus
+Wrote GPCA_SW-property46.booleanFault0.lus
+Wrote GPCA_SW-property46.booleanFault1.lus
+Wrote GPCA_SW-property46.booleanFault2.lus
+Wrote GPCA_SW-property46.booleanFault3.lus
+Wrote GPCA_SW-property46.booleanFault4.lus
+Wrote GPCA_SW-property46.constantFault0.lus
+Wrote GPCA_SW-property46.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 GPCA_SW-property48.lus 
+Wrote GPCA_SW-property48.arithmeticFault0.lus
+Wrote GPCA_SW-property48.arithmeticFault1.lus
+Wrote GPCA_SW-property48.arithmeticFault2.lus
+Wrote GPCA_SW-property48.arithmeticFault3.lus
+Wrote GPCA_SW-property48.arithmeticFault4.lus
+Wrote GPCA_SW-property48.relationalFault0.lus
+Wrote GPCA_SW-property48.relationalFault1.lus
+Wrote GPCA_SW-property48.relationalFault2.lus
+Wrote GPCA_SW-property48.relationalFault3.lus
+Wrote GPCA_SW-property48.relationalFault4.lus
+Wrote GPCA_SW-property48.equalityFault0.lus
+Wrote GPCA_SW-property48.equalityFault1.lus
+Wrote GPCA_SW-property48.booleanFault0.lus
+Wrote GPCA_SW-property48.booleanFault1.lus
+Wrote GPCA_SW-property48.booleanFault2.lus
+Wrote GPCA_SW-property48.booleanFault3.lus
+Wrote GPCA_SW-property48.booleanFault4.lus
+Wrote GPCA_SW-property48.constantFault0.lus
+Wrote GPCA_SW-property48.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 microwave19.lus 
+Wrote microwave19.arithmeticFault0.lus
+Wrote microwave19.arithmeticFault1.lus
+Wrote microwave19.arithmeticFault2.lus
+Wrote microwave19.arithmeticFault3.lus
+Wrote microwave19.arithmeticFault4.lus
+Wrote microwave19.relationalFault0.lus
+Wrote microwave19.relationalFault1.lus
+Wrote microwave19.relationalFault2.lus
+Wrote microwave19.relationalFault3.lus
+Wrote microwave19.relationalFault4.lus
+Wrote microwave19.equalityFault0.lus
+Wrote microwave19.equalityFault1.lus
+Wrote microwave19.booleanFault0.lus
+Wrote microwave19.booleanFault1.lus
+Wrote microwave19.booleanFault2.lus
+Wrote microwave19.booleanFault3.lus
+Wrote microwave19.booleanFault4.lus
+Wrote microwave19.constantFault0.lus
+Wrote microwave19.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 microwave22.lus 
+Wrote microwave22.arithmeticFault0.lus
+Wrote microwave22.arithmeticFault1.lus
+Wrote microwave22.arithmeticFault2.lus
+Wrote microwave22.arithmeticFault3.lus
+Wrote microwave22.arithmeticFault4.lus
+Wrote microwave22.relationalFault0.lus
+Wrote microwave22.relationalFault1.lus
+Wrote microwave22.relationalFault2.lus
+Wrote microwave22.relationalFault3.lus
+Wrote microwave22.relationalFault4.lus
+Wrote microwave22.equalityFault0.lus
+Wrote microwave22.equalityFault1.lus
+Wrote microwave22.booleanFault0.lus
+Wrote microwave22.booleanFault1.lus
+Wrote microwave22.booleanFault2.lus
+Wrote microwave22.booleanFault3.lus
+Wrote microwave22.booleanFault4.lus
+Wrote microwave22.constantFault0.lus
+Wrote microwave22.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 microwave24.lus 
+Wrote microwave24.arithmeticFault0.lus
+Wrote microwave24.arithmeticFault1.lus
+Wrote microwave24.arithmeticFault2.lus
+Wrote microwave24.arithmeticFault3.lus
+Wrote microwave24.arithmeticFault4.lus
+Wrote microwave24.relationalFault0.lus
+Wrote microwave24.relationalFault1.lus
+Wrote microwave24.relationalFault2.lus
+Wrote microwave24.relationalFault3.lus
+Wrote microwave24.relationalFault4.lus
+Wrote microwave24.equalityFault0.lus
+Wrote microwave24.equalityFault1.lus
+Wrote microwave24.booleanFault0.lus
+Wrote microwave24.booleanFault1.lus
+Wrote microwave24.booleanFault2.lus
+Wrote microwave24.booleanFault3.lus
+Wrote microwave24.booleanFault4.lus
+Wrote microwave24.constantFault0.lus
+Wrote microwave24.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 microwave29.lus 
+Wrote microwave29.arithmeticFault0.lus
+Wrote microwave29.arithmeticFault1.lus
+Wrote microwave29.arithmeticFault2.lus
+Wrote microwave29.arithmeticFault3.lus
+Wrote microwave29.arithmeticFault4.lus
+Wrote microwave29.relationalFault0.lus
+Wrote microwave29.relationalFault1.lus
+Wrote microwave29.relationalFault2.lus
+Wrote microwave29.relationalFault3.lus
+Wrote microwave29.relationalFault4.lus
+Wrote microwave29.equalityFault0.lus
+Wrote microwave29.equalityFault1.lus
+Wrote microwave29.booleanFault0.lus
+Wrote microwave29.booleanFault1.lus
+Wrote microwave29.booleanFault2.lus
+Wrote microwave29.booleanFault3.lus
+Wrote microwave29.booleanFault4.lus
+Wrote microwave29.constantFault0.lus
+Wrote microwave29.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 microwave30.lus 
+Wrote microwave30.arithmeticFault0.lus
+Wrote microwave30.arithmeticFault1.lus
+Wrote microwave30.arithmeticFault2.lus
+Wrote microwave30.arithmeticFault3.lus
+Wrote microwave30.arithmeticFault4.lus
+Wrote microwave30.relationalFault0.lus
+Wrote microwave30.relationalFault1.lus
+Wrote microwave30.relationalFault2.lus
+Wrote microwave30.relationalFault3.lus
+Wrote microwave30.relationalFault4.lus
+Wrote microwave30.equalityFault0.lus
+Wrote microwave30.equalityFault1.lus
+Wrote microwave30.booleanFault0.lus
+Wrote microwave30.booleanFault1.lus
+Wrote microwave30.booleanFault2.lus
+Wrote microwave30.booleanFault3.lus
+Wrote microwave30.booleanFault4.lus
+Wrote microwave30.constantFault0.lus
+Wrote microwave30.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 reconfiguration_large.lus 
+Wrote reconfiguration_large.arithmeticFault0.lus
+Wrote reconfiguration_large.arithmeticFault1.lus
+Wrote reconfiguration_large.arithmeticFault2.lus
+Wrote reconfiguration_large.arithmeticFault3.lus
+Wrote reconfiguration_large.arithmeticFault4.lus
+Wrote reconfiguration_large.relationalFault0.lus
+Wrote reconfiguration_large.relationalFault1.lus
+Wrote reconfiguration_large.relationalFault2.lus
+Wrote reconfiguration_large.relationalFault3.lus
+Wrote reconfiguration_large.relationalFault4.lus
+Wrote reconfiguration_large.equalityFault0.lus
+Wrote reconfiguration_large.equalityFault1.lus
+Wrote reconfiguration_large.booleanFault0.lus
+Wrote reconfiguration_large.booleanFault1.lus
+Wrote reconfiguration_large.booleanFault2.lus
+Wrote reconfiguration_large.booleanFault3.lus
+Wrote reconfiguration_large.booleanFault4.lus
+Wrote reconfiguration_large.constantFault0.lus
+Wrote reconfiguration_large.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 reconfiguration_large_bound.lus 
+Wrote reconfiguration_large_bound.arithmeticFault0.lus
+Wrote reconfiguration_large_bound.arithmeticFault1.lus
+Wrote reconfiguration_large_bound.arithmeticFault2.lus
+Wrote reconfiguration_large_bound.arithmeticFault3.lus
+Wrote reconfiguration_large_bound.arithmeticFault4.lus
+Wrote reconfiguration_large_bound.relationalFault0.lus
+Wrote reconfiguration_large_bound.relationalFault1.lus
+Wrote reconfiguration_large_bound.relationalFault2.lus
+Wrote reconfiguration_large_bound.relationalFault3.lus
+Wrote reconfiguration_large_bound.relationalFault4.lus
+Wrote reconfiguration_large_bound.equalityFault0.lus
+Wrote reconfiguration_large_bound.equalityFault1.lus
+Wrote reconfiguration_large_bound.booleanFault0.lus
+Wrote reconfiguration_large_bound.booleanFault1.lus
+Wrote reconfiguration_large_bound.booleanFault2.lus
+Wrote reconfiguration_large_bound.booleanFault3.lus
+Wrote reconfiguration_large_bound.booleanFault4.lus
+Wrote reconfiguration_large_bound.constantFault0.lus
+Wrote reconfiguration_large_bound.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 reconfiguration_medium.lus 
+Wrote reconfiguration_medium.arithmeticFault0.lus
+Wrote reconfiguration_medium.arithmeticFault1.lus
+Wrote reconfiguration_medium.arithmeticFault2.lus
+Wrote reconfiguration_medium.arithmeticFault3.lus
+Wrote reconfiguration_medium.arithmeticFault4.lus
+Wrote reconfiguration_medium.relationalFault0.lus
+Wrote reconfiguration_medium.relationalFault1.lus
+Wrote reconfiguration_medium.relationalFault2.lus
+Wrote reconfiguration_medium.relationalFault3.lus
+Wrote reconfiguration_medium.relationalFault4.lus
+Wrote reconfiguration_medium.equalityFault0.lus
+Wrote reconfiguration_medium.equalityFault1.lus
+Wrote reconfiguration_medium.booleanFault0.lus
+Wrote reconfiguration_medium.booleanFault1.lus
+Wrote reconfiguration_medium.booleanFault2.lus
+Wrote reconfiguration_medium.booleanFault3.lus
+Wrote reconfiguration_medium.booleanFault4.lus
+Wrote reconfiguration_medium.constantFault0.lus
+Wrote reconfiguration_medium.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 reconfiguration_small_bounds.lus 
+Wrote reconfiguration_small_bounds.arithmeticFault0.lus
+Wrote reconfiguration_small_bounds.arithmeticFault1.lus
+Wrote reconfiguration_small_bounds.arithmeticFault2.lus
+Wrote reconfiguration_small_bounds.arithmeticFault3.lus
+Wrote reconfiguration_small_bounds.arithmeticFault4.lus
+Wrote reconfiguration_small_bounds.relationalFault0.lus
+Wrote reconfiguration_small_bounds.relationalFault1.lus
+Wrote reconfiguration_small_bounds.relationalFault2.lus
+Wrote reconfiguration_small_bounds.relationalFault3.lus
+Wrote reconfiguration_small_bounds.relationalFault4.lus
+Wrote reconfiguration_small_bounds.equalityFault0.lus
+Wrote reconfiguration_small_bounds.equalityFault1.lus
+Wrote reconfiguration_small_bounds.booleanFault0.lus
+Wrote reconfiguration_small_bounds.booleanFault1.lus
+Wrote reconfiguration_small_bounds.booleanFault2.lus
+Wrote reconfiguration_small_bounds.booleanFault3.lus
+Wrote reconfiguration_small_bounds.booleanFault4.lus
+Wrote reconfiguration_small_bounds.constantFault0.lus
+Wrote reconfiguration_small_bounds.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 tramway_e7_1834.lus 
+Wrote tramway_e7_1834.equalityFault0.lus
+Wrote tramway_e7_1834.equalityFault1.lus
+Wrote tramway_e7_1834.booleanFault0.lus
+Wrote tramway_e7_1834.booleanFault1.lus
+Wrote tramway_e7_1834.booleanFault2.lus
+Wrote tramway_e7_1834.booleanFault3.lus
+Wrote tramway_e7_1834.booleanFault4.lus
+Wrote tramway_e7_1834.constantFault0.lus
+Wrote tramway_e7_1834.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 tramway_e7_1834_e7_2363.lus 
+Wrote tramway_e7_1834_e7_2363.equalityFault0.lus
+Wrote tramway_e7_1834_e7_2363.equalityFault1.lus
+Wrote tramway_e7_1834_e7_2363.booleanFault0.lus
+Wrote tramway_e7_1834_e7_2363.booleanFault1.lus
+Wrote tramway_e7_1834_e7_2363.booleanFault2.lus
+Wrote tramway_e7_1834_e7_2363.booleanFault3.lus
+Wrote tramway_e7_1834_e7_2363.booleanFault4.lus
+Wrote tramway_e7_1834_e7_2363.constantFault0.lus
+Wrote tramway_e7_1834_e7_2363.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 tramway_e7_3304.lus 
+Wrote tramway_e7_3304.equalityFault0.lus
+Wrote tramway_e7_3304.equalityFault1.lus
+Wrote tramway_e7_3304.booleanFault0.lus
+Wrote tramway_e7_3304.booleanFault1.lus
+Wrote tramway_e7_3304.booleanFault2.lus
+Wrote tramway_e7_3304.booleanFault3.lus
+Wrote tramway_e7_3304.booleanFault4.lus
+Wrote tramway_e7_3304.constantFault0.lus
+Wrote tramway_e7_3304.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ums.lus 
+Wrote ums.equalityFault0.lus
+Wrote ums.equalityFault1.lus
+Wrote ums.booleanFault0.lus
+Wrote ums.booleanFault1.lus
+Wrote ums.booleanFault2.lus
+Wrote ums.booleanFault3.lus
+Wrote ums.booleanFault4.lus
+Wrote ums.constantFault0.lus
+Wrote ums.constantFault1.lus
+
+C:\Users\whalen\Downloads\Jaroslav\mike_benchmarks\mike_benchmarks>jfaultseeder -total_faults 20 ums_e8_1032.lus 
+Wrote ums_e8_1032.equalityFault0.lus
+Wrote ums_e8_1032.equalityFault1.lus
+Wrote ums_e8_1032.booleanFault0.lus
+Wrote ums_e8_1032.booleanFault1.lus
+Wrote ums_e8_1032.booleanFault2.lus
+Wrote ums_e8_1032.booleanFault3.lus
+Wrote ums_e8_1032.booleanFault4.lus
+Wrote ums_e8_1032.constantFault0.lus
+Wrote ums_e8_1032.constantFault1.lus

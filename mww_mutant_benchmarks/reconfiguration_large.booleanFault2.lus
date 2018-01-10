@@ -1,0 +1,286 @@
+node reconfiguration(
+  sensor_value1 : real;
+  sensor_value2 : real;
+  sensor_value3 : real
+) returns (
+  no_command : bool
+);
+var
+  in_command1 : bool;
+  in_command2 : bool;
+  in_command3 : bool;
+  ok : bool;
+  max : real;
+  min : real;
+  corrupt1 : bool;
+  corrupt2 : bool;
+  corrupt3 : bool;
+  n1 : int;
+  n2 : int;
+  n3 : int;
+  m1 : int;
+  m2 : int;
+  m3 : int;
+  range_monitor~0.signal : real;
+  range_monitor~0.min : real;
+  range_monitor~0.max : real;
+  range_monitor~0.n : int;
+  range_monitor~0.out_of_range : bool;
+  range_monitor~0.corrupt : bool;
+  range_monitor~1.signal : real;
+  range_monitor~1.min : real;
+  range_monitor~1.max : real;
+  range_monitor~1.n : int;
+  range_monitor~1.out_of_range : bool;
+  range_monitor~1.corrupt : bool;
+  range_monitor~2.signal : real;
+  range_monitor~2.min : real;
+  range_monitor~2.max : real;
+  range_monitor~2.n : int;
+  range_monitor~2.out_of_range : bool;
+  range_monitor~2.corrupt : bool;
+  priority~0.command_failure : bool;
+  priority~0.other_in_command : bool;
+  priority~0.n : int;
+  priority~0.in_command : bool;
+  priority~1.command_failure : bool;
+  priority~1.other_in_command : bool;
+  priority~1.n : int;
+  priority~1.in_command : bool;
+  priority~2.command_failure : bool;
+  priority~2.other_in_command : bool;
+  priority~2.n : int;
+  priority~2.in_command : bool;
+  conf1~0.signal : bool;
+  conf1~0.n : int;
+  conf1~0.out : bool;
+  conf1~0.pre_cpt : int;
+  conf1~0.cpt : int;
+  range_monitor~0.latch~0.in : bool;
+  range_monitor~0.latch~0.out : bool;
+  range_monitor~0.latch~0.pre_out : bool;
+  range_monitor~1.latch~0.in : bool;
+  range_monitor~1.latch~0.out : bool;
+  range_monitor~1.latch~0.pre_out : bool;
+  range_monitor~2.latch~0.in : bool;
+  range_monitor~2.latch~0.out : bool;
+  range_monitor~2.latch~0.pre_out : bool;
+  priority~0.conf1~0.signal : bool;
+  priority~0.conf1~0.n : int;
+  priority~0.conf1~0.out : bool;
+  priority~0.conf1~0.pre_cpt : int;
+  priority~0.conf1~0.cpt : int;
+  priority~1.conf1~0.signal : bool;
+  priority~1.conf1~0.n : int;
+  priority~1.conf1~0.out : bool;
+  priority~1.conf1~0.pre_cpt : int;
+  priority~1.conf1~0.cpt : int;
+  priority~2.conf1~0.signal : bool;
+  priority~2.conf1~0.n : int;
+  priority~2.conf1~0.out : bool;
+  priority~2.conf1~0.pre_cpt : int;
+  priority~2.conf1~0.cpt : int;
+  range_monitor~0.conf1~0.signal : bool;
+  range_monitor~0.conf1~0.n : int;
+  range_monitor~0.conf1~0.out : bool;
+  range_monitor~0.conf1~0.pre_cpt : int;
+  range_monitor~0.conf1~0.cpt : int;
+  range_monitor~1.conf1~0.signal : bool;
+  range_monitor~1.conf1~0.n : int;
+  range_monitor~1.conf1~0.out : bool;
+  range_monitor~1.conf1~0.pre_cpt : int;
+  range_monitor~1.conf1~0.cpt : int;
+  range_monitor~2.conf1~0.signal : bool;
+  range_monitor~2.conf1~0.n : int;
+  range_monitor~2.conf1~0.out : bool;
+  range_monitor~2.conf1~0.pre_cpt : int;
+  range_monitor~2.conf1~0.cpt : int;
+let
+  --%MAIN;
+  max = 25.0;
+
+  min = (-25.0);
+
+  n1 = 10;
+
+  n2 = 12;
+
+  n3 = 15;
+
+  m1 = 30;
+
+  m2 = 60;
+
+  m3 = 90;
+
+  corrupt1 = range_monitor~0.corrupt;
+
+  corrupt2 = range_monitor~1.corrupt;
+
+  corrupt3 = range_monitor~2.corrupt;
+
+  in_command1 = priority~0.in_command;
+
+  in_command2 = priority~1.in_command;
+
+  in_command3 = priority~2.in_command;
+
+  no_command = (not ((in_command1 or in_command2) or in_command3));
+
+  ok = (not conf1~0.out);
+
+  range_monitor~0.signal = sensor_value1;
+
+  range_monitor~0.min = min;
+
+  range_monitor~0.max = max;
+
+  range_monitor~0.n = n1;
+
+  range_monitor~0.out_of_range = ((range_monitor~0.signal > range_monitor~0.max) or (range_monitor~0.min < range_monitor~0.signal));
+
+  range_monitor~0.corrupt = range_monitor~0.latch~0.out;
+
+  range_monitor~1.signal = sensor_value2;
+
+  range_monitor~1.min = min;
+
+  range_monitor~1.max = max;
+
+  range_monitor~1.n = n2;
+
+  range_monitor~1.out_of_range = ((range_monitor~1.signal > range_monitor~1.max) or (range_monitor~1.min < range_monitor~1.signal));
+
+  range_monitor~1.corrupt = range_monitor~1.latch~0.out;
+
+  range_monitor~2.signal = sensor_value3;
+
+  range_monitor~2.min = min;
+
+  range_monitor~2.max = max;
+
+  range_monitor~2.n = n3;
+
+  range_monitor~2.out_of_range = ((range_monitor~2.signal > range_monitor~2.max) or (range_monitor~2.min < range_monitor~2.signal));
+
+  range_monitor~2.corrupt = range_monitor~2.latch~0.out;
+
+  priority~0.command_failure = corrupt1;
+
+  priority~0.other_in_command = false;
+
+  priority~0.n = m1;
+
+  priority~0.in_command = ((not priority~0.command_failure) and priority~0.conf1~0.out);
+
+  priority~1.command_failure = corrupt2;
+
+  priority~1.other_in_command = in_command1;
+
+  priority~1.n = m2;
+
+  priority~1.in_command = ((not priority~1.command_failure) and priority~1.conf1~0.out);
+
+  priority~2.command_failure = corrupt3;
+
+  priority~2.other_in_command = (in_command1 or in_command2);
+
+  priority~2.n = m3;
+
+  priority~2.in_command = ((not priority~2.command_failure) and priority~2.conf1~0.out);
+
+  conf1~0.signal = no_command;
+
+  conf1~0.n = m3;
+
+  conf1~0.pre_cpt = (0 -> (pre conf1~0.cpt));
+
+  conf1~0.cpt = (if conf1~0.signal then (if (conf1~0.pre_cpt < conf1~0.n) then (conf1~0.pre_cpt + 1) else conf1~0.pre_cpt) else 0);
+
+  conf1~0.out = (conf1~0.cpt >= conf1~0.n);
+
+  range_monitor~0.latch~0.in = range_monitor~0.conf1~0.out;
+
+  range_monitor~0.latch~0.pre_out = (range_monitor~0.latch~0.in -> (pre range_monitor~0.latch~0.out));
+
+  range_monitor~0.latch~0.out = (range_monitor~0.latch~0.in or range_monitor~0.latch~0.pre_out);
+
+  range_monitor~1.latch~0.in = range_monitor~1.conf1~0.out;
+
+  range_monitor~1.latch~0.pre_out = (range_monitor~1.latch~0.in -> (pre range_monitor~1.latch~0.out));
+
+  range_monitor~1.latch~0.out = (range_monitor~1.latch~0.in or range_monitor~1.latch~0.pre_out);
+
+  range_monitor~2.latch~0.in = (pre range_monitor~2.conf1~0.out);
+
+  range_monitor~2.latch~0.pre_out = ((pre range_monitor~2.latch~0.in) -> (pre (pre range_monitor~2.latch~0.out)));
+
+  range_monitor~2.latch~0.out = ((pre range_monitor~2.latch~0.in) or (pre range_monitor~2.latch~0.pre_out));
+
+  priority~0.conf1~0.signal = (not priority~0.other_in_command);
+
+  priority~0.conf1~0.n = priority~0.n;
+
+  priority~0.conf1~0.pre_cpt = (0 -> (pre priority~0.conf1~0.cpt));
+
+  priority~0.conf1~0.cpt = (if priority~0.conf1~0.signal then (if (priority~0.conf1~0.pre_cpt < priority~0.conf1~0.n) then (priority~0.conf1~0.pre_cpt + 1) else priority~0.conf1~0.pre_cpt) else 0);
+
+  priority~0.conf1~0.out = (priority~0.conf1~0.cpt >= priority~0.conf1~0.n);
+
+  priority~1.conf1~0.signal = (not priority~1.other_in_command);
+
+  priority~1.conf1~0.n = priority~1.n;
+
+  priority~1.conf1~0.pre_cpt = (0 -> (pre priority~1.conf1~0.cpt));
+
+  priority~1.conf1~0.cpt = (if priority~1.conf1~0.signal then (if (priority~1.conf1~0.pre_cpt < priority~1.conf1~0.n) then (priority~1.conf1~0.pre_cpt + 1) else priority~1.conf1~0.pre_cpt) else 0);
+
+  priority~1.conf1~0.out = (priority~1.conf1~0.cpt >= priority~1.conf1~0.n);
+
+  priority~2.conf1~0.signal = (not priority~2.other_in_command);
+
+  priority~2.conf1~0.n = priority~2.n;
+
+  priority~2.conf1~0.pre_cpt = (0 -> (pre priority~2.conf1~0.cpt));
+
+  priority~2.conf1~0.cpt = (if priority~2.conf1~0.signal then (if (priority~2.conf1~0.pre_cpt < priority~2.conf1~0.n) then (priority~2.conf1~0.pre_cpt + 1) else priority~2.conf1~0.pre_cpt) else 0);
+
+  priority~2.conf1~0.out = (priority~2.conf1~0.cpt >= priority~2.conf1~0.n);
+
+  range_monitor~0.conf1~0.signal = range_monitor~0.out_of_range;
+
+  range_monitor~0.conf1~0.n = range_monitor~0.n;
+
+  range_monitor~0.conf1~0.pre_cpt = (0 -> (pre range_monitor~0.conf1~0.cpt));
+
+  range_monitor~0.conf1~0.cpt = (if range_monitor~0.conf1~0.signal then (if (range_monitor~0.conf1~0.pre_cpt < range_monitor~0.conf1~0.n) then (range_monitor~0.conf1~0.pre_cpt + 1) else range_monitor~0.conf1~0.pre_cpt) else 0);
+
+  range_monitor~0.conf1~0.out = (range_monitor~0.conf1~0.cpt >= range_monitor~0.conf1~0.n);
+
+  range_monitor~1.conf1~0.signal = range_monitor~1.out_of_range;
+
+  range_monitor~1.conf1~0.n = range_monitor~1.n;
+
+  range_monitor~1.conf1~0.pre_cpt = (0 -> (pre range_monitor~1.conf1~0.cpt));
+
+  range_monitor~1.conf1~0.cpt = (if range_monitor~1.conf1~0.signal then (if (range_monitor~1.conf1~0.pre_cpt < range_monitor~1.conf1~0.n) then (range_monitor~1.conf1~0.pre_cpt + 1) else range_monitor~1.conf1~0.pre_cpt) else 0);
+
+  range_monitor~1.conf1~0.out = (range_monitor~1.conf1~0.cpt >= range_monitor~1.conf1~0.n);
+
+  range_monitor~2.conf1~0.signal = range_monitor~2.out_of_range;
+
+  range_monitor~2.conf1~0.n = range_monitor~2.n;
+
+  range_monitor~2.conf1~0.pre_cpt = (0 -> (pre range_monitor~2.conf1~0.cpt));
+
+  range_monitor~2.conf1~0.cpt = (if range_monitor~2.conf1~0.signal then (if (range_monitor~2.conf1~0.pre_cpt < range_monitor~2.conf1~0.n) then (range_monitor~2.conf1~0.pre_cpt + 1) else range_monitor~2.conf1~0.pre_cpt) else 0);
+
+  range_monitor~2.conf1~0.out = (range_monitor~2.conf1~0.cpt >= range_monitor~2.conf1~0.n);
+
+  assert (((not corrupt1) or (not corrupt2)) or (not corrupt3));
+
+  assert ((m1 < m2) and (m2 < m3));
+
+  --%PROPERTY ok;
+
+tel;

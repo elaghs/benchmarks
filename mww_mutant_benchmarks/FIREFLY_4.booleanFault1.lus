@@ -1,0 +1,144 @@
+node top(
+  e1 : bool;
+  e2 : bool;
+  e3 : bool;
+  e4 : bool;
+  e5 : bool;
+  e6 : bool;
+  e7 : bool;
+  e8 : bool;
+  i_invalid : int
+) returns (
+  OK : bool
+);
+var
+  invalid : int;
+  dirty : int;
+  exclusive : int;
+  shared : int;
+  env : bool;
+  procs : int;
+  firefly~0.e1 : bool;
+  firefly~0.e2 : bool;
+  firefly~0.e3 : bool;
+  firefly~0.e4 : bool;
+  firefly~0.e5 : bool;
+  firefly~0.e6 : bool;
+  firefly~0.e7 : bool;
+  firefly~0.e8 : bool;
+  firefly~0.i_invalid : int;
+  firefly~0.invalid : int;
+  firefly~0.dirty : int;
+  firefly~0.exclusive : int;
+  firefly~0.shared : int;
+  firefly~0.garde1 : bool;
+  firefly~0.garde2 : bool;
+  firefly~0.garde3 : bool;
+  firefly~0.garde4 : bool;
+  firefly~0.garde5 : bool;
+  firefly~0.garde6 : bool;
+  firefly~0.garde7 : bool;
+  firefly~0.garde8 : bool;
+  firefly~0.mem_invalid : int;
+  Sofar~0.X : bool;
+  Sofar~0.Sofar : bool;
+  First~0.X : int;
+  First~0.First : int;
+  excludes8~0.X1 : bool;
+  excludes8~0.X2 : bool;
+  excludes8~0.X3 : bool;
+  excludes8~0.X4 : bool;
+  excludes8~0.X5 : bool;
+  excludes8~0.X6 : bool;
+  excludes8~0.X7 : bool;
+  excludes8~0.X8 : bool;
+  excludes8~0.excludes : bool;
+let
+  --%MAIN;
+  invalid = firefly~0.invalid;
+
+  dirty = firefly~0.dirty;
+
+  exclusive = firefly~0.exclusive;
+
+  shared = firefly~0.shared;
+
+  env = Sofar~0.Sofar;
+
+  procs = First~0.First;
+
+  OK = (env => ((((invalid + dirty) + exclusive) + shared) <= procs));
+
+  firefly~0.e1 = e1;
+
+  firefly~0.e2 = e2;
+
+  firefly~0.e3 = e3;
+
+  firefly~0.e4 = e4;
+
+  firefly~0.e5 = e5;
+
+  firefly~0.e6 = e6;
+
+  firefly~0.e7 = e7;
+
+  firefly~0.e8 = e8;
+
+  firefly~0.i_invalid = i_invalid;
+
+  firefly~0.mem_invalid = (firefly~0.i_invalid -> (pre firefly~0.mem_invalid));
+
+  firefly~0.garde1 = (((((pre firefly~0.invalid) >= 1) and ((pre firefly~0.dirty) = 0)) and ((pre firefly~0.shared) = 0)) and ((pre firefly~0.exclusive) = 0));
+
+  firefly~0.garde2 = (((pre firefly~0.invalid) >= 1) and ((pre firefly~0.dirty) >= 1));
+
+  firefly~0.garde3 = (((pre firefly~0.invalid) >= 1) and (((pre firefly~0.shared) + (pre firefly~0.exclusive)) >= 1));
+
+  firefly~0.garde4 = ((pre firefly~0.exclusive) >= 1);
+
+  firefly~0.garde5 = ((pre firefly~0.shared) = 1);
+
+  firefly~0.garde6 = (((((pre firefly~0.invalid) >= 1) and ((pre firefly~0.dirty) = 0)) and ((pre firefly~0.shared) = 0)) and ((pre firefly~0.exclusive) = 0));
+
+  firefly~0.garde7 = (((pre firefly~0.invalid) >= 1) and ((pre firefly~0.dirty) >= 1));
+
+  firefly~0.garde8 = (((pre firefly~0.invalid) >= 1) and (((pre firefly~0.shared) + (pre firefly~0.exclusive)) >= 1));
+
+  firefly~0.invalid = (firefly~0.mem_invalid -> (if firefly~0.e1 then (if firefly~0.garde1 then ((pre firefly~0.invalid) - 1) else (pre firefly~0.invalid)) else (if firefly~0.e2 then (if firefly~0.garde2 then ((pre firefly~0.invalid) - 1) else (pre firefly~0.invalid)) else (if firefly~0.e3 then (if firefly~0.garde3 then ((pre firefly~0.invalid) - 1) else (pre firefly~0.invalid)) else (if firefly~0.e6 then (if firefly~0.garde6 then ((pre firefly~0.invalid) - 1) else (pre firefly~0.invalid)) else (if firefly~0.e7 then (if firefly~0.garde7 then ((pre firefly~0.invalid) - 1) else (pre firefly~0.invalid)) else (if firefly~0.e8 then (if firefly~0.garde8 then ((pre firefly~0.invalid) - 1) else (pre firefly~0.invalid)) else (pre firefly~0.invalid))))))));
+
+  firefly~0.dirty = (0 -> (if firefly~0.e2 then (if firefly~0.garde2 then ((pre firefly~0.dirty) - 1) else (pre firefly~0.dirty)) else (if firefly~0.e4 then (if firefly~0.garde4 then ((pre firefly~0.dirty) + 1) else (pre firefly~0.dirty)) else (if firefly~0.e6 then (if firefly~0.garde6 then 1 else (pre firefly~0.dirty)) else (if firefly~0.e7 then (if firefly~0.garde7 then ((pre firefly~0.dirty) - 1) else (pre firefly~0.dirty)) else (pre firefly~0.dirty))))));
+
+  firefly~0.exclusive = (0 -> (if firefly~0.e1 then (if firefly~0.garde1 then ((pre firefly~0.exclusive) + 1) else (pre firefly~0.exclusive)) else (if firefly~0.e3 then (if firefly~0.garde3 then 0 else (pre firefly~0.exclusive)) else (if firefly~0.e4 then (if firefly~0.garde4 then ((pre firefly~0.exclusive) - 1) else (pre firefly~0.exclusive)) else (if firefly~0.e5 then (if firefly~0.garde5 then ((pre firefly~0.exclusive) + 1) else (pre firefly~0.exclusive)) else (if firefly~0.e8 then (if firefly~0.garde8 then 0 else (pre firefly~0.exclusive)) else (pre firefly~0.exclusive)))))));
+
+  firefly~0.shared = (0 -> (if firefly~0.e2 then (if firefly~0.garde2 then ((pre firefly~0.shared) + 2) else (pre firefly~0.shared)) else (if firefly~0.e3 then (if firefly~0.garde3 then (((pre firefly~0.shared) + (pre firefly~0.exclusive)) + 1) else (pre firefly~0.shared)) else (if firefly~0.e5 then (if firefly~0.garde5 then (pre 0) else (pre firefly~0.shared)) else (if firefly~0.e7 then (if firefly~0.garde7 then ((pre firefly~0.shared) + 2) else (pre firefly~0.shared)) else (if firefly~0.e8 then (if firefly~0.garde8 then (((pre firefly~0.shared) + (pre firefly~0.exclusive)) + 1) else (pre firefly~0.shared)) else (pre firefly~0.shared)))))));
+
+  Sofar~0.X = ((excludes8~0.excludes and (i_invalid >= 0)) and (i_invalid < 5));
+
+  Sofar~0.Sofar = (Sofar~0.X -> (Sofar~0.X and (pre Sofar~0.Sofar)));
+
+  First~0.X = i_invalid;
+
+  First~0.First = (First~0.X -> (pre First~0.First));
+
+  excludes8~0.X1 = e1;
+
+  excludes8~0.X2 = e2;
+
+  excludes8~0.X3 = e3;
+
+  excludes8~0.X4 = e4;
+
+  excludes8~0.X5 = e5;
+
+  excludes8~0.X6 = e6;
+
+  excludes8~0.X7 = e7;
+
+  excludes8~0.X8 = e8;
+
+  excludes8~0.excludes = ((((((((((((((((not excludes8~0.X1) and (not excludes8~0.X2)) and (not excludes8~0.X3)) and (not excludes8~0.X4)) and (not excludes8~0.X5)) and (not excludes8~0.X6)) and (not excludes8~0.X7)) and (not excludes8~0.X8)) or (((((((excludes8~0.X1 and (not excludes8~0.X2)) and (not excludes8~0.X3)) and (not excludes8~0.X4)) and (not excludes8~0.X5)) and (not excludes8~0.X6)) and (not excludes8~0.X7)) and (not excludes8~0.X8))) or ((((((((not excludes8~0.X1) and excludes8~0.X2) and (not excludes8~0.X3)) and (not excludes8~0.X4)) and (not excludes8~0.X5)) and (not excludes8~0.X6)) and (not excludes8~0.X7)) and (not excludes8~0.X8))) or ((((((((not excludes8~0.X1) and (not excludes8~0.X2)) and excludes8~0.X3) and (not excludes8~0.X4)) and (not excludes8~0.X5)) and (not excludes8~0.X6)) and (not excludes8~0.X7)) and (not excludes8~0.X8))) or ((((((((not excludes8~0.X1) and (not excludes8~0.X2)) and (not excludes8~0.X3)) and excludes8~0.X4) and (not excludes8~0.X5)) and (not excludes8~0.X6)) and (not excludes8~0.X7)) and (not excludes8~0.X8))) or ((((((((not excludes8~0.X1) and (not excludes8~0.X2)) and (not excludes8~0.X3)) and (not excludes8~0.X4)) and excludes8~0.X5) and (not excludes8~0.X6)) and (not excludes8~0.X7)) and (not excludes8~0.X8))) or ((((((((not excludes8~0.X1) and (not excludes8~0.X2)) and (not excludes8~0.X3)) and (not excludes8~0.X4)) and (not (pre excludes8~0.X5))) and excludes8~0.X6) and (not excludes8~0.X7)) and (not excludes8~0.X8))) or ((((((((not excludes8~0.X1) and (not excludes8~0.X2)) and (not excludes8~0.X3)) and (not excludes8~0.X4)) and (not excludes8~0.X5)) and (not excludes8~0.X6)) and excludes8~0.X7) and (not excludes8~0.X8))) or ((((((((not excludes8~0.X1) and (not excludes8~0.X2)) and (not excludes8~0.X3)) and (not excludes8~0.X4)) and (not excludes8~0.X5)) and (not excludes8~0.X6)) and (not excludes8~0.X7)) and excludes8~0.X8));
+
+  --%PROPERTY OK;
+
+tel;

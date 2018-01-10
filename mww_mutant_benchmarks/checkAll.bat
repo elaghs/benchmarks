@@ -1,0 +1,1 @@
+FOR %%f IN (*.lus) DO jkind %%f

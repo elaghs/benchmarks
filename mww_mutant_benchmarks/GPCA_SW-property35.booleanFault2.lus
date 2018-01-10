@@ -1,0 +1,2643 @@
+node main(
+  TLM__OP_CMD_IN.Back : bool;
+  TLM__OP_CMD_IN.Cancel : bool;
+  TLM__OP_CMD_IN.Configuration_Type : int;
+  TLM__OP_CMD_IN.Confirm_Stop : bool;
+  TLM__OP_CMD_IN.Data_Config : bool;
+  TLM__OP_CMD_IN.Disable_Audio : int;
+  TLM__OP_CMD_IN.Infusion_Cancel : bool;
+  TLM__OP_CMD_IN.Infusion_Inhibit : bool;
+  TLM__OP_CMD_IN.Infusion_Initiate : bool;
+  TLM__OP_CMD_IN.Keyboard : bool;
+  TLM__OP_CMD_IN.Next : bool;
+  TLM__OP_CMD_IN.Notification_Cancel : bool;
+  TLM__OP_CMD_IN.System_Start : bool;
+  TLM__OP_CMD_IN.System_Stop : bool;
+  TLM__CONST_IN.Audio_Enable_Duration : int;
+  TLM__CONST_IN.Audio_Level : int;
+  TLM__CONST_IN.Config_Warning_Duration : int;
+  TLM__CONST_IN.Empty_Reservoir : int;
+  TLM__CONST_IN.Log_Interval : int;
+  TLM__CONST_IN.Low_Reservoir : int;
+  TLM__CONST_IN.Max_Config_Duration : int;
+  TLM__CONST_IN.Max_Confirm_Stop_Duration : int;
+  TLM__CONST_IN.Max_Display_Duration : int;
+  TLM__CONST_IN.Max_Duration_Over_Infusion : int;
+  TLM__CONST_IN.Max_Duration_Under_Infusion : int;
+  TLM__CONST_IN.Max_Idle_Duration : int;
+  TLM__CONST_IN.Max_Paused_Duration : int;
+  TLM__CONST_IN.System_Test_Inteval : int;
+  TLM__CONST_IN.Tolerance_Max : int;
+  TLM__CONST_IN.Tolerance_Min : int;
+  SYS_STAT__IM_IN.Actual_Infusion_Duration : int;
+  SYS_STAT__IM_IN.Commanded_Flow_Rate : int;
+  SYS_STAT__IM_IN.Current_System_Mode : int;
+  SYS_STAT__IM_IN.Is_Locked_Out : bool;
+  SYS_STAT__IM_IN.Log_Message_ID : int;
+  SYS_STAT__IM_IN.New_Infusion : bool;
+  SYS_STAT__TLM_MODE_IN.Log_Message_ID : int;
+  SYS_STAT__TLM_MODE_IN.Request_Confirm_Stop : bool;
+  SYS_STAT__TLM_MODE_IN.System_On : bool;
+  SYS_STAT__SENSOR_IN.Air_In_Line : bool;
+  SYS_STAT__SENSOR_IN.Air_Pressure : bool;
+  SYS_STAT__SENSOR_IN.Battery_Depleted : bool;
+  SYS_STAT__SENSOR_IN.Battery_Low : bool;
+  SYS_STAT__SENSOR_IN.Battery_Unable_To_Charge : bool;
+  SYS_STAT__SENSOR_IN.CPU_Error : bool;
+  SYS_STAT__SENSOR_IN.Door_Open : bool;
+  SYS_STAT__SENSOR_IN.Flow_Rate : int;
+  SYS_STAT__SENSOR_IN.Flow_Rate_Not_Stable : bool;
+  SYS_STAT__SENSOR_IN.Humidity : bool;
+  SYS_STAT__SENSOR_IN.Memory_Corrupted : bool;
+  SYS_STAT__SENSOR_IN.Occlusion : bool;
+  SYS_STAT__SENSOR_IN.Post_Successful : bool;
+  SYS_STAT__SENSOR_IN.Pump_Overheated : bool;
+  SYS_STAT__SENSOR_IN.Pump_Primed : bool;
+  SYS_STAT__SENSOR_IN.Pump_Too_Hot : bool;
+  SYS_STAT__SENSOR_IN.RTC_Error : bool;
+  SYS_STAT__SENSOR_IN.Supply_Voltage : bool;
+  SYS_STAT__SENSOR_IN.Temp : bool;
+  SYS_STAT__SENSOR_IN.Watchdog_Interrupted : bool;
+  SYS_STAT__CONST_IN.Audio_Enable_Duration : int;
+  SYS_STAT__CONST_IN.Audio_Level : int;
+  SYS_STAT__CONST_IN.Config_Warning_Duration : int;
+  SYS_STAT__CONST_IN.Empty_Reservoir : int;
+  SYS_STAT__CONST_IN.Log_Interval : int;
+  SYS_STAT__CONST_IN.Low_Reservoir : int;
+  SYS_STAT__CONST_IN.Max_Config_Duration : int;
+  SYS_STAT__CONST_IN.Max_Confirm_Stop_Duration : int;
+  SYS_STAT__CONST_IN.Max_Display_Duration : int;
+  SYS_STAT__CONST_IN.Max_Duration_Over_Infusion : int;
+  SYS_STAT__CONST_IN.Max_Duration_Under_Infusion : int;
+  SYS_STAT__CONST_IN.Max_Idle_Duration : int;
+  SYS_STAT__CONST_IN.Max_Paused_Duration : int;
+  SYS_STAT__CONST_IN.System_Test_Inteval : int;
+  SYS_STAT__CONST_IN.Tolerance_Max : int;
+  SYS_STAT__CONST_IN.Tolerance_Min : int;
+  SYS_STAT__CONFIG_IN.Config_Mode : int;
+  SYS_STAT__CONFIG_IN.Config_Timer : int;
+  SYS_STAT__CONFIG_IN.Configured : int;
+  SYS_STAT__CONFIG_IN.Drug_Concentration : int;
+  SYS_STAT__CONFIG_IN.Drug_Name : int;
+  SYS_STAT__CONFIG_IN.Duration_Intermittent_Bolus : int;
+  SYS_STAT__CONFIG_IN.Duration_Patient_Bolus : int;
+  SYS_STAT__CONFIG_IN.Entered_Reservoir_Volume : int;
+  SYS_STAT__CONFIG_IN.Error_Message_ID : int;
+  SYS_STAT__CONFIG_IN.Flow_Rate_Basal : int;
+  SYS_STAT__CONFIG_IN.Flow_Rate_Intermittent_Bolus : int;
+  SYS_STAT__CONFIG_IN.Flow_Rate_KVO : int;
+  SYS_STAT__CONFIG_IN.Flow_Rate_Patient_Bolus : int;
+  SYS_STAT__CONFIG_IN.Infusion_Total_Duration : int;
+  SYS_STAT__CONFIG_IN.Interval_Intermittent_Bolus : int;
+  SYS_STAT__CONFIG_IN.Lockout_Period_Patient_Bolus : int;
+  SYS_STAT__CONFIG_IN.Log_Message_ID : int;
+  SYS_STAT__CONFIG_IN.Max_Number_of_Patient_Bolus : int;
+  SYS_STAT__CONFIG_IN.Patient_ID : int;
+  SYS_STAT__CONFIG_IN.Request_Config_Type : bool;
+  SYS_STAT__CONFIG_IN.Request_Confirm_Infusion_Initiate : bool;
+  SYS_STAT__CONFIG_IN.Request_Infusion_Info : bool;
+  SYS_STAT__CONFIG_IN.Request_Patient_Drug_Info : bool;
+  SYS_STAT__CONFIG_IN.Reservoir_Volume : int;
+  SYS_STAT__CONFIG_IN.VTBI_Total : int;
+  ALARM__IM_IN.Actual_Infusion_Duration : int;
+  ALARM__IM_IN.Commanded_Flow_Rate : int;
+  ALARM__IM_IN.Current_System_Mode : int;
+  ALARM__IM_IN.Is_Locked_Out : bool;
+  ALARM__IM_IN.Log_Message_ID : int;
+  ALARM__IM_IN.New_Infusion : bool;
+  ALARM__TLM_MODE_IN.Log_Message_ID : int;
+  ALARM__TLM_MODE_IN.Request_Confirm_Stop : bool;
+  ALARM__TLM_MODE_IN.System_On : bool;
+  ALARM__OP_CMD_IN.Back : bool;
+  ALARM__OP_CMD_IN.Cancel : bool;
+  ALARM__OP_CMD_IN.Configuration_Type : int;
+  ALARM__OP_CMD_IN.Confirm_Stop : bool;
+  ALARM__OP_CMD_IN.Data_Config : bool;
+  ALARM__OP_CMD_IN.Disable_Audio : int;
+  ALARM__OP_CMD_IN.Infusion_Cancel : bool;
+  ALARM__OP_CMD_IN.Infusion_Inhibit : bool;
+  ALARM__OP_CMD_IN.Infusion_Initiate : bool;
+  ALARM__OP_CMD_IN.Keyboard : bool;
+  ALARM__OP_CMD_IN.Next : bool;
+  ALARM__OP_CMD_IN.Notification_Cancel : bool;
+  ALARM__OP_CMD_IN.System_Start : bool;
+  ALARM__OP_CMD_IN.System_Stop : bool;
+  ALARM__DB_IN.Drug_Concentration_High : int;
+  ALARM__DB_IN.Drug_Concentration_Low : int;
+  ALARM__DB_IN.Drug_Name : int;
+  ALARM__DB_IN.Flow_Rate_High : int;
+  ALARM__DB_IN.Flow_Rate_KVO : int;
+  ALARM__DB_IN.Flow_Rate_Low : int;
+  ALARM__DB_IN.Inteval_Patient_Bolus : int;
+  ALARM__DB_IN.Known_Prescription : bool;
+  ALARM__DB_IN.Number_Max_Patient_Bolus : int;
+  ALARM__DB_IN.VTBI_High : int;
+  ALARM__DB_IN.VTBI_Low : int;
+  ALARM__SENSOR_IN.Air_In_Line : bool;
+  ALARM__SENSOR_IN.Air_Pressure : bool;
+  ALARM__SENSOR_IN.Battery_Depleted : bool;
+  ALARM__SENSOR_IN.Battery_Low : bool;
+  ALARM__SENSOR_IN.Battery_Unable_To_Charge : bool;
+  ALARM__SENSOR_IN.CPU_Error : bool;
+  ALARM__SENSOR_IN.Door_Open : bool;
+  ALARM__SENSOR_IN.Flow_Rate : int;
+  ALARM__SENSOR_IN.Flow_Rate_Not_Stable : bool;
+  ALARM__SENSOR_IN.Humidity : bool;
+  ALARM__SENSOR_IN.Memory_Corrupted : bool;
+  ALARM__SENSOR_IN.Occlusion : bool;
+  ALARM__SENSOR_IN.Post_Successful : bool;
+  ALARM__SENSOR_IN.Pump_Overheated : bool;
+  ALARM__SENSOR_IN.Pump_Primed : bool;
+  ALARM__SENSOR_IN.Pump_Too_Hot : bool;
+  ALARM__SENSOR_IN.RTC_Error : bool;
+  ALARM__SENSOR_IN.Supply_Voltage : bool;
+  ALARM__SENSOR_IN.Temp : bool;
+  ALARM__SENSOR_IN.Watchdog_Interrupted : bool;
+  ALARM__CONST_IN.Audio_Enable_Duration : int;
+  ALARM__CONST_IN.Audio_Level : int;
+  ALARM__CONST_IN.Config_Warning_Duration : int;
+  ALARM__CONST_IN.Empty_Reservoir : int;
+  ALARM__CONST_IN.Log_Interval : int;
+  ALARM__CONST_IN.Low_Reservoir : int;
+  ALARM__CONST_IN.Max_Config_Duration : int;
+  ALARM__CONST_IN.Max_Confirm_Stop_Duration : int;
+  ALARM__CONST_IN.Max_Display_Duration : int;
+  ALARM__CONST_IN.Max_Duration_Over_Infusion : int;
+  ALARM__CONST_IN.Max_Duration_Under_Infusion : int;
+  ALARM__CONST_IN.Max_Idle_Duration : int;
+  ALARM__CONST_IN.Max_Paused_Duration : int;
+  ALARM__CONST_IN.System_Test_Inteval : int;
+  ALARM__CONST_IN.Tolerance_Max : int;
+  ALARM__CONST_IN.Tolerance_Min : int;
+  ALARM__SYS_STAT_IN.Idle_Time_Exceeded : bool;
+  ALARM__SYS_STAT_IN.In_Therapy : bool;
+  ALARM__SYS_STAT_IN.Log_Message_ID : int;
+  ALARM__SYS_STAT_IN.Paused_Time_Exceeded : bool;
+  ALARM__SYS_STAT_IN.Reservoir_Empty : bool;
+  ALARM__SYS_STAT_IN.Reservoir_Volume : int;
+  ALARM__SYS_STAT_IN.Volume_Infused : int;
+  ALARM__CONFIG_IN.Config_Mode : int;
+  ALARM__CONFIG_IN.Config_Timer : int;
+  ALARM__CONFIG_IN.Configured : int;
+  ALARM__CONFIG_IN.Drug_Concentration : int;
+  ALARM__CONFIG_IN.Drug_Name : int;
+  ALARM__CONFIG_IN.Duration_Intermittent_Bolus : int;
+  ALARM__CONFIG_IN.Duration_Patient_Bolus : int;
+  ALARM__CONFIG_IN.Entered_Reservoir_Volume : int;
+  ALARM__CONFIG_IN.Error_Message_ID : int;
+  ALARM__CONFIG_IN.Flow_Rate_Basal : int;
+  ALARM__CONFIG_IN.Flow_Rate_Intermittent_Bolus : int;
+  ALARM__CONFIG_IN.Flow_Rate_KVO : int;
+  ALARM__CONFIG_IN.Flow_Rate_Patient_Bolus : int;
+  ALARM__CONFIG_IN.Infusion_Total_Duration : int;
+  ALARM__CONFIG_IN.Interval_Intermittent_Bolus : int;
+  ALARM__CONFIG_IN.Lockout_Period_Patient_Bolus : int;
+  ALARM__CONFIG_IN.Log_Message_ID : int;
+  ALARM__CONFIG_IN.Max_Number_of_Patient_Bolus : int;
+  ALARM__CONFIG_IN.Patient_ID : int;
+  ALARM__CONFIG_IN.Request_Config_Type : bool;
+  ALARM__CONFIG_IN.Request_Confirm_Infusion_Initiate : bool;
+  ALARM__CONFIG_IN.Request_Infusion_Info : bool;
+  ALARM__CONFIG_IN.Request_Patient_Drug_Info : bool;
+  ALARM__CONFIG_IN.Reservoir_Volume : int;
+  ALARM__CONFIG_IN.VTBI_Total : int;
+  CONFIG__TLM_MODE_IN.Log_Message_ID : int;
+  CONFIG__TLM_MODE_IN.Request_Confirm_Stop : bool;
+  CONFIG__TLM_MODE_IN.System_On : bool;
+  CONFIG__PRES_IN.Drug_Concentration : int;
+  CONFIG__PRES_IN.Drug_Name : int;
+  CONFIG__PRES_IN.Duration_Intermittent_Bolus : int;
+  CONFIG__PRES_IN.Duration_Patient_Bolus : int;
+  CONFIG__PRES_IN.Entered_Reservoir_Volume : int;
+  CONFIG__PRES_IN.Flow_Rate_Basal : int;
+  CONFIG__PRES_IN.Flow_Rate_Intermittent_Bolus : int;
+  CONFIG__PRES_IN.Flow_Rate_Patient_Bolus : int;
+  CONFIG__PRES_IN.Interval_Intermittent_Bolus : int;
+  CONFIG__PRES_IN.Lockout_Period_Patient_Bolus : int;
+  CONFIG__PRES_IN.Max_Number_of_Patient_Bolus : int;
+  CONFIG__PRES_IN.Patient_ID : int;
+  CONFIG__PRES_IN.Total_Duration : int;
+  CONFIG__PRES_IN.VTBI_Total : int;
+  CONFIG__OP_CMD_IN.Back : bool;
+  CONFIG__OP_CMD_IN.Cancel : bool;
+  CONFIG__OP_CMD_IN.Configuration_Type : int;
+  CONFIG__OP_CMD_IN.Confirm_Stop : bool;
+  CONFIG__OP_CMD_IN.Data_Config : bool;
+  CONFIG__OP_CMD_IN.Disable_Audio : int;
+  CONFIG__OP_CMD_IN.Infusion_Cancel : bool;
+  CONFIG__OP_CMD_IN.Infusion_Inhibit : bool;
+  CONFIG__OP_CMD_IN.Infusion_Initiate : bool;
+  CONFIG__OP_CMD_IN.Keyboard : bool;
+  CONFIG__OP_CMD_IN.Next : bool;
+  CONFIG__OP_CMD_IN.Notification_Cancel : bool;
+  CONFIG__OP_CMD_IN.System_Start : bool;
+  CONFIG__OP_CMD_IN.System_Stop : bool;
+  CONFIG__DB_IN.Drug_Concentration_High : int;
+  CONFIG__DB_IN.Drug_Concentration_Low : int;
+  CONFIG__DB_IN.Drug_Name : int;
+  CONFIG__DB_IN.Flow_Rate_High : int;
+  CONFIG__DB_IN.Flow_Rate_KVO : int;
+  CONFIG__DB_IN.Flow_Rate_Low : int;
+  CONFIG__DB_IN.Inteval_Patient_Bolus : int;
+  CONFIG__DB_IN.Known_Prescription : bool;
+  CONFIG__DB_IN.Number_Max_Patient_Bolus : int;
+  CONFIG__DB_IN.VTBI_High : int;
+  CONFIG__DB_IN.VTBI_Low : int;
+  CONFIG__CONST_IN.Audio_Enable_Duration : int;
+  CONFIG__CONST_IN.Audio_Level : int;
+  CONFIG__CONST_IN.Config_Warning_Duration : int;
+  CONFIG__CONST_IN.Empty_Reservoir : int;
+  CONFIG__CONST_IN.Log_Interval : int;
+  CONFIG__CONST_IN.Low_Reservoir : int;
+  CONFIG__CONST_IN.Max_Config_Duration : int;
+  CONFIG__CONST_IN.Max_Confirm_Stop_Duration : int;
+  CONFIG__CONST_IN.Max_Display_Duration : int;
+  CONFIG__CONST_IN.Max_Duration_Over_Infusion : int;
+  CONFIG__CONST_IN.Max_Duration_Under_Infusion : int;
+  CONFIG__CONST_IN.Max_Idle_Duration : int;
+  CONFIG__CONST_IN.Max_Paused_Duration : int;
+  CONFIG__CONST_IN.System_Test_Inteval : int;
+  CONFIG__CONST_IN.Tolerance_Max : int;
+  CONFIG__CONST_IN.Tolerance_Min : int;
+  CONFIG__SYS_STAT_IN.Idle_Time_Exceeded : bool;
+  CONFIG__SYS_STAT_IN.In_Therapy : bool;
+  CONFIG__SYS_STAT_IN.Log_Message_ID : int;
+  CONFIG__SYS_STAT_IN.Paused_Time_Exceeded : bool;
+  CONFIG__SYS_STAT_IN.Reservoir_Empty : bool;
+  CONFIG__SYS_STAT_IN.Reservoir_Volume : int;
+  CONFIG__SYS_STAT_IN.Volume_Infused : int;
+  IM__TLM_MODE_IN.Log_Message_ID : int;
+  IM__TLM_MODE_IN.Request_Confirm_Stop : bool;
+  IM__TLM_MODE_IN.System_On : bool;
+  IM__OP_CMD_IN.Back : bool;
+  IM__OP_CMD_IN.Cancel : bool;
+  IM__OP_CMD_IN.Configuration_Type : int;
+  IM__OP_CMD_IN.Confirm_Stop : bool;
+  IM__OP_CMD_IN.Data_Config : bool;
+  IM__OP_CMD_IN.Disable_Audio : int;
+  IM__OP_CMD_IN.Infusion_Cancel : bool;
+  IM__OP_CMD_IN.Infusion_Inhibit : bool;
+  IM__OP_CMD_IN.Infusion_Initiate : bool;
+  IM__OP_CMD_IN.Keyboard : bool;
+  IM__OP_CMD_IN.Next : bool;
+  IM__OP_CMD_IN.Notification_Cancel : bool;
+  IM__OP_CMD_IN.System_Start : bool;
+  IM__OP_CMD_IN.System_Stop : bool;
+  IM__PATIENT_IN.Patient_Bolus_Request : bool;
+  IM__CONFIG_IN.Config_Mode : int;
+  IM__CONFIG_IN.Config_Timer : int;
+  IM__CONFIG_IN.Configured : int;
+  IM__CONFIG_IN.Drug_Concentration : int;
+  IM__CONFIG_IN.Drug_Name : int;
+  IM__CONFIG_IN.Duration_Intermittent_Bolus : int;
+  IM__CONFIG_IN.Duration_Patient_Bolus : int;
+  IM__CONFIG_IN.Entered_Reservoir_Volume : int;
+  IM__CONFIG_IN.Error_Message_ID : int;
+  IM__CONFIG_IN.Flow_Rate_Basal : int;
+  IM__CONFIG_IN.Flow_Rate_Intermittent_Bolus : int;
+  IM__CONFIG_IN.Flow_Rate_KVO : int;
+  IM__CONFIG_IN.Flow_Rate_Patient_Bolus : int;
+  IM__CONFIG_IN.Infusion_Total_Duration : int;
+  IM__CONFIG_IN.Interval_Intermittent_Bolus : int;
+  IM__CONFIG_IN.Lockout_Period_Patient_Bolus : int;
+  IM__CONFIG_IN.Log_Message_ID : int;
+  IM__CONFIG_IN.Max_Number_of_Patient_Bolus : int;
+  IM__CONFIG_IN.Patient_ID : int;
+  IM__CONFIG_IN.Request_Config_Type : bool;
+  IM__CONFIG_IN.Request_Confirm_Infusion_Initiate : bool;
+  IM__CONFIG_IN.Request_Infusion_Info : bool;
+  IM__CONFIG_IN.Request_Patient_Drug_Info : bool;
+  IM__CONFIG_IN.Reservoir_Volume : int;
+  IM__CONFIG_IN.VTBI_Total : int;
+  IM__ALARM_IN.Audio_Notification_Command : int;
+  IM__ALARM_IN.Highest_Level_Alarm : int;
+  IM__ALARM_IN.Is_Audio_Disabled : int;
+  IM__ALARM_IN.Log_Message_ID : int;
+  IM__ALARM_IN.Notification_Message : int;
+  IM__SYS_STAT_IN.Idle_Time_Exceeded : bool;
+  IM__SYS_STAT_IN.In_Therapy : bool;
+  IM__SYS_STAT_IN.Log_Message_ID : int;
+  IM__SYS_STAT_IN.Paused_Time_Exceeded : bool;
+  IM__SYS_STAT_IN.Reservoir_Empty : bool;
+  IM__SYS_STAT_IN.Reservoir_Volume : int;
+  IM__SYS_STAT_IN.Volume_Infused : int;
+  OUTPUT__TLM_MODE_IN.Log_Message_ID : int;
+  OUTPUT__TLM_MODE_IN.Request_Confirm_Stop : bool;
+  OUTPUT__TLM_MODE_IN.System_On : bool;
+  OUTPUT__SYS_STAT_IN.Idle_Time_Exceeded : bool;
+  OUTPUT__SYS_STAT_IN.In_Therapy : bool;
+  OUTPUT__SYS_STAT_IN.Log_Message_ID : int;
+  OUTPUT__SYS_STAT_IN.Paused_Time_Exceeded : bool;
+  OUTPUT__SYS_STAT_IN.Reservoir_Empty : bool;
+  OUTPUT__SYS_STAT_IN.Reservoir_Volume : int;
+  OUTPUT__SYS_STAT_IN.Volume_Infused : int;
+  OUTPUT__ALARM_IN.Audio_Notification_Command : int;
+  OUTPUT__ALARM_IN.Highest_Level_Alarm : int;
+  OUTPUT__ALARM_IN.Is_Audio_Disabled : int;
+  OUTPUT__ALARM_IN.Log_Message_ID : int;
+  OUTPUT__ALARM_IN.Notification_Message : int;
+  OUTPUT__CONFIG_IN.Config_Mode : int;
+  OUTPUT__CONFIG_IN.Config_Timer : int;
+  OUTPUT__CONFIG_IN.Configured : int;
+  OUTPUT__CONFIG_IN.Drug_Concentration : int;
+  OUTPUT__CONFIG_IN.Drug_Name : int;
+  OUTPUT__CONFIG_IN.Duration_Intermittent_Bolus : int;
+  OUTPUT__CONFIG_IN.Duration_Patient_Bolus : int;
+  OUTPUT__CONFIG_IN.Entered_Reservoir_Volume : int;
+  OUTPUT__CONFIG_IN.Error_Message_ID : int;
+  OUTPUT__CONFIG_IN.Flow_Rate_Basal : int;
+  OUTPUT__CONFIG_IN.Flow_Rate_Intermittent_Bolus : int;
+  OUTPUT__CONFIG_IN.Flow_Rate_KVO : int;
+  OUTPUT__CONFIG_IN.Flow_Rate_Patient_Bolus : int;
+  OUTPUT__CONFIG_IN.Infusion_Total_Duration : int;
+  OUTPUT__CONFIG_IN.Interval_Intermittent_Bolus : int;
+  OUTPUT__CONFIG_IN.Lockout_Period_Patient_Bolus : int;
+  OUTPUT__CONFIG_IN.Log_Message_ID : int;
+  OUTPUT__CONFIG_IN.Max_Number_of_Patient_Bolus : int;
+  OUTPUT__CONFIG_IN.Patient_ID : int;
+  OUTPUT__CONFIG_IN.Request_Config_Type : bool;
+  OUTPUT__CONFIG_IN.Request_Confirm_Infusion_Initiate : bool;
+  OUTPUT__CONFIG_IN.Request_Infusion_Info : bool;
+  OUTPUT__CONFIG_IN.Request_Patient_Drug_Info : bool;
+  OUTPUT__CONFIG_IN.Reservoir_Volume : int;
+  OUTPUT__CONFIG_IN.VTBI_Total : int;
+  OUTPUT__IM_IN.Actual_Infusion_Duration : int;
+  OUTPUT__IM_IN.Commanded_Flow_Rate : int;
+  OUTPUT__IM_IN.Current_System_Mode : int;
+  OUTPUT__IM_IN.Is_Locked_Out : bool;
+  OUTPUT__IM_IN.Log_Message_ID : int;
+  OUTPUT__IM_IN.New_Infusion : bool;
+  OUTPUT__LOG_IN.Log : int;
+  OP_CMD_IN.Back : bool;
+  OP_CMD_IN.Cancel : bool;
+  OP_CMD_IN.Configuration_Type : int;
+  OP_CMD_IN.Confirm_Stop : bool;
+  OP_CMD_IN.Data_Config : bool;
+  OP_CMD_IN.Disable_Audio : int;
+  OP_CMD_IN.Infusion_Cancel : bool;
+  OP_CMD_IN.Infusion_Inhibit : bool;
+  OP_CMD_IN.Infusion_Initiate : bool;
+  OP_CMD_IN.Keyboard : bool;
+  OP_CMD_IN.Next : bool;
+  OP_CMD_IN.Notification_Cancel : bool;
+  OP_CMD_IN.System_Start : bool;
+  OP_CMD_IN.System_Stop : bool;
+  PRES_IN.Drug_Concentration : int;
+  PRES_IN.Drug_Name : int;
+  PRES_IN.Duration_Intermittent_Bolus : int;
+  PRES_IN.Duration_Patient_Bolus : int;
+  PRES_IN.Entered_Reservoir_Volume : int;
+  PRES_IN.Flow_Rate_Basal : int;
+  PRES_IN.Flow_Rate_Intermittent_Bolus : int;
+  PRES_IN.Flow_Rate_Patient_Bolus : int;
+  PRES_IN.Interval_Intermittent_Bolus : int;
+  PRES_IN.Lockout_Period_Patient_Bolus : int;
+  PRES_IN.Max_Number_of_Patient_Bolus : int;
+  PRES_IN.Patient_ID : int;
+  PRES_IN.Total_Duration : int;
+  PRES_IN.VTBI_Total : int;
+  PATIENT_IN.Patient_Bolus_Request : bool;
+  SENSOR_IN.Air_In_Line : bool;
+  SENSOR_IN.Air_Pressure : bool;
+  SENSOR_IN.Battery_Depleted : bool;
+  SENSOR_IN.Battery_Low : bool;
+  SENSOR_IN.Battery_Unable_To_Charge : bool;
+  SENSOR_IN.CPU_Error : bool;
+  SENSOR_IN.Door_Open : bool;
+  SENSOR_IN.Flow_Rate : int;
+  SENSOR_IN.Flow_Rate_Not_Stable : bool;
+  SENSOR_IN.Humidity : bool;
+  SENSOR_IN.Memory_Corrupted : bool;
+  SENSOR_IN.Occlusion : bool;
+  SENSOR_IN.Post_Successful : bool;
+  SENSOR_IN.Pump_Overheated : bool;
+  SENSOR_IN.Pump_Primed : bool;
+  SENSOR_IN.Pump_Too_Hot : bool;
+  SENSOR_IN.RTC_Error : bool;
+  SENSOR_IN.Supply_Voltage : bool;
+  SENSOR_IN.Temp : bool;
+  SENSOR_IN.Watchdog_Interrupted : bool;
+  CONST_IN.Audio_Enable_Duration : int;
+  CONST_IN.Audio_Level : int;
+  CONST_IN.Config_Warning_Duration : int;
+  CONST_IN.Empty_Reservoir : int;
+  CONST_IN.Log_Interval : int;
+  CONST_IN.Low_Reservoir : int;
+  CONST_IN.Max_Config_Duration : int;
+  CONST_IN.Max_Confirm_Stop_Duration : int;
+  CONST_IN.Max_Display_Duration : int;
+  CONST_IN.Max_Duration_Over_Infusion : int;
+  CONST_IN.Max_Duration_Under_Infusion : int;
+  CONST_IN.Max_Idle_Duration : int;
+  CONST_IN.Max_Paused_Duration : int;
+  CONST_IN.System_Test_Inteval : int;
+  CONST_IN.Tolerance_Max : int;
+  CONST_IN.Tolerance_Min : int;
+  DB_IN.Drug_Concentration_High : int;
+  DB_IN.Drug_Concentration_Low : int;
+  DB_IN.Drug_Name : int;
+  DB_IN.Flow_Rate_High : int;
+  DB_IN.Flow_Rate_KVO : int;
+  DB_IN.Flow_Rate_Low : int;
+  DB_IN.Inteval_Patient_Bolus : int;
+  DB_IN.Known_Prescription : bool;
+  DB_IN.Number_Max_Patient_Bolus : int;
+  DB_IN.VTBI_High : int;
+  DB_IN.VTBI_Low : int;
+  TLM__system_start_implies_system_on : bool;
+  TLM__not_system_start_implies_system_off : bool;
+  TLM__system_stop_implies_not_system_on : bool;
+  TLM__TLM_MODE_OUT.Log_Message_ID : int;
+  TLM__TLM_MODE_OUT.Request_Confirm_Stop : bool;
+  TLM__TLM_MODE_OUT.System_On : bool;
+  SYS_STAT__empty_reservoir_condition : bool;
+  SYS_STAT__empty_reservoir_exclusive : bool;
+  SYS_STAT__mode_grt_1_implies_In_Therapy : bool;
+  SYS_STAT__mode_not_grt_1_implies_not_In_Therapy : bool;
+  SYS_STAT__SYS_STAT_OUT.Idle_Time_Exceeded : bool;
+  SYS_STAT__SYS_STAT_OUT.In_Therapy : bool;
+  SYS_STAT__SYS_STAT_OUT.Log_Message_ID : int;
+  SYS_STAT__SYS_STAT_OUT.Paused_Time_Exceeded : bool;
+  SYS_STAT__SYS_STAT_OUT.Reservoir_Empty : bool;
+  SYS_STAT__SYS_STAT_OUT.Reservoir_Volume : int;
+  SYS_STAT__SYS_STAT_OUT.Volume_Infused : int;
+  ALARM__ALM_Initial : bool;
+  ALARM__level_4_alarm : bool;
+  ALARM__Time_FR_Over_Min_Tol : int;
+  ALARM__Is_Over_Infusion : bool;
+  ALARM__level_3_alarm : bool;
+  ALARM__low_reservoiur : bool;
+  ALARM__level_2_alarm : bool;
+  ALARM__Time_FR_Under_Min_Tol : int;
+  ALARM__is_under_infusion : bool;
+  ALARM__level_1_alarm : bool;
+  ALARM__Paused_Time_Counter : int;
+  ALARM__Idle_Time_Counter : int;
+  ALARM__Config_Timer : int;
+  ALARM__alarm_range : bool;
+  ALARM__level4_conditions_implies_highest_level_4 : bool;
+  ALARM__level3_conditions_implies_highest_level_3 : bool;
+  ALARM__level2_conditions_implies_highest_level_2 : bool;
+  ALARM__level1_conditions_implies_highest_level_1 : bool;
+  ALARM__no_conditions_implies_highest_level_0 : bool;
+  ALARM__alarm_gte_L3_causes_audio_output_EQ_audio_level : bool;
+  ALARM__no_audio_if_audio_disabled : bool;
+  ALARM__alarm_gt_3_no_audio_disable_implies_audio : bool;
+  ALARM__empty_reservoir_implies_visual_1 : bool;
+  ALARM__patient_bolus_counter : int;
+  ALARM__alarm_3_or_4_implies_audio : bool;
+  ALARM__level_4_alarm_visual : bool;
+  ALARM__emptry_res_visual_implies_error : bool;
+  ALARM__enviro_visual_implies_error : bool;
+  ALARM__hardware_visual_implies_error : bool;
+  ALARM__level_3_alarm_visual : bool;
+  ALARM__over_fr_visual_implies_error : bool;
+  ALARM__over_vtbi_visual_implies_error : bool;
+  ALARM__air_visual_implies_error : bool;
+  ALARM__occlusion_visual_implies_error : bool;
+  ALARM__door_visual_implies_error : bool;
+  ALARM__level_2_alarm_visual : bool;
+  ALARM__low_res_visial_implies_error : bool;
+  ALARM__level_1_alarm_visual : bool;
+  ALARM__under_fr_visual_implies_error : bool;
+  ALARM__unstable_fr_visual_implies_error : bool;
+  ALARM__idle_time_visual_implies_error : bool;
+  ALARM__pause_time_visual_implies_error : bool;
+  ALARM__config_time_visual_implies_error : bool;
+  ALARM__battery_visual_implies_error : bool;
+  ALARM__pump_hot_visual_implies_error : bool;
+  ALARM__not_system_on_implies_no_alarm : bool;
+  ALARM__ALARM_OUT.Audio_Notification_Command : int;
+  ALARM__ALARM_OUT.Highest_Level_Alarm : int;
+  ALARM__ALARM_OUT.Is_Audio_Disabled : int;
+  ALARM__ALARM_OUT.Log_Message_ID : int;
+  ALARM__ALARM_OUT.Notification_Message : int;
+  CONFIG__flow_rate_kvo_gt_0 : bool;
+  CONFIG__config_range : bool;
+  CONFIG__Infusion_Total_Duration : bool;
+  CONFIG__config_gt_1_implies_values_configured : bool;
+  CONFIG__configuration_type_request : bool;
+  CONFIG__validate_configured_patient_drug_info : bool;
+  CONFIG__validate_configured_infusion_info : bool;
+  CONFIG__CONFIG_OUT.Config_Mode : int;
+  CONFIG__CONFIG_OUT.Config_Timer : int;
+  CONFIG__CONFIG_OUT.Configured : int;
+  CONFIG__CONFIG_OUT.Drug_Concentration : int;
+  CONFIG__CONFIG_OUT.Drug_Name : int;
+  CONFIG__CONFIG_OUT.Duration_Intermittent_Bolus : int;
+  CONFIG__CONFIG_OUT.Duration_Patient_Bolus : int;
+  CONFIG__CONFIG_OUT.Entered_Reservoir_Volume : int;
+  CONFIG__CONFIG_OUT.Error_Message_ID : int;
+  CONFIG__CONFIG_OUT.Flow_Rate_Basal : int;
+  CONFIG__CONFIG_OUT.Flow_Rate_Intermittent_Bolus : int;
+  CONFIG__CONFIG_OUT.Flow_Rate_KVO : int;
+  CONFIG__CONFIG_OUT.Flow_Rate_Patient_Bolus : int;
+  CONFIG__CONFIG_OUT.Infusion_Total_Duration : int;
+  CONFIG__CONFIG_OUT.Interval_Intermittent_Bolus : int;
+  CONFIG__CONFIG_OUT.Lockout_Period_Patient_Bolus : int;
+  CONFIG__CONFIG_OUT.Log_Message_ID : int;
+  CONFIG__CONFIG_OUT.Max_Number_of_Patient_Bolus : int;
+  CONFIG__CONFIG_OUT.Patient_ID : int;
+  CONFIG__CONFIG_OUT.Request_Config_Type : bool;
+  CONFIG__CONFIG_OUT.Request_Confirm_Infusion_Initiate : bool;
+  CONFIG__CONFIG_OUT.Request_Infusion_Info : bool;
+  CONFIG__CONFIG_OUT.Request_Patient_Drug_Info : bool;
+  CONFIG__CONFIG_OUT.Reservoir_Volume : int;
+  CONFIG__CONFIG_OUT.VTBI_Total : int;
+  IM__mode_range : bool;
+  IM__IM_initial : bool;
+  IM__initial_system_on_implies_idle : bool;
+  IM__system_on_implies_idle : bool;
+  IM__not_system_on_implies_mode_0 : bool;
+  IM__mode_0_1_implies_flow_rate_0 : bool;
+  IM__alarm_L4_implies_flow_rate_zero : bool;
+  IM__alarm_L3_implies_flow_rate_kvo : bool;
+  IM__alarm_L2_implies_no_bolus : bool;
+  IM__infusion_cancel_implies_flow_0 : bool;
+  IM__infusion_pause_implies_flow_kvo : bool;
+  IM__no_config_implies_mode_1 : bool;
+  IM__no_patient_request_imples_no_pbolus : bool;
+  IM__infusion_initiation_requires_prescription : bool;
+  IM__basal_fr : bool;
+  IM__Patient_Bolus_Delivered_Count : int;
+  IM__ignore_patient_bolus_request : bool;
+  IM__infusion_complete_implies_idle : bool;
+  IM__infusion_inhibit_implies_paused : bool;
+  IM__basal_transition_to_pbolus : bool;
+  IM__sbolus_transition_to_pbolus : bool;
+  IM__transition_to_pbolus : bool;
+  IM__IM_OUT.Actual_Infusion_Duration : int;
+  IM__IM_OUT.Commanded_Flow_Rate : int;
+  IM__IM_OUT.Current_System_Mode : int;
+  IM__IM_OUT.Is_Locked_Out : bool;
+  IM__IM_OUT.Log_Message_ID : int;
+  IM__IM_OUT.New_Infusion : bool;
+  OUTPUT__GPCA_SW_OUT.Actual_Infusion_Duration : int;
+  OUTPUT__GPCA_SW_OUT.Audio_Notification_Command : int;
+  OUTPUT__GPCA_SW_OUT.Commanded_Flow_Rate : int;
+  OUTPUT__GPCA_SW_OUT.Configured : int;
+  OUTPUT__GPCA_SW_OUT.Current_System_Mode : int;
+  OUTPUT__GPCA_SW_OUT.Drug_Concentration : int;
+  OUTPUT__GPCA_SW_OUT.Drug_Name : int;
+  OUTPUT__GPCA_SW_OUT.Duration_Intermittent_Bolus : int;
+  OUTPUT__GPCA_SW_OUT.Duration_Patient_Bolus : int;
+  OUTPUT__GPCA_SW_OUT.Entered_Reservoir_Volume : int;
+  OUTPUT__GPCA_SW_OUT.Error_Message_ID : int;
+  OUTPUT__GPCA_SW_OUT.Flow_Rate_Basal : int;
+  OUTPUT__GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus : int;
+  OUTPUT__GPCA_SW_OUT.Flow_Rate_KVO : int;
+  OUTPUT__GPCA_SW_OUT.Flow_Rate_Patient_Bolus : int;
+  OUTPUT__GPCA_SW_OUT.Infusion_Total_Duration : int;
+  OUTPUT__GPCA_SW_OUT.Interval_Intermittent_Bolus : int;
+  OUTPUT__GPCA_SW_OUT.Is_Audio_Disabled : int;
+  OUTPUT__GPCA_SW_OUT.Is_Locked_Out : bool;
+  OUTPUT__GPCA_SW_OUT.Lockout_Period_Patient_Bolus : int;
+  OUTPUT__GPCA_SW_OUT.Log : int;
+  OUTPUT__GPCA_SW_OUT.Max_Number_of_Patient_Bolus : int;
+  OUTPUT__GPCA_SW_OUT.New_Infusion : bool;
+  OUTPUT__GPCA_SW_OUT.Notification_Message : int;
+  OUTPUT__GPCA_SW_OUT.Patient_ID : int;
+  OUTPUT__GPCA_SW_OUT.Request_Config_Type : bool;
+  OUTPUT__GPCA_SW_OUT.Request_Confirm_Infusion_Initiate : bool;
+  OUTPUT__GPCA_SW_OUT.Request_Confirm_Stop : bool;
+  OUTPUT__GPCA_SW_OUT.Request_Infusion_Info : bool;
+  OUTPUT__GPCA_SW_OUT.Request_Patient_Drug_Info : bool;
+  OUTPUT__GPCA_SW_OUT.Reservoir_Volume : int;
+  OUTPUT__GPCA_SW_OUT.VTBI_Total : int;
+  OUTPUT__GPCA_SW_OUT.Volume_Infused : int;
+  sys_initial : bool;
+  Time_FR_Under_Min_Tol : int;
+  is_under_infusion : bool;
+  Time_FR_Over_Min_Tol : int;
+  Is_Over_Infusion : bool;
+  Paused_Time_Counter : int;
+  Idle_Time_Counter : int;
+  Config_Timer : int;
+  is_on : bool;
+  is_therapy : bool;
+  is_active : bool;
+  level_4_alarm : bool;
+  level_3_alarm : bool;
+  level_2_alarm : bool;
+  level_1_alarm : bool;
+  mode_range : bool;
+  not_system_start_implies_mode_0 : bool;
+  initial_system_start_implies_mode_idle : bool;
+  off_to_on_implies_mode_idle : bool;
+  empty_reservoir_and_In_therapy_implies_no_flow : bool;
+  environmental_error_implies_no_flow : bool;
+  hardware_error_implies_no_flow : bool;
+  volume_infused_exceeds_VTBI_Hi : bool;
+  flow_rate_exceeds_flow_rate_Hi : bool;
+  AirInLine_implies_flow_at_most_KVO : bool;
+  occlusion_implies_flow_at_most_KVO : bool;
+  door_open_implies_flow_at_most_KVO : bool;
+  low_reservoir_and_In_therapy_implies_no_bolus : bool;
+  infusion_cancel_implies_idle : bool;
+  infusion_pause_implies_flow_kvo : bool;
+  no_audio_if_audio_disabled : bool;
+  no_config_implies_mode_1 : bool;
+  empty_reservoir_implies_audio : bool;
+  empty_reservoir_implies_visual_1 : bool;
+  no_patient_request_imples_no_pbolus : bool;
+  off_imples_fr_0 : bool;
+  idle_imples_fr_0 : bool;
+  system_stop_implies_off : bool;
+  infusion_initiation_requires_prescription : bool;
+  basal_fr : bool;
+  Patient_Bolus_Delivered_Count : int;
+  ignore_patient_bolus_request : bool;
+  infusion_complete_implies_idle : bool;
+  infusion_inhibit_implies_paused : bool;
+  basal_transition_to_pbolus : bool;
+  sbolus_transition_to_pbolus : bool;
+  level_4_alarm_visual : bool;
+  empty_res_visual_implies_error : bool;
+  enviro_visual_implies_error : bool;
+  hardware_visual_implies_error : bool;
+  level_3_alarm_visual : bool;
+  over_fr_visual_implies_error : bool;
+  over_vtbi_visual_implies_error : bool;
+  air_visual_implies_error : bool;
+  occlusion_visual_implies_error : bool;
+  door_visual_implies_error : bool;
+  level_2_alarm_visual : bool;
+  low_res_visial_implies_error : bool;
+  level_1_alarm_visual : bool;
+  under_fr_visual_implies_error : bool;
+  unstable_fr_visual_implies_error : bool;
+  idle_time_visual_implies_error : bool;
+  pause_time_visual_implies_error : bool;
+  config_time_visual_implies_error : bool;
+  battery_visual_implies_error : bool;
+  pump_hot_visual_implies_error : bool;
+  alarm_3_or_4_implies_audio : bool;
+  configuration_type_request : bool;
+  validate_configured_patient_drug_info : bool;
+  validate_configured_infusion_info : bool;
+  GPCA_SW_OUT.Actual_Infusion_Duration : int;
+  GPCA_SW_OUT.Audio_Notification_Command : int;
+  GPCA_SW_OUT.Commanded_Flow_Rate : int;
+  GPCA_SW_OUT.Configured : int;
+  GPCA_SW_OUT.Current_System_Mode : int;
+  GPCA_SW_OUT.Drug_Concentration : int;
+  GPCA_SW_OUT.Drug_Name : int;
+  GPCA_SW_OUT.Duration_Intermittent_Bolus : int;
+  GPCA_SW_OUT.Duration_Patient_Bolus : int;
+  GPCA_SW_OUT.Entered_Reservoir_Volume : int;
+  GPCA_SW_OUT.Error_Message_ID : int;
+  GPCA_SW_OUT.Flow_Rate_Basal : int;
+  GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus : int;
+  GPCA_SW_OUT.Flow_Rate_KVO : int;
+  GPCA_SW_OUT.Flow_Rate_Patient_Bolus : int;
+  GPCA_SW_OUT.Infusion_Total_Duration : int;
+  GPCA_SW_OUT.Interval_Intermittent_Bolus : int;
+  GPCA_SW_OUT.Is_Audio_Disabled : int;
+  GPCA_SW_OUT.Is_Locked_Out : bool;
+  GPCA_SW_OUT.Lockout_Period_Patient_Bolus : int;
+  GPCA_SW_OUT.Log : int;
+  GPCA_SW_OUT.Max_Number_of_Patient_Bolus : int;
+  GPCA_SW_OUT.New_Infusion : bool;
+  GPCA_SW_OUT.Notification_Message : int;
+  GPCA_SW_OUT.Patient_ID : int;
+  GPCA_SW_OUT.Request_Config_Type : bool;
+  GPCA_SW_OUT.Request_Confirm_Infusion_Initiate : bool;
+  GPCA_SW_OUT.Request_Confirm_Stop : bool;
+  GPCA_SW_OUT.Request_Infusion_Info : bool;
+  GPCA_SW_OUT.Request_Patient_Drug_Info : bool;
+  GPCA_SW_OUT.Reservoir_Volume : int;
+  GPCA_SW_OUT.VTBI_Total : int;
+  GPCA_SW_OUT.Volume_Infused : int
+) returns (
+
+);
+var
+  _TOP__ASSUME__0 : bool;
+  _TOP__ASSUME__1 : bool;
+  _TOP__ASSUME__2 : bool;
+  _TOP__ASSUME__3 : bool;
+  _TOP__ASSUME__4 : bool;
+  _TOP__ASSUME__5 : bool;
+  _TOP__ASSERT__0 : bool;
+  _TOP__ASSERT__1 : bool;
+  _TOP__ASSERT__2 : bool;
+  _TOP__ASSERT__3 : bool;
+  _TOP__ASSERT__4 : bool;
+  _TOP__ASSERT__5 : bool;
+  _TOP__ASSERT__6 : bool;
+  _TOP__ASSERT__7 : bool;
+  _TOP__ASSERT__8 : bool;
+  _TOP__ASSERT__9 : bool;
+  _TOP__ASSERT__10 : bool;
+  _TOP__ASSERT__11 : bool;
+  _TOP__ASSERT__12 : bool;
+  _TOP__ASSERT__13 : bool;
+  _TOP__ASSERT__14 : bool;
+  _TOP__ASSERT__15 : bool;
+  _TOP__ASSERT__16 : bool;
+  _TOP__ASSERT__17 : bool;
+  _TOP__ASSERT__18 : bool;
+  _TOP__ASSERT__19 : bool;
+  _TOP__ASSERT__20 : bool;
+  _TOP__ASSERT__21 : bool;
+  _TOP__ASSERT__22 : bool;
+  _TOP__ASSERT__23 : bool;
+  _TOP__ASSERT__24 : bool;
+  _TOP__ASSERT__25 : bool;
+  _TOP__ASSERT__26 : bool;
+  _TOP__ASSERT__27 : bool;
+  _TOP__ASSERT__28 : bool;
+  _TOP__ASSERT__29 : bool;
+  _TOP__ASSERT__30 : bool;
+  _TOP__ASSERT__31 : bool;
+  _TOP__ASSERT__32 : bool;
+  _TOP__ASSERT__33 : bool;
+  _TOP__ASSERT__34 : bool;
+  _TOP__ASSERT__35 : bool;
+  _TOP__ASSERT__36 : bool;
+  _TOP__ASSERT__37 : bool;
+  _TOP__ASSERT__38 : bool;
+  _TOP__ASSERT__39 : bool;
+  _TOP__ASSERT__40 : bool;
+  _TOP__ASSERT__41 : bool;
+  _TOP__ASSERT__42 : bool;
+  _TOP__ASSERT__43 : bool;
+  _TOP__ASSERT__44 : bool;
+  _TOP__ASSERT__45 : bool;
+  _TOP__ASSERT__46 : bool;
+  _TOP__ASSERT__47 : bool;
+  _TOP__ASSERT__48 : bool;
+  _TOP__ASSERT__49 : bool;
+  _TOP__ASSERT__50 : bool;
+  _TOP__ASSERT__51 : bool;
+  _TOP__ASSERT__52 : bool;
+  _TOP__ASSERT__53 : bool;
+  _TOP__ASSERT__54 : bool;
+  _TOP__ASSERT__55 : bool;
+  _TOP__ASSERT__56 : bool;
+  _TOP__ASSERT__57 : bool;
+  _TOP__ASSERT__58 : bool;
+  _TOP__ASSERT__59 : bool;
+  _TOP__ASSERT__60 : bool;
+  _TOP__ASSERT__61 : bool;
+  _TOP__ASSERT__62 : bool;
+  _TOP__ASSERT__63 : bool;
+  _TOP__ASSERT__64 : bool;
+  _TOP__ASSERT__65 : bool;
+  _TOP__ASSERT__66 : bool;
+  _TOP__ASSERT__67 : bool;
+  _TOP__ASSERT__68 : bool;
+  _TOP__ASSERT__69 : bool;
+  __GUARANTEE35 : bool;
+  _TOP__TLM~0.OP_CMD_IN.System_Start : bool;
+  _TOP__TLM~0.OP_CMD_IN.System_Stop : bool;
+  _TOP__TLM~0.system_start_implies_system_on : bool;
+  _TOP__TLM~0.not_system_start_implies_system_off : bool;
+  _TOP__TLM~0.system_stop_implies_not_system_on : bool;
+  _TOP__TLM~0.TLM_MODE_OUT.System_On : bool;
+  _TOP__TLM~0.__ASSERT : bool;
+  _TOP__TLM~0.__ASSUME__HIST : bool;
+  _TOP__TLM~0.__ASSUME__CONJ : bool;
+  _TOP__TLM~0.__TLM__PROP__0 : bool;
+  _TOP__TLM~0.__TLM__PROP__1 : bool;
+  _TOP__TLM~0.__TLM__PROP__2 : bool;
+  _TOP__TLM~0.__TLM__ASSERT__0 : bool;
+  _TOP__TLM~0.__TLM__ASSERT__1 : bool;
+  _TOP__TLM~0.__TLM__ASSERT__2 : bool;
+  _TOP__SYS_STAT~0.IM_IN.Current_System_Mode : int;
+  _TOP__SYS_STAT~0.TLM_MODE_IN.System_On : bool;
+  _TOP__SYS_STAT~0.CONST_IN.Empty_Reservoir : int;
+  _TOP__SYS_STAT~0.empty_reservoir_condition : bool;
+  _TOP__SYS_STAT~0.empty_reservoir_exclusive : bool;
+  _TOP__SYS_STAT~0.mode_grt_1_implies_In_Therapy : bool;
+  _TOP__SYS_STAT~0.mode_not_grt_1_implies_not_In_Therapy : bool;
+  _TOP__SYS_STAT~0.SYS_STAT_OUT.In_Therapy : bool;
+  _TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Empty : bool;
+  _TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Volume : int;
+  _TOP__SYS_STAT~0.__ASSERT : bool;
+  _TOP__SYS_STAT~0.__ASSUME__HIST : bool;
+  _TOP__SYS_STAT~0.__ASSUME__CONJ : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__0 : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__1 : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__2 : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__3 : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__0 : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__1 : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__2 : bool;
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__3 : bool;
+  _TOP__ALARM~0.IM_IN.Commanded_Flow_Rate : int;
+  _TOP__ALARM~0.IM_IN.Current_System_Mode : int;
+  _TOP__ALARM~0.TLM_MODE_IN.System_On : bool;
+  _TOP__ALARM~0.OP_CMD_IN.Disable_Audio : int;
+  _TOP__ALARM~0.DB_IN.Flow_Rate_High : int;
+  _TOP__ALARM~0.DB_IN.Flow_Rate_Low : int;
+  _TOP__ALARM~0.DB_IN.VTBI_High : int;
+  _TOP__ALARM~0.SENSOR_IN.Air_In_Line : bool;
+  _TOP__ALARM~0.SENSOR_IN.Air_Pressure : bool;
+  _TOP__ALARM~0.SENSOR_IN.Battery_Depleted : bool;
+  _TOP__ALARM~0.SENSOR_IN.Battery_Low : bool;
+  _TOP__ALARM~0.SENSOR_IN.Battery_Unable_To_Charge : bool;
+  _TOP__ALARM~0.SENSOR_IN.CPU_Error : bool;
+  _TOP__ALARM~0.SENSOR_IN.Door_Open : bool;
+  _TOP__ALARM~0.SENSOR_IN.Flow_Rate : int;
+  _TOP__ALARM~0.SENSOR_IN.Flow_Rate_Not_Stable : bool;
+  _TOP__ALARM~0.SENSOR_IN.Humidity : bool;
+  _TOP__ALARM~0.SENSOR_IN.Memory_Corrupted : bool;
+  _TOP__ALARM~0.SENSOR_IN.Occlusion : bool;
+  _TOP__ALARM~0.SENSOR_IN.Pump_Overheated : bool;
+  _TOP__ALARM~0.SENSOR_IN.Pump_Too_Hot : bool;
+  _TOP__ALARM~0.SENSOR_IN.RTC_Error : bool;
+  _TOP__ALARM~0.SENSOR_IN.Supply_Voltage : bool;
+  _TOP__ALARM~0.SENSOR_IN.Temp : bool;
+  _TOP__ALARM~0.SENSOR_IN.Watchdog_Interrupted : bool;
+  _TOP__ALARM~0.CONST_IN.Audio_Level : int;
+  _TOP__ALARM~0.CONST_IN.Config_Warning_Duration : int;
+  _TOP__ALARM~0.CONST_IN.Low_Reservoir : int;
+  _TOP__ALARM~0.CONST_IN.Max_Duration_Over_Infusion : int;
+  _TOP__ALARM~0.CONST_IN.Max_Duration_Under_Infusion : int;
+  _TOP__ALARM~0.CONST_IN.Max_Idle_Duration : int;
+  _TOP__ALARM~0.CONST_IN.Max_Paused_Duration : int;
+  _TOP__ALARM~0.CONST_IN.Tolerance_Max : int;
+  _TOP__ALARM~0.CONST_IN.Tolerance_Min : int;
+  _TOP__ALARM~0.SYS_STAT_IN.In_Therapy : bool;
+  _TOP__ALARM~0.SYS_STAT_IN.Reservoir_Empty : bool;
+  _TOP__ALARM~0.SYS_STAT_IN.Reservoir_Volume : int;
+  _TOP__ALARM~0.SYS_STAT_IN.Volume_Infused : int;
+  _TOP__ALARM~0.CONFIG_IN.Configured : int;
+  _TOP__ALARM~0.ALM_Initial : bool;
+  _TOP__ALARM~0.level_4_alarm : bool;
+  _TOP__ALARM~0.Time_FR_Over_Min_Tol : int;
+  _TOP__ALARM~0.Is_Over_Infusion : bool;
+  _TOP__ALARM~0.level_3_alarm : bool;
+  _TOP__ALARM~0.low_reservoiur : bool;
+  _TOP__ALARM~0.level_2_alarm : bool;
+  _TOP__ALARM~0.Time_FR_Under_Min_Tol : int;
+  _TOP__ALARM~0.is_under_infusion : bool;
+  _TOP__ALARM~0.level_1_alarm : bool;
+  _TOP__ALARM~0.Paused_Time_Counter : int;
+  _TOP__ALARM~0.Idle_Time_Counter : int;
+  _TOP__ALARM~0.Config_Timer : int;
+  _TOP__ALARM~0.alarm_range : bool;
+  _TOP__ALARM~0.level4_conditions_implies_highest_level_4 : bool;
+  _TOP__ALARM~0.level3_conditions_implies_highest_level_3 : bool;
+  _TOP__ALARM~0.level2_conditions_implies_highest_level_2 : bool;
+  _TOP__ALARM~0.level1_conditions_implies_highest_level_1 : bool;
+  _TOP__ALARM~0.no_conditions_implies_highest_level_0 : bool;
+  _TOP__ALARM~0.alarm_gte_L3_causes_audio_output_EQ_audio_level : bool;
+  _TOP__ALARM~0.no_audio_if_audio_disabled : bool;
+  _TOP__ALARM~0.alarm_gt_3_no_audio_disable_implies_audio : bool;
+  _TOP__ALARM~0.empty_reservoir_implies_visual_1 : bool;
+  _TOP__ALARM~0.patient_bolus_counter : int;
+  _TOP__ALARM~0.alarm_3_or_4_implies_audio : bool;
+  _TOP__ALARM~0.level_4_alarm_visual : bool;
+  _TOP__ALARM~0.emptry_res_visual_implies_error : bool;
+  _TOP__ALARM~0.enviro_visual_implies_error : bool;
+  _TOP__ALARM~0.hardware_visual_implies_error : bool;
+  _TOP__ALARM~0.level_3_alarm_visual : bool;
+  _TOP__ALARM~0.over_fr_visual_implies_error : bool;
+  _TOP__ALARM~0.over_vtbi_visual_implies_error : bool;
+  _TOP__ALARM~0.air_visual_implies_error : bool;
+  _TOP__ALARM~0.occlusion_visual_implies_error : bool;
+  _TOP__ALARM~0.door_visual_implies_error : bool;
+  _TOP__ALARM~0.level_2_alarm_visual : bool;
+  _TOP__ALARM~0.low_res_visial_implies_error : bool;
+  _TOP__ALARM~0.level_1_alarm_visual : bool;
+  _TOP__ALARM~0.under_fr_visual_implies_error : bool;
+  _TOP__ALARM~0.unstable_fr_visual_implies_error : bool;
+  _TOP__ALARM~0.idle_time_visual_implies_error : bool;
+  _TOP__ALARM~0.pause_time_visual_implies_error : bool;
+  _TOP__ALARM~0.config_time_visual_implies_error : bool;
+  _TOP__ALARM~0.battery_visual_implies_error : bool;
+  _TOP__ALARM~0.pump_hot_visual_implies_error : bool;
+  _TOP__ALARM~0.not_system_on_implies_no_alarm : bool;
+  _TOP__ALARM~0.ALARM_OUT.Audio_Notification_Command : int;
+  _TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm : int;
+  _TOP__ALARM~0.ALARM_OUT.Is_Audio_Disabled : int;
+  _TOP__ALARM~0.ALARM_OUT.Notification_Message : int;
+  _TOP__ALARM~0.__ASSERT : bool;
+  _TOP__ALARM~0.__ASSUME__HIST : bool;
+  _TOP__ALARM~0.__ASSUME__CONJ : bool;
+  _TOP__ALARM~0.__ALARM__PROP__0 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__1 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__2 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__3 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__4 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__5 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__6 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__7 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__8 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__9 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__10 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__11 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__12 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__13 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__14 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__15 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__16 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__17 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__18 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__19 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__20 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__21 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__22 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__23 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__24 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__25 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__26 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__27 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__28 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__29 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__30 : bool;
+  _TOP__ALARM~0.__ALARM__PROP__31 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__0 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__1 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__2 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__3 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__4 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__5 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__6 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__7 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__8 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__9 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__10 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__11 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__12 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__13 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__14 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__15 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__16 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__17 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__18 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__19 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__20 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__21 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__22 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__23 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__24 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__25 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__26 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__27 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__28 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__29 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__30 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__31 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__32 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__33 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__34 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__35 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__36 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__37 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__38 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__39 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__40 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__41 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__42 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__43 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__44 : bool;
+  _TOP__ALARM~0.__ALARM__ASSERT__45 : bool;
+  _TOP__CONFIG~0.TLM_MODE_IN.System_On : bool;
+  _TOP__CONFIG~0.PRES_IN.Drug_Concentration : int;
+  _TOP__CONFIG~0.PRES_IN.Drug_Name : int;
+  _TOP__CONFIG~0.PRES_IN.Duration_Intermittent_Bolus : int;
+  _TOP__CONFIG~0.PRES_IN.Entered_Reservoir_Volume : int;
+  _TOP__CONFIG~0.PRES_IN.Flow_Rate_Basal : int;
+  _TOP__CONFIG~0.PRES_IN.Flow_Rate_Intermittent_Bolus : int;
+  _TOP__CONFIG~0.PRES_IN.Flow_Rate_Patient_Bolus : int;
+  _TOP__CONFIG~0.PRES_IN.Interval_Intermittent_Bolus : int;
+  _TOP__CONFIG~0.PRES_IN.Max_Number_of_Patient_Bolus : int;
+  _TOP__CONFIG~0.PRES_IN.VTBI_Total : int;
+  _TOP__CONFIG~0.OP_CMD_IN.Data_Config : bool;
+  _TOP__CONFIG~0.DB_IN.Drug_Concentration_High : int;
+  _TOP__CONFIG~0.DB_IN.Drug_Concentration_Low : int;
+  _TOP__CONFIG~0.DB_IN.Flow_Rate_High : int;
+  _TOP__CONFIG~0.DB_IN.Flow_Rate_Low : int;
+  _TOP__CONFIG~0.DB_IN.Number_Max_Patient_Bolus : int;
+  _TOP__CONFIG~0.DB_IN.VTBI_High : int;
+  _TOP__CONFIG~0.DB_IN.VTBI_Low : int;
+  _TOP__CONFIG~0.CONST_IN.Empty_Reservoir : int;
+  _TOP__CONFIG~0.flow_rate_kvo_gt_0 : bool;
+  _TOP__CONFIG~0.config_range : bool;
+  _TOP__CONFIG~0.Infusion_Total_Duration : bool;
+  _TOP__CONFIG~0.config_gt_1_implies_values_configured : bool;
+  _TOP__CONFIG~0.configuration_type_request : bool;
+  _TOP__CONFIG~0.validate_configured_patient_drug_info : bool;
+  _TOP__CONFIG~0.validate_configured_infusion_info : bool;
+  _TOP__CONFIG~0.CONFIG_OUT.Configured : int;
+  _TOP__CONFIG~0.CONFIG_OUT.Error_Message_ID : int;
+  _TOP__CONFIG~0.CONFIG_OUT.Flow_Rate_KVO : int;
+  _TOP__CONFIG~0.CONFIG_OUT.Infusion_Total_Duration : int;
+  _TOP__CONFIG~0.CONFIG_OUT.Request_Config_Type : bool;
+  _TOP__CONFIG~0.CONFIG_OUT.Request_Patient_Drug_Info : bool;
+  _TOP__CONFIG~0.__ASSERT : bool;
+  _TOP__CONFIG~0.__ASSUME__HIST : bool;
+  _TOP__CONFIG~0.__ASSUME__CONJ : bool;
+  _TOP__CONFIG~0.__CONFIG__PROP__0 : bool;
+  _TOP__CONFIG~0.__CONFIG__PROP__1 : bool;
+  _TOP__CONFIG~0.__CONFIG__PROP__2 : bool;
+  _TOP__CONFIG~0.__CONFIG__PROP__3 : bool;
+  _TOP__CONFIG~0.__CONFIG__PROP__4 : bool;
+  _TOP__CONFIG~0.__CONFIG__PROP__5 : bool;
+  _TOP__CONFIG~0.__CONFIG__PROP__6 : bool;
+  _TOP__CONFIG~0.__CONFIG__ASSERT__0 : bool;
+  _TOP__CONFIG~0.__CONFIG__ASSERT__1 : bool;
+  _TOP__CONFIG~0.__CONFIG__ASSERT__2 : bool;
+  _TOP__CONFIG~0.__CONFIG__ASSERT__3 : bool;
+  _TOP__CONFIG~0.__CONFIG__ASSERT__4 : bool;
+  _TOP__CONFIG~0.__CONFIG__ASSERT__5 : bool;
+  _TOP__CONFIG~0.__CONFIG__ASSERT__6 : bool;
+  _TOP__IM~0.TLM_MODE_IN.System_On : bool;
+  _TOP__IM~0.OP_CMD_IN.Infusion_Cancel : bool;
+  _TOP__IM~0.OP_CMD_IN.Infusion_Inhibit : bool;
+  _TOP__IM~0.PATIENT_IN.Patient_Bolus_Request : bool;
+  _TOP__IM~0.CONFIG_IN.Configured : int;
+  _TOP__IM~0.CONFIG_IN.Flow_Rate_Basal : int;
+  _TOP__IM~0.CONFIG_IN.Flow_Rate_KVO : int;
+  _TOP__IM~0.CONFIG_IN.Infusion_Total_Duration : int;
+  _TOP__IM~0.CONFIG_IN.Max_Number_of_Patient_Bolus : int;
+  _TOP__IM~0.CONFIG_IN.VTBI_Total : int;
+  _TOP__IM~0.ALARM_IN.Highest_Level_Alarm : int;
+  _TOP__IM~0.SYS_STAT_IN.In_Therapy : bool;
+  _TOP__IM~0.SYS_STAT_IN.Volume_Infused : int;
+  _TOP__IM~0.mode_range : bool;
+  _TOP__IM~0.IM_initial : bool;
+  _TOP__IM~0.initial_system_on_implies_idle : bool;
+  _TOP__IM~0.system_on_implies_idle : bool;
+  _TOP__IM~0.not_system_on_implies_mode_0 : bool;
+  _TOP__IM~0.mode_0_1_implies_flow_rate_0 : bool;
+  _TOP__IM~0.alarm_L4_implies_flow_rate_zero : bool;
+  _TOP__IM~0.alarm_L3_implies_flow_rate_kvo : bool;
+  _TOP__IM~0.alarm_L2_implies_no_bolus : bool;
+  _TOP__IM~0.infusion_cancel_implies_flow_0 : bool;
+  _TOP__IM~0.infusion_pause_implies_flow_kvo : bool;
+  _TOP__IM~0.no_config_implies_mode_1 : bool;
+  _TOP__IM~0.no_patient_request_imples_no_pbolus : bool;
+  _TOP__IM~0.infusion_initiation_requires_prescription : bool;
+  _TOP__IM~0.basal_fr : bool;
+  _TOP__IM~0.Patient_Bolus_Delivered_Count : int;
+  _TOP__IM~0.ignore_patient_bolus_request : bool;
+  _TOP__IM~0.infusion_complete_implies_idle : bool;
+  _TOP__IM~0.infusion_inhibit_implies_paused : bool;
+  _TOP__IM~0.basal_transition_to_pbolus : bool;
+  _TOP__IM~0.sbolus_transition_to_pbolus : bool;
+  _TOP__IM~0.transition_to_pbolus : bool;
+  _TOP__IM~0.IM_OUT.Actual_Infusion_Duration : int;
+  _TOP__IM~0.IM_OUT.Commanded_Flow_Rate : int;
+  _TOP__IM~0.IM_OUT.Current_System_Mode : int;
+  _TOP__IM~0.IM_OUT.Is_Locked_Out : bool;
+  _TOP__IM~0.IM_OUT.New_Infusion : bool;
+  _TOP__IM~0.__ASSERT : bool;
+  _TOP__IM~0.__ASSUME__HIST : bool;
+  _TOP__IM~0.__ASSUME__CONJ : bool;
+  _TOP__IM~0.__IM__PROP__0 : bool;
+  _TOP__IM~0.__IM__PROP__1 : bool;
+  _TOP__IM~0.__IM__PROP__2 : bool;
+  _TOP__IM~0.__IM__PROP__3 : bool;
+  _TOP__IM~0.__IM__PROP__4 : bool;
+  _TOP__IM~0.__IM__PROP__5 : bool;
+  _TOP__IM~0.__IM__PROP__6 : bool;
+  _TOP__IM~0.__IM__PROP__7 : bool;
+  _TOP__IM~0.__IM__PROP__8 : bool;
+  _TOP__IM~0.__IM__PROP__9 : bool;
+  _TOP__IM~0.__IM__PROP__10 : bool;
+  _TOP__IM~0.__IM__PROP__11 : bool;
+  _TOP__IM~0.__IM__PROP__12 : bool;
+  _TOP__IM~0.__IM__PROP__13 : bool;
+  _TOP__IM~0.__IM__PROP__14 : bool;
+  _TOP__IM~0.__IM__PROP__15 : bool;
+  _TOP__IM~0.__IM__PROP__16 : bool;
+  _TOP__IM~0.__IM__PROP__17 : bool;
+  _TOP__IM~0.__IM__PROP__18 : bool;
+  _TOP__IM~0.__IM__PROP__19 : bool;
+  _TOP__IM~0.__IM__ASSERT__0 : bool;
+  _TOP__IM~0.__IM__ASSERT__1 : bool;
+  _TOP__IM~0.__IM__ASSERT__2 : bool;
+  _TOP__IM~0.__IM__ASSERT__3 : bool;
+  _TOP__IM~0.__IM__ASSERT__4 : bool;
+  _TOP__IM~0.__IM__ASSERT__5 : bool;
+  _TOP__IM~0.__IM__ASSERT__6 : bool;
+  _TOP__IM~0.__IM__ASSERT__7 : bool;
+  _TOP__IM~0.__IM__ASSERT__8 : bool;
+  _TOP__IM~0.__IM__ASSERT__9 : bool;
+  _TOP__IM~0.__IM__ASSERT__10 : bool;
+  _TOP__IM~0.__IM__ASSERT__11 : bool;
+  _TOP__IM~0.__IM__ASSERT__12 : bool;
+  _TOP__IM~0.__IM__ASSERT__13 : bool;
+  _TOP__IM~0.__IM__ASSERT__14 : bool;
+  _TOP__IM~0.__IM__ASSERT__15 : bool;
+  _TOP__IM~0.__IM__ASSERT__16 : bool;
+  _TOP__IM~0.__IM__ASSERT__17 : bool;
+  _TOP__IM~0.__IM__ASSERT__18 : bool;
+  _TOP__IM~0.__IM__ASSERT__19 : bool;
+  _TOP__IM~0.__IM__ASSERT__20 : bool;
+  _TOP__IM~0.__IM__ASSERT__21 : bool;
+  _TOP__OUTPUT~0.TLM_MODE_IN.Request_Confirm_Stop : bool;
+  _TOP__OUTPUT~0.SYS_STAT_IN.Reservoir_Volume : int;
+  _TOP__OUTPUT~0.SYS_STAT_IN.Volume_Infused : int;
+  _TOP__OUTPUT~0.ALARM_IN.Audio_Notification_Command : int;
+  _TOP__OUTPUT~0.ALARM_IN.Is_Audio_Disabled : int;
+  _TOP__OUTPUT~0.ALARM_IN.Notification_Message : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Configured : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Drug_Concentration : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Drug_Name : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Duration_Intermittent_Bolus : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Duration_Patient_Bolus : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Entered_Reservoir_Volume : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Error_Message_ID : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Basal : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Intermittent_Bolus : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_KVO : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Patient_Bolus : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Infusion_Total_Duration : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Interval_Intermittent_Bolus : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Lockout_Period_Patient_Bolus : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Max_Number_of_Patient_Bolus : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Patient_ID : int;
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Config_Type : bool;
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Confirm_Infusion_Initiate : bool;
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Infusion_Info : bool;
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Patient_Drug_Info : bool;
+  _TOP__OUTPUT~0.CONFIG_IN.VTBI_Total : int;
+  _TOP__OUTPUT~0.IM_IN.Actual_Infusion_Duration : int;
+  _TOP__OUTPUT~0.IM_IN.Commanded_Flow_Rate : int;
+  _TOP__OUTPUT~0.IM_IN.Current_System_Mode : int;
+  _TOP__OUTPUT~0.IM_IN.Is_Locked_Out : bool;
+  _TOP__OUTPUT~0.IM_IN.New_Infusion : bool;
+  _TOP__OUTPUT~0.LOG_IN.Log : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Actual_Infusion_Duration : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Audio_Notification_Command : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Commanded_Flow_Rate : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Configured : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Current_System_Mode : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Drug_Concentration : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Drug_Name : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Duration_Intermittent_Bolus : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Duration_Patient_Bolus : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Entered_Reservoir_Volume : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Error_Message_ID : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Basal : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_KVO : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Patient_Bolus : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Infusion_Total_Duration : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Interval_Intermittent_Bolus : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Is_Audio_Disabled : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Is_Locked_Out : bool;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Lockout_Period_Patient_Bolus : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Log : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Max_Number_of_Patient_Bolus : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.New_Infusion : bool;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Notification_Message : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Patient_ID : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Config_Type : bool;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Confirm_Infusion_Initiate : bool;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Confirm_Stop : bool;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Infusion_Info : bool;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Patient_Drug_Info : bool;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Reservoir_Volume : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.VTBI_Total : int;
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Volume_Infused : int;
+  _TOP__OUTPUT~0.__ASSERT : bool;
+  _TOP__OUTPUT~0.__ASSUME__HIST : bool;
+  _TOP__OUTPUT~0.__ASSUME__CONJ : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__0 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__1 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__2 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__3 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__4 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__5 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__6 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__7 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__8 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__9 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__10 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__11 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__12 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__13 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__14 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__15 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__16 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__17 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__18 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__19 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__20 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__21 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__22 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__23 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__24 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__25 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__26 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__27 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__28 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__29 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__30 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__31 : bool;
+  _TOP__OUTPUT~0.__OUTPUT__PROP__32 : bool;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.actual_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.desired_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.tol : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.over : bool;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.actual_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.desired_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.tol : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.over : bool;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.actual_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.desired_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.tol : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.under : bool;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.actual_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.desired_flow_rate : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.tol : int;
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.under : bool;
+  _TOP__IM~0.DEFS__is_therapy~0.mode : int;
+  _TOP__IM~0.DEFS__is_therapy~0._outvar : bool;
+  _TOP__IM~0.DEFS__is_active~0.mode : int;
+  _TOP__IM~0.DEFS__is_active~0._outvar : bool;
+  DEFS__Is_Infusion_below_tolerance~0.actual_flow_rate : int;
+  DEFS__Is_Infusion_below_tolerance~0.desired_flow_rate : int;
+  DEFS__Is_Infusion_below_tolerance~0.tol : int;
+  DEFS__Is_Infusion_below_tolerance~0.under : bool;
+  DEFS__Is_Infusion_below_tolerance~1.actual_flow_rate : int;
+  DEFS__Is_Infusion_below_tolerance~1.desired_flow_rate : int;
+  DEFS__Is_Infusion_below_tolerance~1.tol : int;
+  DEFS__Is_Infusion_below_tolerance~1.under : bool;
+  DEFS__Is_Infusion_above_tolerance~0.actual_flow_rate : int;
+  DEFS__Is_Infusion_above_tolerance~0.desired_flow_rate : int;
+  DEFS__Is_Infusion_above_tolerance~0.tol : int;
+  DEFS__Is_Infusion_above_tolerance~0.over : bool;
+  DEFS__Is_Infusion_above_tolerance~1.actual_flow_rate : int;
+  DEFS__Is_Infusion_above_tolerance~1.desired_flow_rate : int;
+  DEFS__Is_Infusion_above_tolerance~1.tol : int;
+  DEFS__Is_Infusion_above_tolerance~1.over : bool;
+  DEFS__is_idle~0.mode : int;
+  DEFS__is_idle~0._outvar : bool;
+  DEFS__is_on~0.mode : int;
+  DEFS__is_on~0._outvar : bool;
+  DEFS__is_therapy~0.mode : int;
+  DEFS__is_therapy~0._outvar : bool;
+  DEFS__is_active~0.mode : int;
+  DEFS__is_active~0._outvar : bool;
+let
+  --%MAIN;
+  _TOP__TLM~0.OP_CMD_IN.System_Start = TLM__OP_CMD_IN.System_Start;
+
+  _TOP__TLM~0.OP_CMD_IN.System_Stop = TLM__OP_CMD_IN.System_Stop;
+
+  _TOP__TLM~0.system_start_implies_system_on = TLM__system_start_implies_system_on;
+
+  _TOP__TLM~0.not_system_start_implies_system_off = TLM__not_system_start_implies_system_off;
+
+  _TOP__TLM~0.system_stop_implies_not_system_on = TLM__system_stop_implies_not_system_on;
+
+  _TOP__TLM~0.TLM_MODE_OUT.System_On = TLM__TLM_MODE_OUT.System_On;
+
+  _TOP__TLM~0.__ASSUME__CONJ = true;
+
+  _TOP__TLM~0.__ASSUME__HIST = (_TOP__TLM~0.__ASSUME__CONJ -> ((pre _TOP__TLM~0.__ASSUME__HIST) and _TOP__TLM~0.__ASSUME__CONJ));
+
+  _TOP__TLM~0.__TLM__PROP__0 = _TOP__TLM~0.system_start_implies_system_on;
+
+  _TOP__TLM~0.__TLM__PROP__1 = _TOP__TLM~0.not_system_start_implies_system_off;
+
+  _TOP__TLM~0.__TLM__PROP__2 = _TOP__TLM~0.system_stop_implies_not_system_on;
+
+  _TOP__TLM~0.__TLM__ASSERT__0 = (_TOP__TLM~0.system_start_implies_system_on = (_TOP__TLM~0.OP_CMD_IN.System_Start => _TOP__TLM~0.TLM_MODE_OUT.System_On));
+
+  _TOP__TLM~0.__TLM__ASSERT__1 = (_TOP__TLM~0.not_system_start_implies_system_off = ((not _TOP__TLM~0.OP_CMD_IN.System_Start) => (not _TOP__TLM~0.TLM_MODE_OUT.System_On)));
+
+  _TOP__TLM~0.__TLM__ASSERT__2 = (_TOP__TLM~0.system_stop_implies_not_system_on = (_TOP__TLM~0.OP_CMD_IN.System_Stop => (not _TOP__TLM~0.TLM_MODE_OUT.System_On)));
+
+  _TOP__TLM~0.__ASSERT = (_TOP__TLM~0.__TLM__ASSERT__2 and (_TOP__TLM~0.__TLM__ASSERT__1 and (_TOP__TLM~0.__TLM__ASSERT__0 and ((_TOP__TLM~0.__ASSUME__HIST => (_TOP__TLM~0.__TLM__PROP__2 and (_TOP__TLM~0.__TLM__PROP__1 and (_TOP__TLM~0.__TLM__PROP__0 and true)))) and true))));
+
+  _TOP__SYS_STAT~0.IM_IN.Current_System_Mode = SYS_STAT__IM_IN.Current_System_Mode;
+
+  _TOP__SYS_STAT~0.TLM_MODE_IN.System_On = SYS_STAT__TLM_MODE_IN.System_On;
+
+  _TOP__SYS_STAT~0.CONST_IN.Empty_Reservoir = SYS_STAT__CONST_IN.Empty_Reservoir;
+
+  _TOP__SYS_STAT~0.empty_reservoir_condition = SYS_STAT__empty_reservoir_condition;
+
+  _TOP__SYS_STAT~0.empty_reservoir_exclusive = SYS_STAT__empty_reservoir_exclusive;
+
+  _TOP__SYS_STAT~0.mode_grt_1_implies_In_Therapy = SYS_STAT__mode_grt_1_implies_In_Therapy;
+
+  _TOP__SYS_STAT~0.mode_not_grt_1_implies_not_In_Therapy = SYS_STAT__mode_not_grt_1_implies_not_In_Therapy;
+
+  _TOP__SYS_STAT~0.SYS_STAT_OUT.In_Therapy = SYS_STAT__SYS_STAT_OUT.In_Therapy;
+
+  _TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Empty = SYS_STAT__SYS_STAT_OUT.Reservoir_Empty;
+
+  _TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Volume = SYS_STAT__SYS_STAT_OUT.Reservoir_Volume;
+
+  _TOP__SYS_STAT~0.__ASSUME__CONJ = true;
+
+  _TOP__SYS_STAT~0.__ASSUME__HIST = (_TOP__SYS_STAT~0.__ASSUME__CONJ -> ((pre _TOP__SYS_STAT~0.__ASSUME__HIST) and _TOP__SYS_STAT~0.__ASSUME__CONJ));
+
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__0 = _TOP__SYS_STAT~0.empty_reservoir_condition;
+
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__1 = _TOP__SYS_STAT~0.empty_reservoir_exclusive;
+
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__2 = _TOP__SYS_STAT~0.mode_grt_1_implies_In_Therapy;
+
+  _TOP__SYS_STAT~0.__SYS_STAT__PROP__3 = _TOP__SYS_STAT~0.mode_not_grt_1_implies_not_In_Therapy;
+
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__0 = (_TOP__SYS_STAT~0.empty_reservoir_condition = (_TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Empty = (_TOP__SYS_STAT~0.TLM_MODE_IN.System_On and (_TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Volume < _TOP__SYS_STAT~0.CONST_IN.Empty_Reservoir))));
+
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__1 = (_TOP__SYS_STAT~0.empty_reservoir_exclusive = ((_TOP__SYS_STAT~0.TLM_MODE_IN.System_On and _TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Empty) => (_TOP__SYS_STAT~0.SYS_STAT_OUT.Reservoir_Volume < _TOP__SYS_STAT~0.CONST_IN.Empty_Reservoir)));
+
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__2 = (_TOP__SYS_STAT~0.mode_grt_1_implies_In_Therapy = ((_TOP__SYS_STAT~0.TLM_MODE_IN.System_On and (_TOP__SYS_STAT~0.IM_IN.Current_System_Mode > 1)) => _TOP__SYS_STAT~0.SYS_STAT_OUT.In_Therapy));
+
+  _TOP__SYS_STAT~0.__SYS_STAT__ASSERT__3 = (_TOP__SYS_STAT~0.mode_not_grt_1_implies_not_In_Therapy = ((_TOP__SYS_STAT~0.TLM_MODE_IN.System_On and (not (_TOP__SYS_STAT~0.IM_IN.Current_System_Mode > 1))) => (not _TOP__SYS_STAT~0.SYS_STAT_OUT.In_Therapy)));
+
+  _TOP__SYS_STAT~0.__ASSERT = (_TOP__SYS_STAT~0.__SYS_STAT__ASSERT__3 and (_TOP__SYS_STAT~0.__SYS_STAT__ASSERT__2 and (_TOP__SYS_STAT~0.__SYS_STAT__ASSERT__1 and (_TOP__SYS_STAT~0.__SYS_STAT__ASSERT__0 and ((_TOP__SYS_STAT~0.__ASSUME__HIST => (_TOP__SYS_STAT~0.__SYS_STAT__PROP__3 and (_TOP__SYS_STAT~0.__SYS_STAT__PROP__2 and (_TOP__SYS_STAT~0.__SYS_STAT__PROP__1 and (_TOP__SYS_STAT~0.__SYS_STAT__PROP__0 and true))))) and true)))));
+
+  _TOP__ALARM~0.IM_IN.Commanded_Flow_Rate = ALARM__IM_IN.Commanded_Flow_Rate;
+
+  _TOP__ALARM~0.IM_IN.Current_System_Mode = ALARM__IM_IN.Current_System_Mode;
+
+  _TOP__ALARM~0.TLM_MODE_IN.System_On = ALARM__TLM_MODE_IN.System_On;
+
+  _TOP__ALARM~0.OP_CMD_IN.Disable_Audio = ALARM__OP_CMD_IN.Disable_Audio;
+
+  _TOP__ALARM~0.DB_IN.Flow_Rate_High = ALARM__DB_IN.Flow_Rate_High;
+
+  _TOP__ALARM~0.DB_IN.Flow_Rate_Low = ALARM__DB_IN.Flow_Rate_Low;
+
+  _TOP__ALARM~0.DB_IN.VTBI_High = ALARM__DB_IN.VTBI_High;
+
+  _TOP__ALARM~0.SENSOR_IN.Air_In_Line = ALARM__SENSOR_IN.Air_In_Line;
+
+  _TOP__ALARM~0.SENSOR_IN.Air_Pressure = ALARM__SENSOR_IN.Air_Pressure;
+
+  _TOP__ALARM~0.SENSOR_IN.Battery_Depleted = ALARM__SENSOR_IN.Battery_Depleted;
+
+  _TOP__ALARM~0.SENSOR_IN.Battery_Low = ALARM__SENSOR_IN.Battery_Low;
+
+  _TOP__ALARM~0.SENSOR_IN.Battery_Unable_To_Charge = ALARM__SENSOR_IN.Battery_Unable_To_Charge;
+
+  _TOP__ALARM~0.SENSOR_IN.CPU_Error = ALARM__SENSOR_IN.CPU_Error;
+
+  _TOP__ALARM~0.SENSOR_IN.Door_Open = ALARM__SENSOR_IN.Door_Open;
+
+  _TOP__ALARM~0.SENSOR_IN.Flow_Rate = ALARM__SENSOR_IN.Flow_Rate;
+
+  _TOP__ALARM~0.SENSOR_IN.Flow_Rate_Not_Stable = ALARM__SENSOR_IN.Flow_Rate_Not_Stable;
+
+  _TOP__ALARM~0.SENSOR_IN.Humidity = ALARM__SENSOR_IN.Humidity;
+
+  _TOP__ALARM~0.SENSOR_IN.Memory_Corrupted = ALARM__SENSOR_IN.Memory_Corrupted;
+
+  _TOP__ALARM~0.SENSOR_IN.Occlusion = ALARM__SENSOR_IN.Occlusion;
+
+  _TOP__ALARM~0.SENSOR_IN.Pump_Overheated = ALARM__SENSOR_IN.Pump_Overheated;
+
+  _TOP__ALARM~0.SENSOR_IN.Pump_Too_Hot = ALARM__SENSOR_IN.Pump_Too_Hot;
+
+  _TOP__ALARM~0.SENSOR_IN.RTC_Error = ALARM__SENSOR_IN.RTC_Error;
+
+  _TOP__ALARM~0.SENSOR_IN.Supply_Voltage = ALARM__SENSOR_IN.Supply_Voltage;
+
+  _TOP__ALARM~0.SENSOR_IN.Temp = ALARM__SENSOR_IN.Temp;
+
+  _TOP__ALARM~0.SENSOR_IN.Watchdog_Interrupted = ALARM__SENSOR_IN.Watchdog_Interrupted;
+
+  _TOP__ALARM~0.CONST_IN.Audio_Level = ALARM__CONST_IN.Audio_Level;
+
+  _TOP__ALARM~0.CONST_IN.Config_Warning_Duration = ALARM__CONST_IN.Config_Warning_Duration;
+
+  _TOP__ALARM~0.CONST_IN.Low_Reservoir = ALARM__CONST_IN.Low_Reservoir;
+
+  _TOP__ALARM~0.CONST_IN.Max_Duration_Over_Infusion = ALARM__CONST_IN.Max_Duration_Over_Infusion;
+
+  _TOP__ALARM~0.CONST_IN.Max_Duration_Under_Infusion = ALARM__CONST_IN.Max_Duration_Under_Infusion;
+
+  _TOP__ALARM~0.CONST_IN.Max_Idle_Duration = ALARM__CONST_IN.Max_Idle_Duration;
+
+  _TOP__ALARM~0.CONST_IN.Max_Paused_Duration = ALARM__CONST_IN.Max_Paused_Duration;
+
+  _TOP__ALARM~0.CONST_IN.Tolerance_Max = ALARM__CONST_IN.Tolerance_Max;
+
+  _TOP__ALARM~0.CONST_IN.Tolerance_Min = ALARM__CONST_IN.Tolerance_Min;
+
+  _TOP__ALARM~0.SYS_STAT_IN.In_Therapy = ALARM__SYS_STAT_IN.In_Therapy;
+
+  _TOP__ALARM~0.SYS_STAT_IN.Reservoir_Empty = ALARM__SYS_STAT_IN.Reservoir_Empty;
+
+  _TOP__ALARM~0.SYS_STAT_IN.Reservoir_Volume = ALARM__SYS_STAT_IN.Reservoir_Volume;
+
+  _TOP__ALARM~0.SYS_STAT_IN.Volume_Infused = ALARM__SYS_STAT_IN.Volume_Infused;
+
+  _TOP__ALARM~0.CONFIG_IN.Configured = ALARM__CONFIG_IN.Configured;
+
+  _TOP__ALARM~0.ALM_Initial = ALARM__ALM_Initial;
+
+  _TOP__ALARM~0.level_4_alarm = ALARM__level_4_alarm;
+
+  _TOP__ALARM~0.Time_FR_Over_Min_Tol = ALARM__Time_FR_Over_Min_Tol;
+
+  _TOP__ALARM~0.Is_Over_Infusion = ALARM__Is_Over_Infusion;
+
+  _TOP__ALARM~0.level_3_alarm = ALARM__level_3_alarm;
+
+  _TOP__ALARM~0.low_reservoiur = ALARM__low_reservoiur;
+
+  _TOP__ALARM~0.level_2_alarm = ALARM__level_2_alarm;
+
+  _TOP__ALARM~0.Time_FR_Under_Min_Tol = ALARM__Time_FR_Under_Min_Tol;
+
+  _TOP__ALARM~0.is_under_infusion = ALARM__is_under_infusion;
+
+  _TOP__ALARM~0.level_1_alarm = ALARM__level_1_alarm;
+
+  _TOP__ALARM~0.Paused_Time_Counter = ALARM__Paused_Time_Counter;
+
+  _TOP__ALARM~0.Idle_Time_Counter = ALARM__Idle_Time_Counter;
+
+  _TOP__ALARM~0.Config_Timer = ALARM__Config_Timer;
+
+  _TOP__ALARM~0.alarm_range = ALARM__alarm_range;
+
+  _TOP__ALARM~0.level4_conditions_implies_highest_level_4 = ALARM__level4_conditions_implies_highest_level_4;
+
+  _TOP__ALARM~0.level3_conditions_implies_highest_level_3 = ALARM__level3_conditions_implies_highest_level_3;
+
+  _TOP__ALARM~0.level2_conditions_implies_highest_level_2 = ALARM__level2_conditions_implies_highest_level_2;
+
+  _TOP__ALARM~0.level1_conditions_implies_highest_level_1 = ALARM__level1_conditions_implies_highest_level_1;
+
+  _TOP__ALARM~0.no_conditions_implies_highest_level_0 = ALARM__no_conditions_implies_highest_level_0;
+
+  _TOP__ALARM~0.alarm_gte_L3_causes_audio_output_EQ_audio_level = ALARM__alarm_gte_L3_causes_audio_output_EQ_audio_level;
+
+  _TOP__ALARM~0.no_audio_if_audio_disabled = ALARM__no_audio_if_audio_disabled;
+
+  _TOP__ALARM~0.alarm_gt_3_no_audio_disable_implies_audio = ALARM__alarm_gt_3_no_audio_disable_implies_audio;
+
+  _TOP__ALARM~0.empty_reservoir_implies_visual_1 = ALARM__empty_reservoir_implies_visual_1;
+
+  _TOP__ALARM~0.patient_bolus_counter = ALARM__patient_bolus_counter;
+
+  _TOP__ALARM~0.alarm_3_or_4_implies_audio = ALARM__alarm_3_or_4_implies_audio;
+
+  _TOP__ALARM~0.level_4_alarm_visual = ALARM__level_4_alarm_visual;
+
+  _TOP__ALARM~0.emptry_res_visual_implies_error = ALARM__emptry_res_visual_implies_error;
+
+  _TOP__ALARM~0.enviro_visual_implies_error = ALARM__enviro_visual_implies_error;
+
+  _TOP__ALARM~0.hardware_visual_implies_error = ALARM__hardware_visual_implies_error;
+
+  _TOP__ALARM~0.level_3_alarm_visual = ALARM__level_3_alarm_visual;
+
+  _TOP__ALARM~0.over_fr_visual_implies_error = ALARM__over_fr_visual_implies_error;
+
+  _TOP__ALARM~0.over_vtbi_visual_implies_error = ALARM__over_vtbi_visual_implies_error;
+
+  _TOP__ALARM~0.air_visual_implies_error = ALARM__air_visual_implies_error;
+
+  _TOP__ALARM~0.occlusion_visual_implies_error = ALARM__occlusion_visual_implies_error;
+
+  _TOP__ALARM~0.door_visual_implies_error = ALARM__door_visual_implies_error;
+
+  _TOP__ALARM~0.level_2_alarm_visual = ALARM__level_2_alarm_visual;
+
+  _TOP__ALARM~0.low_res_visial_implies_error = ALARM__low_res_visial_implies_error;
+
+  _TOP__ALARM~0.level_1_alarm_visual = ALARM__level_1_alarm_visual;
+
+  _TOP__ALARM~0.under_fr_visual_implies_error = ALARM__under_fr_visual_implies_error;
+
+  _TOP__ALARM~0.unstable_fr_visual_implies_error = ALARM__unstable_fr_visual_implies_error;
+
+  _TOP__ALARM~0.idle_time_visual_implies_error = ALARM__idle_time_visual_implies_error;
+
+  _TOP__ALARM~0.pause_time_visual_implies_error = ALARM__pause_time_visual_implies_error;
+
+  _TOP__ALARM~0.config_time_visual_implies_error = ALARM__config_time_visual_implies_error;
+
+  _TOP__ALARM~0.battery_visual_implies_error = ALARM__battery_visual_implies_error;
+
+  _TOP__ALARM~0.pump_hot_visual_implies_error = ALARM__pump_hot_visual_implies_error;
+
+  _TOP__ALARM~0.not_system_on_implies_no_alarm = ALARM__not_system_on_implies_no_alarm;
+
+  _TOP__ALARM~0.ALARM_OUT.Audio_Notification_Command = ALARM__ALARM_OUT.Audio_Notification_Command;
+
+  _TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = ALARM__ALARM_OUT.Highest_Level_Alarm;
+
+  _TOP__ALARM~0.ALARM_OUT.Is_Audio_Disabled = ALARM__ALARM_OUT.Is_Audio_Disabled;
+
+  _TOP__ALARM~0.ALARM_OUT.Notification_Message = ALARM__ALARM_OUT.Notification_Message;
+
+  _TOP__ALARM~0.__ASSUME__CONJ = true;
+
+  _TOP__ALARM~0.__ASSUME__HIST = (_TOP__ALARM~0.__ASSUME__CONJ -> ((pre _TOP__ALARM~0.__ASSUME__HIST) and _TOP__ALARM~0.__ASSUME__CONJ));
+
+  _TOP__ALARM~0.__ALARM__PROP__0 = _TOP__ALARM~0.alarm_range;
+
+  _TOP__ALARM~0.__ALARM__PROP__1 = _TOP__ALARM~0.level4_conditions_implies_highest_level_4;
+
+  _TOP__ALARM~0.__ALARM__PROP__2 = _TOP__ALARM~0.level3_conditions_implies_highest_level_3;
+
+  _TOP__ALARM~0.__ALARM__PROP__3 = _TOP__ALARM~0.level2_conditions_implies_highest_level_2;
+
+  _TOP__ALARM~0.__ALARM__PROP__4 = _TOP__ALARM~0.level1_conditions_implies_highest_level_1;
+
+  _TOP__ALARM~0.__ALARM__PROP__5 = _TOP__ALARM~0.no_conditions_implies_highest_level_0;
+
+  _TOP__ALARM~0.__ALARM__PROP__6 = _TOP__ALARM~0.alarm_gte_L3_causes_audio_output_EQ_audio_level;
+
+  _TOP__ALARM~0.__ALARM__PROP__7 = _TOP__ALARM~0.no_audio_if_audio_disabled;
+
+  _TOP__ALARM~0.__ALARM__PROP__8 = _TOP__ALARM~0.alarm_gt_3_no_audio_disable_implies_audio;
+
+  _TOP__ALARM~0.__ALARM__PROP__9 = _TOP__ALARM~0.empty_reservoir_implies_visual_1;
+
+  _TOP__ALARM~0.__ALARM__PROP__10 = _TOP__ALARM~0.alarm_3_or_4_implies_audio;
+
+  _TOP__ALARM~0.__ALARM__PROP__11 = _TOP__ALARM~0.level_4_alarm_visual;
+
+  _TOP__ALARM~0.__ALARM__PROP__12 = _TOP__ALARM~0.emptry_res_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__13 = _TOP__ALARM~0.enviro_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__14 = _TOP__ALARM~0.hardware_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__15 = _TOP__ALARM~0.level_3_alarm_visual;
+
+  _TOP__ALARM~0.__ALARM__PROP__16 = _TOP__ALARM~0.over_fr_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__17 = _TOP__ALARM~0.over_vtbi_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__18 = _TOP__ALARM~0.air_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__19 = _TOP__ALARM~0.occlusion_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__20 = _TOP__ALARM~0.door_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__21 = _TOP__ALARM~0.level_2_alarm_visual;
+
+  _TOP__ALARM~0.__ALARM__PROP__22 = _TOP__ALARM~0.low_res_visial_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__23 = _TOP__ALARM~0.level_1_alarm_visual;
+
+  _TOP__ALARM~0.__ALARM__PROP__24 = _TOP__ALARM~0.under_fr_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__25 = _TOP__ALARM~0.unstable_fr_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__26 = _TOP__ALARM~0.idle_time_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__27 = _TOP__ALARM~0.pause_time_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__28 = _TOP__ALARM~0.config_time_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__29 = _TOP__ALARM~0.battery_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__30 = _TOP__ALARM~0.pump_hot_visual_implies_error;
+
+  _TOP__ALARM~0.__ALARM__PROP__31 = _TOP__ALARM~0.not_system_on_implies_no_alarm;
+
+  _TOP__ALARM~0.__ALARM__ASSERT__0 = (_TOP__ALARM~0.ALM_Initial = (true -> false));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__1 = (_TOP__ALARM~0.level_4_alarm = (_TOP__ALARM~0.TLM_MODE_IN.System_On and ((((((((((_TOP__ALARM~0.SYS_STAT_IN.Reservoir_Empty and _TOP__ALARM~0.SYS_STAT_IN.In_Therapy) or _TOP__ALARM~0.SENSOR_IN.Temp) or _TOP__ALARM~0.SENSOR_IN.Air_Pressure) or _TOP__ALARM~0.SENSOR_IN.Humidity) or _TOP__ALARM~0.SENSOR_IN.CPU_Error) or _TOP__ALARM~0.SENSOR_IN.Battery_Depleted) or _TOP__ALARM~0.SENSOR_IN.RTC_Error) or _TOP__ALARM~0.SENSOR_IN.Memory_Corrupted) or _TOP__ALARM~0.SENSOR_IN.Pump_Too_Hot) or _TOP__ALARM~0.SENSOR_IN.Watchdog_Interrupted)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__2 = (_TOP__ALARM~0.Time_FR_Over_Min_Tol = (0 -> (if _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.over then ((pre _TOP__ALARM~0.Time_FR_Over_Min_Tol) + 1) else 0)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__3 = (_TOP__ALARM~0.Is_Over_Infusion = (false -> (((_TOP__ALARM~0.CONST_IN.Max_Duration_Over_Infusion < _TOP__ALARM~0.Time_FR_Over_Min_Tol) or _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.over) or (_TOP__ALARM~0.SENSOR_IN.Flow_Rate > _TOP__ALARM~0.DB_IN.Flow_Rate_High))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__4 = (_TOP__ALARM~0.level_3_alarm = (_TOP__ALARM~0.TLM_MODE_IN.System_On and ((((((_TOP__ALARM~0.SYS_STAT_IN.Volume_Infused > _TOP__ALARM~0.DB_IN.VTBI_High) and _TOP__ALARM~0.SYS_STAT_IN.In_Therapy) or _TOP__ALARM~0.SENSOR_IN.Air_In_Line) or _TOP__ALARM~0.SENSOR_IN.Occlusion) or _TOP__ALARM~0.SENSOR_IN.Door_Open) or _TOP__ALARM~0.Is_Over_Infusion)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__5 = (_TOP__ALARM~0.low_reservoiur = (false -> ((_TOP__ALARM~0.TLM_MODE_IN.System_On and _TOP__ALARM~0.SYS_STAT_IN.In_Therapy) and (_TOP__ALARM~0.SYS_STAT_IN.Reservoir_Volume < _TOP__ALARM~0.CONST_IN.Low_Reservoir))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__6 = (_TOP__ALARM~0.level_2_alarm = (false -> _TOP__ALARM~0.low_reservoiur));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__7 = (_TOP__ALARM~0.Time_FR_Under_Min_Tol = (0 -> (if _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.under then ((pre _TOP__ALARM~0.Time_FR_Under_Min_Tol) + 1) else 0)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__8 = (_TOP__ALARM~0.is_under_infusion = (((_TOP__ALARM~0.CONST_IN.Max_Duration_Under_Infusion < _TOP__ALARM~0.Time_FR_Under_Min_Tol) or _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.under) or (_TOP__ALARM~0.SENSOR_IN.Flow_Rate < _TOP__ALARM~0.DB_IN.Flow_Rate_Low)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__9 = (_TOP__ALARM~0.level_1_alarm = (_TOP__ALARM~0.TLM_MODE_IN.System_On and ((((((((_TOP__ALARM~0.SENSOR_IN.Pump_Overheated or _TOP__ALARM~0.SENSOR_IN.Supply_Voltage) or _TOP__ALARM~0.SENSOR_IN.Battery_Low) or _TOP__ALARM~0.SENSOR_IN.Battery_Unable_To_Charge) or (_TOP__ALARM~0.SYS_STAT_IN.In_Therapy and _TOP__ALARM~0.SENSOR_IN.Flow_Rate_Not_Stable)) or _TOP__ALARM~0.is_under_infusion) or (_TOP__ALARM~0.Idle_Time_Counter > _TOP__ALARM~0.CONST_IN.Max_Idle_Duration)) or (_TOP__ALARM~0.Paused_Time_Counter > _TOP__ALARM~0.CONST_IN.Max_Paused_Duration)) or (_TOP__ALARM~0.Config_Timer > _TOP__ALARM~0.CONST_IN.Config_Warning_Duration))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__10 = (_TOP__ALARM~0.Paused_Time_Counter = (0 -> (if (((_TOP__ALARM~0.IM_IN.Current_System_Mode = 6) or (_TOP__ALARM~0.IM_IN.Current_System_Mode = 7)) or (_TOP__ALARM~0.IM_IN.Current_System_Mode = 8)) then ((pre _TOP__ALARM~0.Paused_Time_Counter) + 1) else 0)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__11 = (_TOP__ALARM~0.Idle_Time_Counter = (0 -> (if (_TOP__ALARM~0.IM_IN.Current_System_Mode = 1) then ((pre _TOP__ALARM~0.Idle_Time_Counter) + 1) else 0)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__12 = (_TOP__ALARM~0.Config_Timer = (0 -> (if (_TOP__ALARM~0.CONFIG_IN.Configured > 0) then ((pre _TOP__ALARM~0.Config_Timer) + 1) else 0)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__13 = (_TOP__ALARM~0.patient_bolus_counter = (0 -> (if ((_TOP__ALARM~0.IM_IN.Current_System_Mode = 3) and (not ((pre _TOP__ALARM~0.IM_IN.Current_System_Mode) = 3))) then ((pre _TOP__ALARM~0.patient_bolus_counter) + 1) else (pre _TOP__ALARM~0.patient_bolus_counter))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__14 = (_TOP__ALARM~0.alarm_range = (((((_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 1) or (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 2)) or (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 3)) or (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 4)) or (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 0)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__15 = (_TOP__ALARM~0.level4_conditions_implies_highest_level_4 = (_TOP__ALARM~0.level_4_alarm => (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 4)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__16 = (_TOP__ALARM~0.level3_conditions_implies_highest_level_3 = (true -> ((_TOP__ALARM~0.level_3_alarm and (not _TOP__ALARM~0.level_4_alarm)) => (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 3))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__17 = (_TOP__ALARM~0.level2_conditions_implies_highest_level_2 = (true -> (((_TOP__ALARM~0.level_2_alarm and (not _TOP__ALARM~0.level_3_alarm)) and (not _TOP__ALARM~0.level_4_alarm)) => (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 2))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__18 = (_TOP__ALARM~0.level1_conditions_implies_highest_level_1 = (true -> ((((_TOP__ALARM~0.level_1_alarm and (not _TOP__ALARM~0.level_2_alarm)) and (not _TOP__ALARM~0.level_3_alarm)) and (not _TOP__ALARM~0.level_4_alarm)) => (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 1))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__19 = (_TOP__ALARM~0.no_conditions_implies_highest_level_0 = (true -> (((((not _TOP__ALARM~0.level_1_alarm) and (not _TOP__ALARM~0.level_2_alarm)) and (not _TOP__ALARM~0.level_3_alarm)) and (not _TOP__ALARM~0.level_4_alarm)) => (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 0))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__20 = (_TOP__ALARM~0.alarm_gte_L3_causes_audio_output_EQ_audio_level = (((_TOP__ALARM~0.TLM_MODE_IN.System_On and (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm >= 3)) and (_TOP__ALARM~0.OP_CMD_IN.Disable_Audio = 0)) => ((_TOP__ALARM~0.ALARM_OUT.Audio_Notification_Command = _TOP__ALARM~0.CONST_IN.Audio_Level) and (_TOP__ALARM~0.ALARM_OUT.Is_Audio_Disabled = 0))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__21 = (_TOP__ALARM~0.no_audio_if_audio_disabled = ((_TOP__ALARM~0.TLM_MODE_IN.System_On and (_TOP__ALARM~0.OP_CMD_IN.Disable_Audio > 0)) => ((_TOP__ALARM~0.ALARM_OUT.Audio_Notification_Command = 0) and (_TOP__ALARM~0.ALARM_OUT.Is_Audio_Disabled = _TOP__ALARM~0.OP_CMD_IN.Disable_Audio))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__22 = (_TOP__ALARM~0.alarm_gt_3_no_audio_disable_implies_audio = (true -> (((_TOP__ALARM~0.TLM_MODE_IN.System_On and (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm >= 3)) and (_TOP__ALARM~0.OP_CMD_IN.Disable_Audio = 0)) => ((_TOP__ALARM~0.ALARM_OUT.Audio_Notification_Command = _TOP__ALARM~0.CONST_IN.Audio_Level) and (_TOP__ALARM~0.ALARM_OUT.Is_Audio_Disabled = _TOP__ALARM~0.OP_CMD_IN.Disable_Audio)))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__23 = (_TOP__ALARM~0.empty_reservoir_implies_visual_1 = (true -> (((_TOP__ALARM~0.TLM_MODE_IN.System_On and _TOP__ALARM~0.SYS_STAT_IN.In_Therapy) and _TOP__ALARM~0.SYS_STAT_IN.Reservoir_Empty) = (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 1))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__24 = (_TOP__ALARM~0.alarm_3_or_4_implies_audio = (((_TOP__ALARM~0.TLM_MODE_IN.System_On and (_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm >= 3)) and (_TOP__ALARM~0.OP_CMD_IN.Disable_Audio = 0)) => (_TOP__ALARM~0.ALARM_OUT.Audio_Notification_Command = _TOP__ALARM~0.CONST_IN.Audio_Level)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__25 = (_TOP__ALARM~0.level_4_alarm_visual = (true -> (_TOP__ALARM~0.level_4_alarm => (((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 1) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 2)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 3)))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__26 = (_TOP__ALARM~0.emptry_res_visual_implies_error = (true -> (((_TOP__ALARM~0.TLM_MODE_IN.System_On and _TOP__ALARM~0.SYS_STAT_IN.In_Therapy) and _TOP__ALARM~0.SYS_STAT_IN.Reservoir_Empty) => (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 1))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__27 = (_TOP__ALARM~0.enviro_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 2) => ((_TOP__ALARM~0.SENSOR_IN.Temp or _TOP__ALARM~0.SENSOR_IN.Air_Pressure) or _TOP__ALARM~0.SENSOR_IN.Humidity)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__28 = (_TOP__ALARM~0.hardware_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 3) => (((((_TOP__ALARM~0.SENSOR_IN.Battery_Depleted or _TOP__ALARM~0.SENSOR_IN.RTC_Error) or _TOP__ALARM~0.SENSOR_IN.CPU_Error) or _TOP__ALARM~0.SENSOR_IN.Memory_Corrupted) or _TOP__ALARM~0.SENSOR_IN.Pump_Too_Hot) or _TOP__ALARM~0.SENSOR_IN.Watchdog_Interrupted)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__29 = (_TOP__ALARM~0.level_3_alarm_visual = ((_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 3) => (((((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 4) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 5)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 6)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 7)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 8))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__30 = (_TOP__ALARM~0.over_fr_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 4) => _TOP__ALARM~0.Is_Over_Infusion));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__31 = (_TOP__ALARM~0.over_vtbi_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 5) => ((_TOP__ALARM~0.TLM_MODE_IN.System_On and _TOP__ALARM~0.SYS_STAT_IN.In_Therapy) and (_TOP__ALARM~0.SYS_STAT_IN.Volume_Infused > _TOP__ALARM~0.DB_IN.VTBI_High))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__32 = (_TOP__ALARM~0.air_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 6) => _TOP__ALARM~0.SENSOR_IN.Air_In_Line));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__33 = (_TOP__ALARM~0.occlusion_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 7) => _TOP__ALARM~0.SENSOR_IN.Occlusion));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__34 = (_TOP__ALARM~0.door_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 8) => _TOP__ALARM~0.SENSOR_IN.Door_Open));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__35 = (_TOP__ALARM~0.level_2_alarm_visual = (true -> ((_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 2) => (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 9))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__36 = (_TOP__ALARM~0.low_res_visial_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 9) => _TOP__ALARM~0.low_reservoiur));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__37 = (_TOP__ALARM~0.level_1_alarm_visual = (true -> ((_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm = 1) => (((((((((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 10) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 11)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 12)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 13)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 14)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 15)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 16)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 17)) or (_TOP__ALARM~0.ALARM_OUT.Notification_Message = 18)))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__38 = (_TOP__ALARM~0.under_fr_visual_implies_error = (true -> ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 10) => _TOP__ALARM~0.is_under_infusion)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__39 = (_TOP__ALARM~0.unstable_fr_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 11) => ((_TOP__ALARM~0.TLM_MODE_IN.System_On and _TOP__ALARM~0.SYS_STAT_IN.In_Therapy) and _TOP__ALARM~0.SENSOR_IN.Flow_Rate_Not_Stable)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__40 = (_TOP__ALARM~0.idle_time_visual_implies_error = (true -> ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 12) => (_TOP__ALARM~0.Idle_Time_Counter > _TOP__ALARM~0.CONST_IN.Max_Idle_Duration))));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__41 = (_TOP__ALARM~0.pause_time_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 13) => (_TOP__ALARM~0.Paused_Time_Counter > _TOP__ALARM~0.CONST_IN.Max_Paused_Duration)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__42 = (_TOP__ALARM~0.config_time_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 14) => (_TOP__ALARM~0.Config_Timer > _TOP__ALARM~0.CONST_IN.Config_Warning_Duration)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__43 = (_TOP__ALARM~0.battery_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 15) => ((_TOP__ALARM~0.SENSOR_IN.Supply_Voltage or _TOP__ALARM~0.SENSOR_IN.Battery_Low) or _TOP__ALARM~0.SENSOR_IN.Battery_Unable_To_Charge)));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__44 = (_TOP__ALARM~0.pump_hot_visual_implies_error = ((_TOP__ALARM~0.ALARM_OUT.Notification_Message = 16) => _TOP__ALARM~0.SENSOR_IN.Pump_Overheated));
+
+  _TOP__ALARM~0.__ALARM__ASSERT__45 = (_TOP__ALARM~0.not_system_on_implies_no_alarm = ((_TOP__ALARM~0.ALARM_OUT.Highest_Level_Alarm > 0) => _TOP__ALARM~0.TLM_MODE_IN.System_On));
+
+  _TOP__ALARM~0.__ASSERT = (_TOP__ALARM~0.__ALARM__ASSERT__45 and (_TOP__ALARM~0.__ALARM__ASSERT__44 and (_TOP__ALARM~0.__ALARM__ASSERT__43 and (_TOP__ALARM~0.__ALARM__ASSERT__42 and (_TOP__ALARM~0.__ALARM__ASSERT__41 and (_TOP__ALARM~0.__ALARM__ASSERT__40 and (_TOP__ALARM~0.__ALARM__ASSERT__39 and (_TOP__ALARM~0.__ALARM__ASSERT__38 and (_TOP__ALARM~0.__ALARM__ASSERT__37 and (_TOP__ALARM~0.__ALARM__ASSERT__36 and (_TOP__ALARM~0.__ALARM__ASSERT__35 and (_TOP__ALARM~0.__ALARM__ASSERT__34 and (_TOP__ALARM~0.__ALARM__ASSERT__33 and (_TOP__ALARM~0.__ALARM__ASSERT__32 and (_TOP__ALARM~0.__ALARM__ASSERT__31 and (_TOP__ALARM~0.__ALARM__ASSERT__30 and (_TOP__ALARM~0.__ALARM__ASSERT__29 and (_TOP__ALARM~0.__ALARM__ASSERT__28 and (_TOP__ALARM~0.__ALARM__ASSERT__27 and (_TOP__ALARM~0.__ALARM__ASSERT__26 and (_TOP__ALARM~0.__ALARM__ASSERT__25 and (_TOP__ALARM~0.__ALARM__ASSERT__24 and (_TOP__ALARM~0.__ALARM__ASSERT__23 and (_TOP__ALARM~0.__ALARM__ASSERT__22 and (_TOP__ALARM~0.__ALARM__ASSERT__21 and (_TOP__ALARM~0.__ALARM__ASSERT__20 and (_TOP__ALARM~0.__ALARM__ASSERT__19 and (_TOP__ALARM~0.__ALARM__ASSERT__18 and (_TOP__ALARM~0.__ALARM__ASSERT__17 and (_TOP__ALARM~0.__ALARM__ASSERT__16 and (_TOP__ALARM~0.__ALARM__ASSERT__15 and (_TOP__ALARM~0.__ALARM__ASSERT__14 and (_TOP__ALARM~0.__ALARM__ASSERT__13 and (_TOP__ALARM~0.__ALARM__ASSERT__12 and (_TOP__ALARM~0.__ALARM__ASSERT__11 and (_TOP__ALARM~0.__ALARM__ASSERT__10 and (_TOP__ALARM~0.__ALARM__ASSERT__9 and (_TOP__ALARM~0.__ALARM__ASSERT__8 and (_TOP__ALARM~0.__ALARM__ASSERT__7 and (_TOP__ALARM~0.__ALARM__ASSERT__6 and (_TOP__ALARM~0.__ALARM__ASSERT__5 and (_TOP__ALARM~0.__ALARM__ASSERT__4 and (_TOP__ALARM~0.__ALARM__ASSERT__3 and (_TOP__ALARM~0.__ALARM__ASSERT__2 and (_TOP__ALARM~0.__ALARM__ASSERT__1 and (_TOP__ALARM~0.__ALARM__ASSERT__0 and ((_TOP__ALARM~0.__ASSUME__HIST => (_TOP__ALARM~0.__ALARM__PROP__31 and (_TOP__ALARM~0.__ALARM__PROP__30 and (_TOP__ALARM~0.__ALARM__PROP__29 and (_TOP__ALARM~0.__ALARM__PROP__28 and (_TOP__ALARM~0.__ALARM__PROP__27 and (_TOP__ALARM~0.__ALARM__PROP__26 and (_TOP__ALARM~0.__ALARM__PROP__25 and (_TOP__ALARM~0.__ALARM__PROP__24 and (_TOP__ALARM~0.__ALARM__PROP__23 and (_TOP__ALARM~0.__ALARM__PROP__22 and (_TOP__ALARM~0.__ALARM__PROP__21 and (_TOP__ALARM~0.__ALARM__PROP__20 and (_TOP__ALARM~0.__ALARM__PROP__19 and (_TOP__ALARM~0.__ALARM__PROP__18 and (_TOP__ALARM~0.__ALARM__PROP__17 and (_TOP__ALARM~0.__ALARM__PROP__16 and (_TOP__ALARM~0.__ALARM__PROP__15 and (_TOP__ALARM~0.__ALARM__PROP__14 and (_TOP__ALARM~0.__ALARM__PROP__13 and (_TOP__ALARM~0.__ALARM__PROP__12 and (_TOP__ALARM~0.__ALARM__PROP__11 and (_TOP__ALARM~0.__ALARM__PROP__10 and (_TOP__ALARM~0.__ALARM__PROP__9 and (_TOP__ALARM~0.__ALARM__PROP__8 and (_TOP__ALARM~0.__ALARM__PROP__7 and (_TOP__ALARM~0.__ALARM__PROP__6 and (_TOP__ALARM~0.__ALARM__PROP__5 and (_TOP__ALARM~0.__ALARM__PROP__4 and (_TOP__ALARM~0.__ALARM__PROP__3 and (_TOP__ALARM~0.__ALARM__PROP__2 and (_TOP__ALARM~0.__ALARM__PROP__1 and (_TOP__ALARM~0.__ALARM__PROP__0 and true))))))))))))))))))))))))))))))))) and true)))))))))))))))))))))))))))))))))))))))))))))));
+
+  _TOP__CONFIG~0.TLM_MODE_IN.System_On = CONFIG__TLM_MODE_IN.System_On;
+
+  _TOP__CONFIG~0.PRES_IN.Drug_Concentration = CONFIG__PRES_IN.Drug_Concentration;
+
+  _TOP__CONFIG~0.PRES_IN.Drug_Name = CONFIG__PRES_IN.Drug_Name;
+
+  _TOP__CONFIG~0.PRES_IN.Duration_Intermittent_Bolus = CONFIG__PRES_IN.Duration_Intermittent_Bolus;
+
+  _TOP__CONFIG~0.PRES_IN.Entered_Reservoir_Volume = CONFIG__PRES_IN.Entered_Reservoir_Volume;
+
+  _TOP__CONFIG~0.PRES_IN.Flow_Rate_Basal = CONFIG__PRES_IN.Flow_Rate_Basal;
+
+  _TOP__CONFIG~0.PRES_IN.Flow_Rate_Intermittent_Bolus = CONFIG__PRES_IN.Flow_Rate_Intermittent_Bolus;
+
+  _TOP__CONFIG~0.PRES_IN.Flow_Rate_Patient_Bolus = CONFIG__PRES_IN.Flow_Rate_Patient_Bolus;
+
+  _TOP__CONFIG~0.PRES_IN.Interval_Intermittent_Bolus = CONFIG__PRES_IN.Interval_Intermittent_Bolus;
+
+  _TOP__CONFIG~0.PRES_IN.Max_Number_of_Patient_Bolus = CONFIG__PRES_IN.Max_Number_of_Patient_Bolus;
+
+  _TOP__CONFIG~0.PRES_IN.VTBI_Total = CONFIG__PRES_IN.VTBI_Total;
+
+  _TOP__CONFIG~0.OP_CMD_IN.Data_Config = CONFIG__OP_CMD_IN.Data_Config;
+
+  _TOP__CONFIG~0.DB_IN.Drug_Concentration_High = CONFIG__DB_IN.Drug_Concentration_High;
+
+  _TOP__CONFIG~0.DB_IN.Drug_Concentration_Low = CONFIG__DB_IN.Drug_Concentration_Low;
+
+  _TOP__CONFIG~0.DB_IN.Flow_Rate_High = CONFIG__DB_IN.Flow_Rate_High;
+
+  _TOP__CONFIG~0.DB_IN.Flow_Rate_Low = CONFIG__DB_IN.Flow_Rate_Low;
+
+  _TOP__CONFIG~0.DB_IN.Number_Max_Patient_Bolus = CONFIG__DB_IN.Number_Max_Patient_Bolus;
+
+  _TOP__CONFIG~0.DB_IN.VTBI_High = CONFIG__DB_IN.VTBI_High;
+
+  _TOP__CONFIG~0.DB_IN.VTBI_Low = CONFIG__DB_IN.VTBI_Low;
+
+  _TOP__CONFIG~0.CONST_IN.Empty_Reservoir = CONFIG__CONST_IN.Empty_Reservoir;
+
+  _TOP__CONFIG~0.flow_rate_kvo_gt_0 = CONFIG__flow_rate_kvo_gt_0;
+
+  _TOP__CONFIG~0.config_range = CONFIG__config_range;
+
+  _TOP__CONFIG~0.Infusion_Total_Duration = CONFIG__Infusion_Total_Duration;
+
+  _TOP__CONFIG~0.config_gt_1_implies_values_configured = CONFIG__config_gt_1_implies_values_configured;
+
+  _TOP__CONFIG~0.configuration_type_request = CONFIG__configuration_type_request;
+
+  _TOP__CONFIG~0.validate_configured_patient_drug_info = CONFIG__validate_configured_patient_drug_info;
+
+  _TOP__CONFIG~0.validate_configured_infusion_info = CONFIG__validate_configured_infusion_info;
+
+  _TOP__CONFIG~0.CONFIG_OUT.Configured = CONFIG__CONFIG_OUT.Configured;
+
+  _TOP__CONFIG~0.CONFIG_OUT.Error_Message_ID = CONFIG__CONFIG_OUT.Error_Message_ID;
+
+  _TOP__CONFIG~0.CONFIG_OUT.Flow_Rate_KVO = CONFIG__CONFIG_OUT.Flow_Rate_KVO;
+
+  _TOP__CONFIG~0.CONFIG_OUT.Infusion_Total_Duration = CONFIG__CONFIG_OUT.Infusion_Total_Duration;
+
+  _TOP__CONFIG~0.CONFIG_OUT.Request_Config_Type = CONFIG__CONFIG_OUT.Request_Config_Type;
+
+  _TOP__CONFIG~0.CONFIG_OUT.Request_Patient_Drug_Info = CONFIG__CONFIG_OUT.Request_Patient_Drug_Info;
+
+  _TOP__CONFIG~0.__ASSUME__CONJ = true;
+
+  _TOP__CONFIG~0.__ASSUME__HIST = (_TOP__CONFIG~0.__ASSUME__CONJ -> ((pre _TOP__CONFIG~0.__ASSUME__HIST) and _TOP__CONFIG~0.__ASSUME__CONJ));
+
+  _TOP__CONFIG~0.__CONFIG__PROP__0 = _TOP__CONFIG~0.flow_rate_kvo_gt_0;
+
+  _TOP__CONFIG~0.__CONFIG__PROP__1 = _TOP__CONFIG~0.config_range;
+
+  _TOP__CONFIG~0.__CONFIG__PROP__2 = _TOP__CONFIG~0.Infusion_Total_Duration;
+
+  _TOP__CONFIG~0.__CONFIG__PROP__3 = _TOP__CONFIG~0.config_gt_1_implies_values_configured;
+
+  _TOP__CONFIG~0.__CONFIG__PROP__4 = _TOP__CONFIG~0.configuration_type_request;
+
+  _TOP__CONFIG~0.__CONFIG__PROP__5 = _TOP__CONFIG~0.validate_configured_patient_drug_info;
+
+  _TOP__CONFIG~0.__CONFIG__PROP__6 = _TOP__CONFIG~0.validate_configured_infusion_info;
+
+  _TOP__CONFIG~0.__CONFIG__ASSERT__0 = (_TOP__CONFIG~0.flow_rate_kvo_gt_0 = (_TOP__CONFIG~0.TLM_MODE_IN.System_On => (_TOP__CONFIG~0.CONFIG_OUT.Flow_Rate_KVO > 0)));
+
+  _TOP__CONFIG~0.__CONFIG__ASSERT__1 = (_TOP__CONFIG~0.config_range = (_TOP__CONFIG~0.TLM_MODE_IN.System_On => ((_TOP__CONFIG~0.CONFIG_OUT.Configured >= 0) and (_TOP__CONFIG~0.CONFIG_OUT.Configured <= 3))));
+
+  _TOP__CONFIG~0.__CONFIG__ASSERT__2 = (_TOP__CONFIG~0.Infusion_Total_Duration = (_TOP__CONFIG~0.TLM_MODE_IN.System_On => (_TOP__CONFIG~0.CONFIG_OUT.Infusion_Total_Duration >= 0)));
+
+  _TOP__CONFIG~0.__CONFIG__ASSERT__3 = (_TOP__CONFIG~0.config_gt_1_implies_values_configured = ((_TOP__CONFIG~0.TLM_MODE_IN.System_On and (_TOP__CONFIG~0.CONFIG_OUT.Configured > 0)) => (_TOP__CONFIG~0.CONFIG_OUT.Infusion_Total_Duration > 0)));
+
+  _TOP__CONFIG~0.__CONFIG__ASSERT__4 = (_TOP__CONFIG~0.configuration_type_request = (_TOP__CONFIG~0.OP_CMD_IN.Data_Config => _TOP__CONFIG~0.CONFIG_OUT.Request_Config_Type));
+
+  _TOP__CONFIG~0.__CONFIG__ASSERT__5 = (_TOP__CONFIG~0.validate_configured_patient_drug_info = (((_TOP__CONFIG~0.CONFIG_OUT.Configured = 1) and (((_TOP__CONFIG~0.PRES_IN.Drug_Name = 0) or ((_TOP__CONFIG~0.PRES_IN.Drug_Concentration < _TOP__CONFIG~0.DB_IN.Drug_Concentration_Low) or (_TOP__CONFIG~0.PRES_IN.Drug_Concentration > _TOP__CONFIG~0.DB_IN.Drug_Concentration_High))) or (_TOP__CONFIG~0.PRES_IN.Entered_Reservoir_Volume < _TOP__CONFIG~0.CONST_IN.Empty_Reservoir))) => ((_TOP__CONFIG~0.CONFIG_OUT.Error_Message_ID = 5) and _TOP__CONFIG~0.CONFIG_OUT.Request_Patient_Drug_Info)));
+
+  _TOP__CONFIG~0.__CONFIG__ASSERT__6 = (_TOP__CONFIG~0.validate_configured_infusion_info = (((_TOP__CONFIG~0.CONFIG_OUT.Configured > 0) and ((((((((((((_TOP__CONFIG~0.PRES_IN.VTBI_Total > _TOP__CONFIG~0.DB_IN.VTBI_High) or (_TOP__CONFIG~0.PRES_IN.VTBI_Total < _TOP__CONFIG~0.DB_IN.VTBI_Low)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Basal < _TOP__CONFIG~0.DB_IN.Flow_Rate_Low)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Basal > _TOP__CONFIG~0.DB_IN.Flow_Rate_High)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Intermittent_Bolus < _TOP__CONFIG~0.DB_IN.Flow_Rate_Low)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Intermittent_Bolus > _TOP__CONFIG~0.DB_IN.Flow_Rate_High)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Patient_Bolus < _TOP__CONFIG~0.DB_IN.Flow_Rate_Low)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Patient_Bolus > _TOP__CONFIG~0.DB_IN.Flow_Rate_High)) or (_TOP__CONFIG~0.PRES_IN.Duration_Intermittent_Bolus > _TOP__CONFIG~0.PRES_IN.Interval_Intermittent_Bolus)) or (_TOP__CONFIG~0.PRES_IN.Max_Number_of_Patient_Bolus > _TOP__CONFIG~0.DB_IN.Number_Max_Patient_Bolus)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Intermittent_Bolus < _TOP__CONFIG~0.PRES_IN.Flow_Rate_Basal)) or (_TOP__CONFIG~0.PRES_IN.Flow_Rate_Patient_Bolus < _TOP__CONFIG~0.PRES_IN.Flow_Rate_Basal))) => _TOP__CONFIG~0.CONFIG_OUT.Request_Patient_Drug_Info));
+
+  _TOP__CONFIG~0.__ASSERT = (_TOP__CONFIG~0.__CONFIG__ASSERT__6 and (_TOP__CONFIG~0.__CONFIG__ASSERT__5 and (_TOP__CONFIG~0.__CONFIG__ASSERT__4 and (_TOP__CONFIG~0.__CONFIG__ASSERT__3 and (_TOP__CONFIG~0.__CONFIG__ASSERT__2 and (_TOP__CONFIG~0.__CONFIG__ASSERT__1 and (_TOP__CONFIG~0.__CONFIG__ASSERT__0 and ((_TOP__CONFIG~0.__ASSUME__HIST => (_TOP__CONFIG~0.__CONFIG__PROP__6 and (_TOP__CONFIG~0.__CONFIG__PROP__5 and (_TOP__CONFIG~0.__CONFIG__PROP__4 and (_TOP__CONFIG~0.__CONFIG__PROP__3 and (_TOP__CONFIG~0.__CONFIG__PROP__2 and (_TOP__CONFIG~0.__CONFIG__PROP__1 and (_TOP__CONFIG~0.__CONFIG__PROP__0 and true)))))))) and true))))))));
+
+  _TOP__IM~0.TLM_MODE_IN.System_On = IM__TLM_MODE_IN.System_On;
+
+  _TOP__IM~0.OP_CMD_IN.Infusion_Cancel = IM__OP_CMD_IN.Infusion_Cancel;
+
+  _TOP__IM~0.OP_CMD_IN.Infusion_Inhibit = IM__OP_CMD_IN.Infusion_Inhibit;
+
+  _TOP__IM~0.PATIENT_IN.Patient_Bolus_Request = IM__PATIENT_IN.Patient_Bolus_Request;
+
+  _TOP__IM~0.CONFIG_IN.Configured = IM__CONFIG_IN.Configured;
+
+  _TOP__IM~0.CONFIG_IN.Flow_Rate_Basal = IM__CONFIG_IN.Flow_Rate_Basal;
+
+  _TOP__IM~0.CONFIG_IN.Flow_Rate_KVO = IM__CONFIG_IN.Flow_Rate_KVO;
+
+  _TOP__IM~0.CONFIG_IN.Infusion_Total_Duration = IM__CONFIG_IN.Infusion_Total_Duration;
+
+  _TOP__IM~0.CONFIG_IN.Max_Number_of_Patient_Bolus = IM__CONFIG_IN.Max_Number_of_Patient_Bolus;
+
+  _TOP__IM~0.CONFIG_IN.VTBI_Total = IM__CONFIG_IN.VTBI_Total;
+
+  _TOP__IM~0.ALARM_IN.Highest_Level_Alarm = IM__ALARM_IN.Highest_Level_Alarm;
+
+  _TOP__IM~0.SYS_STAT_IN.In_Therapy = IM__SYS_STAT_IN.In_Therapy;
+
+  _TOP__IM~0.SYS_STAT_IN.Volume_Infused = IM__SYS_STAT_IN.Volume_Infused;
+
+  _TOP__IM~0.mode_range = IM__mode_range;
+
+  _TOP__IM~0.IM_initial = IM__IM_initial;
+
+  _TOP__IM~0.initial_system_on_implies_idle = IM__initial_system_on_implies_idle;
+
+  _TOP__IM~0.system_on_implies_idle = IM__system_on_implies_idle;
+
+  _TOP__IM~0.not_system_on_implies_mode_0 = IM__not_system_on_implies_mode_0;
+
+  _TOP__IM~0.mode_0_1_implies_flow_rate_0 = IM__mode_0_1_implies_flow_rate_0;
+
+  _TOP__IM~0.alarm_L4_implies_flow_rate_zero = IM__alarm_L4_implies_flow_rate_zero;
+
+  _TOP__IM~0.alarm_L3_implies_flow_rate_kvo = IM__alarm_L3_implies_flow_rate_kvo;
+
+  _TOP__IM~0.alarm_L2_implies_no_bolus = IM__alarm_L2_implies_no_bolus;
+
+  _TOP__IM~0.infusion_cancel_implies_flow_0 = IM__infusion_cancel_implies_flow_0;
+
+  _TOP__IM~0.infusion_pause_implies_flow_kvo = IM__infusion_pause_implies_flow_kvo;
+
+  _TOP__IM~0.no_config_implies_mode_1 = IM__no_config_implies_mode_1;
+
+  _TOP__IM~0.no_patient_request_imples_no_pbolus = IM__no_patient_request_imples_no_pbolus;
+
+  _TOP__IM~0.infusion_initiation_requires_prescription = IM__infusion_initiation_requires_prescription;
+
+  _TOP__IM~0.basal_fr = IM__basal_fr;
+
+  _TOP__IM~0.Patient_Bolus_Delivered_Count = IM__Patient_Bolus_Delivered_Count;
+
+  _TOP__IM~0.ignore_patient_bolus_request = IM__ignore_patient_bolus_request;
+
+  _TOP__IM~0.infusion_complete_implies_idle = IM__infusion_complete_implies_idle;
+
+  _TOP__IM~0.infusion_inhibit_implies_paused = IM__infusion_inhibit_implies_paused;
+
+  _TOP__IM~0.basal_transition_to_pbolus = IM__basal_transition_to_pbolus;
+
+  _TOP__IM~0.sbolus_transition_to_pbolus = IM__sbolus_transition_to_pbolus;
+
+  _TOP__IM~0.transition_to_pbolus = IM__transition_to_pbolus;
+
+  _TOP__IM~0.IM_OUT.Actual_Infusion_Duration = IM__IM_OUT.Actual_Infusion_Duration;
+
+  _TOP__IM~0.IM_OUT.Commanded_Flow_Rate = IM__IM_OUT.Commanded_Flow_Rate;
+
+  _TOP__IM~0.IM_OUT.Current_System_Mode = IM__IM_OUT.Current_System_Mode;
+
+  _TOP__IM~0.IM_OUT.Is_Locked_Out = IM__IM_OUT.Is_Locked_Out;
+
+  _TOP__IM~0.IM_OUT.New_Infusion = IM__IM_OUT.New_Infusion;
+
+  _TOP__IM~0.__ASSUME__CONJ = true;
+
+  _TOP__IM~0.__ASSUME__HIST = (_TOP__IM~0.__ASSUME__CONJ -> ((pre _TOP__IM~0.__ASSUME__HIST) and _TOP__IM~0.__ASSUME__CONJ));
+
+  _TOP__IM~0.__IM__PROP__0 = _TOP__IM~0.mode_range;
+
+  _TOP__IM~0.__IM__PROP__1 = _TOP__IM~0.initial_system_on_implies_idle;
+
+  _TOP__IM~0.__IM__PROP__2 = _TOP__IM~0.system_on_implies_idle;
+
+  _TOP__IM~0.__IM__PROP__3 = _TOP__IM~0.not_system_on_implies_mode_0;
+
+  _TOP__IM~0.__IM__PROP__4 = _TOP__IM~0.mode_0_1_implies_flow_rate_0;
+
+  _TOP__IM~0.__IM__PROP__5 = _TOP__IM~0.alarm_L4_implies_flow_rate_zero;
+
+  _TOP__IM~0.__IM__PROP__6 = _TOP__IM~0.alarm_L3_implies_flow_rate_kvo;
+
+  _TOP__IM~0.__IM__PROP__7 = _TOP__IM~0.alarm_L2_implies_no_bolus;
+
+  _TOP__IM~0.__IM__PROP__8 = _TOP__IM~0.infusion_cancel_implies_flow_0;
+
+  _TOP__IM~0.__IM__PROP__9 = _TOP__IM~0.infusion_pause_implies_flow_kvo;
+
+  _TOP__IM~0.__IM__PROP__10 = _TOP__IM~0.no_config_implies_mode_1;
+
+  _TOP__IM~0.__IM__PROP__11 = _TOP__IM~0.no_patient_request_imples_no_pbolus;
+
+  _TOP__IM~0.__IM__PROP__12 = _TOP__IM~0.infusion_initiation_requires_prescription;
+
+  _TOP__IM~0.__IM__PROP__13 = _TOP__IM~0.basal_fr;
+
+  _TOP__IM~0.__IM__PROP__14 = _TOP__IM~0.ignore_patient_bolus_request;
+
+  _TOP__IM~0.__IM__PROP__15 = _TOP__IM~0.infusion_complete_implies_idle;
+
+  _TOP__IM~0.__IM__PROP__16 = _TOP__IM~0.infusion_inhibit_implies_paused;
+
+  _TOP__IM~0.__IM__PROP__17 = _TOP__IM~0.basal_transition_to_pbolus;
+
+  _TOP__IM~0.__IM__PROP__18 = _TOP__IM~0.sbolus_transition_to_pbolus;
+
+  _TOP__IM~0.__IM__PROP__19 = _TOP__IM~0.transition_to_pbolus;
+
+  _TOP__IM~0.__IM__ASSERT__0 = (_TOP__IM~0.IM_initial = (true -> false));
+
+  _TOP__IM~0.__IM__ASSERT__1 = (_TOP__IM~0.Patient_Bolus_Delivered_Count = (0 -> (if ((_TOP__IM~0.IM_OUT.Current_System_Mode = 3) and (not ((pre _TOP__IM~0.IM_OUT.Current_System_Mode) = 3))) then ((pre _TOP__IM~0.Patient_Bolus_Delivered_Count) + 1) else (pre _TOP__IM~0.Patient_Bolus_Delivered_Count))));
+
+  _TOP__IM~0.__IM__ASSERT__2 = (_TOP__IM~0.mode_range = (((((((((_TOP__IM~0.IM_OUT.Current_System_Mode = 0) and (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate = 0)) or ((_TOP__IM~0.IM_OUT.Current_System_Mode = 1) and (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate = 0))) or ((_TOP__IM~0.IM_OUT.Current_System_Mode = 2) and _TOP__IM~0.SYS_STAT_IN.In_Therapy)) or ((_TOP__IM~0.IM_OUT.Current_System_Mode = 3) and _TOP__IM~0.SYS_STAT_IN.In_Therapy)) or ((_TOP__IM~0.IM_OUT.Current_System_Mode = 4) and _TOP__IM~0.SYS_STAT_IN.In_Therapy)) or ((_TOP__IM~0.IM_OUT.Current_System_Mode = 6) and _TOP__IM~0.SYS_STAT_IN.In_Therapy)) or ((_TOP__IM~0.IM_OUT.Current_System_Mode = 7) and _TOP__IM~0.SYS_STAT_IN.In_Therapy)) or (_TOP__IM~0.IM_OUT.Current_System_Mode = 8)));
+
+  _TOP__IM~0.__IM__ASSERT__3 = (_TOP__IM~0.initial_system_on_implies_idle = ((_TOP__IM~0.IM_initial and _TOP__IM~0.TLM_MODE_IN.System_On) => (_TOP__IM~0.IM_OUT.Current_System_Mode = 1)));
+
+  _TOP__IM~0.__IM__ASSERT__4 = (_TOP__IM~0.system_on_implies_idle = ((((not _TOP__IM~0.IM_initial) and ((pre _TOP__IM~0.IM_OUT.Current_System_Mode) = 0)) and _TOP__IM~0.TLM_MODE_IN.System_On) => ((_TOP__IM~0.IM_OUT.Current_System_Mode = 1) and (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate = 0))));
+
+  _TOP__IM~0.__IM__ASSERT__5 = (_TOP__IM~0.not_system_on_implies_mode_0 = ((not _TOP__IM~0.TLM_MODE_IN.System_On) => (_TOP__IM~0.IM_OUT.Current_System_Mode = 0)));
+
+  _TOP__IM~0.__IM__ASSERT__6 = (_TOP__IM~0.mode_0_1_implies_flow_rate_0 = (((not _TOP__IM~0.TLM_MODE_IN.System_On) and (_TOP__IM~0.IM_OUT.Current_System_Mode < 2)) => (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate = 0)));
+
+  _TOP__IM~0.__IM__ASSERT__7 = (_TOP__IM~0.alarm_L4_implies_flow_rate_zero = ((_TOP__IM~0.TLM_MODE_IN.System_On and (_TOP__IM~0.ALARM_IN.Highest_Level_Alarm = 4)) => (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate = 0)));
+
+  _TOP__IM~0.__IM__ASSERT__8 = (_TOP__IM~0.alarm_L3_implies_flow_rate_kvo = (((_TOP__IM~0.TLM_MODE_IN.System_On and (_TOP__IM~0.ALARM_IN.Highest_Level_Alarm = 3)) and _TOP__IM~0.DEFS__is_therapy~0._outvar) => (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate = _TOP__IM~0.CONFIG_IN.Flow_Rate_KVO)));
+
+  _TOP__IM~0.__IM__ASSERT__9 = (_TOP__IM~0.alarm_L2_implies_no_bolus = ((_TOP__IM~0.TLM_MODE_IN.System_On and (_TOP__IM~0.ALARM_IN.Highest_Level_Alarm = 2)) => ((not (_TOP__IM~0.IM_OUT.Current_System_Mode = 3)) or (not (_TOP__IM~0.IM_OUT.Current_System_Mode = 4)))));
+
+  _TOP__IM~0.__IM__ASSERT__10 = (_TOP__IM~0.infusion_cancel_implies_flow_0 = (true -> ((_TOP__IM~0.TLM_MODE_IN.System_On and _TOP__IM~0.OP_CMD_IN.Infusion_Cancel) => (_TOP__IM~0.IM_OUT.Current_System_Mode = 1))));
+
+  _TOP__IM~0.__IM__ASSERT__11 = (_TOP__IM~0.infusion_pause_implies_flow_kvo = (true -> ((((_TOP__IM~0.TLM_MODE_IN.System_On and _TOP__IM~0.OP_CMD_IN.Infusion_Inhibit) and (not (_TOP__IM~0.ALARM_IN.Highest_Level_Alarm = 4))) and _TOP__IM~0.DEFS__is_therapy~0._outvar) => (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate <= _TOP__IM~0.CONFIG_IN.Flow_Rate_KVO))));
+
+  _TOP__IM~0.__IM__ASSERT__12 = (_TOP__IM~0.no_config_implies_mode_1 = ((_TOP__IM~0.TLM_MODE_IN.System_On and (_TOP__IM~0.CONFIG_IN.Configured < 1)) => (_TOP__IM~0.IM_OUT.Current_System_Mode = 1)));
+
+  _TOP__IM~0.__IM__ASSERT__13 = (_TOP__IM~0.no_patient_request_imples_no_pbolus = (((_TOP__IM~0.TLM_MODE_IN.System_On and (not ((pre _TOP__IM~0.IM_OUT.Current_System_Mode) = 3))) and (not _TOP__IM~0.PATIENT_IN.Patient_Bolus_Request)) => (not (_TOP__IM~0.IM_OUT.Current_System_Mode = 3))));
+
+  _TOP__IM~0.__IM__ASSERT__14 = (_TOP__IM~0.infusion_initiation_requires_prescription = (((_TOP__IM~0.IM_OUT.Current_System_Mode >= 1) and _TOP__IM~0.IM_OUT.New_Infusion) => (_TOP__IM~0.CONFIG_IN.Configured > 0)));
+
+  _TOP__IM~0.__IM__ASSERT__15 = (_TOP__IM~0.basal_fr = ((_TOP__IM~0.IM_OUT.Current_System_Mode = 2) => (_TOP__IM~0.IM_OUT.Commanded_Flow_Rate = _TOP__IM~0.CONFIG_IN.Flow_Rate_Basal)));
+
+  _TOP__IM~0.__IM__ASSERT__16 = (_TOP__IM~0.ignore_patient_bolus_request = (true -> ((_TOP__IM~0.PATIENT_IN.Patient_Bolus_Request and ((((_TOP__IM~0.ALARM_IN.Highest_Level_Alarm >= 2) or (_TOP__IM~0.Patient_Bolus_Delivered_Count > _TOP__IM~0.CONFIG_IN.Max_Number_of_Patient_Bolus)) or _TOP__IM~0.IM_OUT.Is_Locked_Out) or ((pre _TOP__IM~0.IM_OUT.Current_System_Mode) = 3))) => (not (_TOP__IM~0.IM_OUT.Current_System_Mode = 3)))));
+
+  _TOP__IM~0.__IM__ASSERT__17 = (_TOP__IM~0.infusion_complete_implies_idle = (true -> ((((_TOP__IM~0.TLM_MODE_IN.System_On and (pre _TOP__IM~0.DEFS__is_active~0._outvar)) and ((_TOP__IM~0.IM_OUT.Actual_Infusion_Duration >= _TOP__IM~0.CONFIG_IN.Infusion_Total_Duration) or (_TOP__IM~0.SYS_STAT_IN.Volume_Infused >= _TOP__IM~0.CONFIG_IN.VTBI_Total))) and (not _TOP__IM~0.OP_CMD_IN.Infusion_Inhibit)) => (_TOP__IM~0.IM_OUT.Current_System_Mode = 1))));
+
+  _TOP__IM~0.__IM__ASSERT__18 = (_TOP__IM~0.infusion_inhibit_implies_paused = (true -> ((((_TOP__IM~0.TLM_MODE_IN.System_On and (pre _TOP__IM~0.DEFS__is_active~0._outvar)) and _TOP__IM~0.OP_CMD_IN.Infusion_Inhibit) and (_TOP__IM~0.CONFIG_IN.Configured > 0)) => (((_TOP__IM~0.IM_OUT.Current_System_Mode = 6) or (_TOP__IM~0.IM_OUT.Current_System_Mode = 8)) or (_TOP__IM~0.IM_OUT.Current_System_Mode = 7)))));
+
+  _TOP__IM~0.__IM__ASSERT__19 = (_TOP__IM~0.basal_transition_to_pbolus = (true -> (((((pre _TOP__IM~0.IM_OUT.Current_System_Mode) = 2) and _TOP__IM~0.PATIENT_IN.Patient_Bolus_Request) and (not (((_TOP__IM~0.ALARM_IN.Highest_Level_Alarm >= 2) or (_TOP__IM~0.Patient_Bolus_Delivered_Count > _TOP__IM~0.CONFIG_IN.Max_Number_of_Patient_Bolus)) or _TOP__IM~0.IM_OUT.Is_Locked_Out))) => (_TOP__IM~0.IM_OUT.Current_System_Mode = 3))));
+
+  _TOP__IM~0.__IM__ASSERT__20 = (_TOP__IM~0.sbolus_transition_to_pbolus = (true -> (((((pre _TOP__IM~0.IM_OUT.Current_System_Mode) = 4) and _TOP__IM~0.PATIENT_IN.Patient_Bolus_Request) and (not (((_TOP__IM~0.ALARM_IN.Highest_Level_Alarm >= 2) or (_TOP__IM~0.Patient_Bolus_Delivered_Count > _TOP__IM~0.CONFIG_IN.Max_Number_of_Patient_Bolus)) or _TOP__IM~0.IM_OUT.Is_Locked_Out))) => (_TOP__IM~0.IM_OUT.Current_System_Mode = 3))));
+
+  _TOP__IM~0.__IM__ASSERT__21 = (_TOP__IM~0.transition_to_pbolus = (true -> (((((_TOP__IM~0.ALARM_IN.Highest_Level_Alarm >= 2) or (not _TOP__IM~0.PATIENT_IN.Patient_Bolus_Request)) or (_TOP__IM~0.Patient_Bolus_Delivered_Count > _TOP__IM~0.CONFIG_IN.Max_Number_of_Patient_Bolus)) or _TOP__IM~0.IM_OUT.Is_Locked_Out) => (not (_TOP__IM~0.IM_OUT.Current_System_Mode = 3)))));
+
+  _TOP__IM~0.__ASSERT = (_TOP__IM~0.__IM__ASSERT__21 and (_TOP__IM~0.__IM__ASSERT__20 and (_TOP__IM~0.__IM__ASSERT__19 and (_TOP__IM~0.__IM__ASSERT__18 and (_TOP__IM~0.__IM__ASSERT__17 and (_TOP__IM~0.__IM__ASSERT__16 and (_TOP__IM~0.__IM__ASSERT__15 and (_TOP__IM~0.__IM__ASSERT__14 and (_TOP__IM~0.__IM__ASSERT__13 and (_TOP__IM~0.__IM__ASSERT__12 and (_TOP__IM~0.__IM__ASSERT__11 and (_TOP__IM~0.__IM__ASSERT__10 and (_TOP__IM~0.__IM__ASSERT__9 and (_TOP__IM~0.__IM__ASSERT__8 and (_TOP__IM~0.__IM__ASSERT__7 and (_TOP__IM~0.__IM__ASSERT__6 and (_TOP__IM~0.__IM__ASSERT__5 and (_TOP__IM~0.__IM__ASSERT__4 and (_TOP__IM~0.__IM__ASSERT__3 and (_TOP__IM~0.__IM__ASSERT__2 and (_TOP__IM~0.__IM__ASSERT__1 and (_TOP__IM~0.__IM__ASSERT__0 and ((_TOP__IM~0.__ASSUME__HIST => (_TOP__IM~0.__IM__PROP__19 and (_TOP__IM~0.__IM__PROP__18 and (_TOP__IM~0.__IM__PROP__17 and (_TOP__IM~0.__IM__PROP__16 and (_TOP__IM~0.__IM__PROP__15 and (_TOP__IM~0.__IM__PROP__14 and (_TOP__IM~0.__IM__PROP__13 and (_TOP__IM~0.__IM__PROP__12 and (_TOP__IM~0.__IM__PROP__11 and (_TOP__IM~0.__IM__PROP__10 and (_TOP__IM~0.__IM__PROP__9 and (_TOP__IM~0.__IM__PROP__8 and (_TOP__IM~0.__IM__PROP__7 and (_TOP__IM~0.__IM__PROP__6 and (_TOP__IM~0.__IM__PROP__5 and (_TOP__IM~0.__IM__PROP__4 and (_TOP__IM~0.__IM__PROP__3 and (_TOP__IM~0.__IM__PROP__2 and (_TOP__IM~0.__IM__PROP__1 and (_TOP__IM~0.__IM__PROP__0 and true))))))))))))))))))))) and true)))))))))))))))))))))));
+
+  _TOP__OUTPUT~0.TLM_MODE_IN.Request_Confirm_Stop = OUTPUT__TLM_MODE_IN.Request_Confirm_Stop;
+
+  _TOP__OUTPUT~0.SYS_STAT_IN.Reservoir_Volume = OUTPUT__SYS_STAT_IN.Reservoir_Volume;
+
+  _TOP__OUTPUT~0.SYS_STAT_IN.Volume_Infused = OUTPUT__SYS_STAT_IN.Volume_Infused;
+
+  _TOP__OUTPUT~0.ALARM_IN.Audio_Notification_Command = OUTPUT__ALARM_IN.Audio_Notification_Command;
+
+  _TOP__OUTPUT~0.ALARM_IN.Is_Audio_Disabled = OUTPUT__ALARM_IN.Is_Audio_Disabled;
+
+  _TOP__OUTPUT~0.ALARM_IN.Notification_Message = OUTPUT__ALARM_IN.Notification_Message;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Configured = OUTPUT__CONFIG_IN.Configured;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Drug_Concentration = OUTPUT__CONFIG_IN.Drug_Concentration;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Drug_Name = OUTPUT__CONFIG_IN.Drug_Name;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Duration_Intermittent_Bolus = OUTPUT__CONFIG_IN.Duration_Intermittent_Bolus;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Duration_Patient_Bolus = OUTPUT__CONFIG_IN.Duration_Patient_Bolus;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Entered_Reservoir_Volume = OUTPUT__CONFIG_IN.Entered_Reservoir_Volume;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Error_Message_ID = OUTPUT__CONFIG_IN.Error_Message_ID;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Basal = OUTPUT__CONFIG_IN.Flow_Rate_Basal;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Intermittent_Bolus = OUTPUT__CONFIG_IN.Flow_Rate_Intermittent_Bolus;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_KVO = OUTPUT__CONFIG_IN.Flow_Rate_KVO;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Patient_Bolus = OUTPUT__CONFIG_IN.Flow_Rate_Patient_Bolus;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Infusion_Total_Duration = OUTPUT__CONFIG_IN.Infusion_Total_Duration;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Interval_Intermittent_Bolus = OUTPUT__CONFIG_IN.Interval_Intermittent_Bolus;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Lockout_Period_Patient_Bolus = OUTPUT__CONFIG_IN.Lockout_Period_Patient_Bolus;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Max_Number_of_Patient_Bolus = OUTPUT__CONFIG_IN.Max_Number_of_Patient_Bolus;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Patient_ID = OUTPUT__CONFIG_IN.Patient_ID;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Config_Type = OUTPUT__CONFIG_IN.Request_Config_Type;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Confirm_Infusion_Initiate = OUTPUT__CONFIG_IN.Request_Confirm_Infusion_Initiate;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Infusion_Info = OUTPUT__CONFIG_IN.Request_Infusion_Info;
+
+  _TOP__OUTPUT~0.CONFIG_IN.Request_Patient_Drug_Info = OUTPUT__CONFIG_IN.Request_Patient_Drug_Info;
+
+  _TOP__OUTPUT~0.CONFIG_IN.VTBI_Total = OUTPUT__CONFIG_IN.VTBI_Total;
+
+  _TOP__OUTPUT~0.IM_IN.Actual_Infusion_Duration = OUTPUT__IM_IN.Actual_Infusion_Duration;
+
+  _TOP__OUTPUT~0.IM_IN.Commanded_Flow_Rate = OUTPUT__IM_IN.Commanded_Flow_Rate;
+
+  _TOP__OUTPUT~0.IM_IN.Current_System_Mode = OUTPUT__IM_IN.Current_System_Mode;
+
+  _TOP__OUTPUT~0.IM_IN.Is_Locked_Out = OUTPUT__IM_IN.Is_Locked_Out;
+
+  _TOP__OUTPUT~0.IM_IN.New_Infusion = OUTPUT__IM_IN.New_Infusion;
+
+  _TOP__OUTPUT~0.LOG_IN.Log = OUTPUT__LOG_IN.Log;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Actual_Infusion_Duration = OUTPUT__GPCA_SW_OUT.Actual_Infusion_Duration;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Audio_Notification_Command = OUTPUT__GPCA_SW_OUT.Audio_Notification_Command;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Commanded_Flow_Rate = OUTPUT__GPCA_SW_OUT.Commanded_Flow_Rate;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Configured = OUTPUT__GPCA_SW_OUT.Configured;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Current_System_Mode = OUTPUT__GPCA_SW_OUT.Current_System_Mode;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Drug_Concentration = OUTPUT__GPCA_SW_OUT.Drug_Concentration;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Drug_Name = OUTPUT__GPCA_SW_OUT.Drug_Name;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Duration_Intermittent_Bolus = OUTPUT__GPCA_SW_OUT.Duration_Intermittent_Bolus;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Duration_Patient_Bolus = OUTPUT__GPCA_SW_OUT.Duration_Patient_Bolus;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Entered_Reservoir_Volume = OUTPUT__GPCA_SW_OUT.Entered_Reservoir_Volume;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Error_Message_ID = OUTPUT__GPCA_SW_OUT.Error_Message_ID;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Basal = OUTPUT__GPCA_SW_OUT.Flow_Rate_Basal;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus = OUTPUT__GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_KVO = OUTPUT__GPCA_SW_OUT.Flow_Rate_KVO;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Patient_Bolus = OUTPUT__GPCA_SW_OUT.Flow_Rate_Patient_Bolus;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Infusion_Total_Duration = OUTPUT__GPCA_SW_OUT.Infusion_Total_Duration;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Interval_Intermittent_Bolus = OUTPUT__GPCA_SW_OUT.Interval_Intermittent_Bolus;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Is_Audio_Disabled = OUTPUT__GPCA_SW_OUT.Is_Audio_Disabled;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Is_Locked_Out = OUTPUT__GPCA_SW_OUT.Is_Locked_Out;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Lockout_Period_Patient_Bolus = OUTPUT__GPCA_SW_OUT.Lockout_Period_Patient_Bolus;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Log = OUTPUT__GPCA_SW_OUT.Log;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Max_Number_of_Patient_Bolus = OUTPUT__GPCA_SW_OUT.Max_Number_of_Patient_Bolus;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.New_Infusion = OUTPUT__GPCA_SW_OUT.New_Infusion;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Notification_Message = OUTPUT__GPCA_SW_OUT.Notification_Message;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Patient_ID = OUTPUT__GPCA_SW_OUT.Patient_ID;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Config_Type = OUTPUT__GPCA_SW_OUT.Request_Config_Type;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Confirm_Infusion_Initiate = OUTPUT__GPCA_SW_OUT.Request_Confirm_Infusion_Initiate;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Confirm_Stop = OUTPUT__GPCA_SW_OUT.Request_Confirm_Stop;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Infusion_Info = OUTPUT__GPCA_SW_OUT.Request_Infusion_Info;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Patient_Drug_Info = OUTPUT__GPCA_SW_OUT.Request_Patient_Drug_Info;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Reservoir_Volume = OUTPUT__GPCA_SW_OUT.Reservoir_Volume;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.VTBI_Total = OUTPUT__GPCA_SW_OUT.VTBI_Total;
+
+  _TOP__OUTPUT~0.GPCA_SW_OUT.Volume_Infused = OUTPUT__GPCA_SW_OUT.Volume_Infused;
+
+  _TOP__OUTPUT~0.__ASSUME__CONJ = true;
+
+  _TOP__OUTPUT~0.__ASSUME__HIST = (_TOP__OUTPUT~0.__ASSUME__CONJ -> ((pre _TOP__OUTPUT~0.__ASSUME__HIST) and _TOP__OUTPUT~0.__ASSUME__CONJ));
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__0 = (_TOP__OUTPUT~0.TLM_MODE_IN.Request_Confirm_Stop = _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Confirm_Stop);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__1 = (_TOP__OUTPUT~0.SYS_STAT_IN.Volume_Infused = _TOP__OUTPUT~0.GPCA_SW_OUT.Volume_Infused);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__2 = (_TOP__OUTPUT~0.SYS_STAT_IN.Reservoir_Volume = _TOP__OUTPUT~0.GPCA_SW_OUT.Reservoir_Volume);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__3 = (_TOP__OUTPUT~0.ALARM_IN.Is_Audio_Disabled = _TOP__OUTPUT~0.GPCA_SW_OUT.Is_Audio_Disabled);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__4 = (_TOP__OUTPUT~0.ALARM_IN.Notification_Message = _TOP__OUTPUT~0.GPCA_SW_OUT.Notification_Message);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__5 = (_TOP__OUTPUT~0.ALARM_IN.Audio_Notification_Command = _TOP__OUTPUT~0.GPCA_SW_OUT.Audio_Notification_Command);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__6 = (_TOP__OUTPUT~0.CONFIG_IN.Patient_ID = _TOP__OUTPUT~0.GPCA_SW_OUT.Patient_ID);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__7 = (_TOP__OUTPUT~0.CONFIG_IN.Drug_Name = _TOP__OUTPUT~0.GPCA_SW_OUT.Drug_Name);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__8 = (_TOP__OUTPUT~0.CONFIG_IN.Drug_Concentration = _TOP__OUTPUT~0.GPCA_SW_OUT.Drug_Concentration);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__9 = (_TOP__OUTPUT~0.CONFIG_IN.Infusion_Total_Duration = _TOP__OUTPUT~0.GPCA_SW_OUT.Infusion_Total_Duration);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__10 = (_TOP__OUTPUT~0.CONFIG_IN.VTBI_Total = _TOP__OUTPUT~0.GPCA_SW_OUT.VTBI_Total);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__11 = (_TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Basal = _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Basal);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__12 = (_TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Intermittent_Bolus = _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__13 = (_TOP__OUTPUT~0.CONFIG_IN.Duration_Intermittent_Bolus = _TOP__OUTPUT~0.GPCA_SW_OUT.Duration_Intermittent_Bolus);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__14 = (_TOP__OUTPUT~0.CONFIG_IN.Interval_Intermittent_Bolus = _TOP__OUTPUT~0.GPCA_SW_OUT.Interval_Intermittent_Bolus);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__15 = (_TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_Patient_Bolus = _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_Patient_Bolus);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__16 = (_TOP__OUTPUT~0.CONFIG_IN.Duration_Patient_Bolus = _TOP__OUTPUT~0.GPCA_SW_OUT.Duration_Patient_Bolus);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__17 = (_TOP__OUTPUT~0.CONFIG_IN.Lockout_Period_Patient_Bolus = _TOP__OUTPUT~0.GPCA_SW_OUT.Lockout_Period_Patient_Bolus);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__18 = (_TOP__OUTPUT~0.CONFIG_IN.Max_Number_of_Patient_Bolus = _TOP__OUTPUT~0.GPCA_SW_OUT.Max_Number_of_Patient_Bolus);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__19 = (_TOP__OUTPUT~0.CONFIG_IN.Flow_Rate_KVO = _TOP__OUTPUT~0.GPCA_SW_OUT.Flow_Rate_KVO);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__20 = (_TOP__OUTPUT~0.CONFIG_IN.Entered_Reservoir_Volume = _TOP__OUTPUT~0.GPCA_SW_OUT.Entered_Reservoir_Volume);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__21 = (_TOP__OUTPUT~0.CONFIG_IN.Configured = _TOP__OUTPUT~0.GPCA_SW_OUT.Configured);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__22 = (_TOP__OUTPUT~0.CONFIG_IN.Error_Message_ID = _TOP__OUTPUT~0.GPCA_SW_OUT.Error_Message_ID);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__23 = (_TOP__OUTPUT~0.CONFIG_IN.Request_Config_Type = _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Config_Type);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__24 = (_TOP__OUTPUT~0.CONFIG_IN.Request_Confirm_Infusion_Initiate = _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Confirm_Infusion_Initiate);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__25 = (_TOP__OUTPUT~0.CONFIG_IN.Request_Patient_Drug_Info = _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Patient_Drug_Info);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__26 = (_TOP__OUTPUT~0.CONFIG_IN.Request_Infusion_Info = _TOP__OUTPUT~0.GPCA_SW_OUT.Request_Infusion_Info);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__27 = (_TOP__OUTPUT~0.IM_IN.Current_System_Mode = _TOP__OUTPUT~0.GPCA_SW_OUT.Current_System_Mode);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__28 = (_TOP__OUTPUT~0.IM_IN.Actual_Infusion_Duration = _TOP__OUTPUT~0.GPCA_SW_OUT.Actual_Infusion_Duration);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__29 = (_TOP__OUTPUT~0.IM_IN.Commanded_Flow_Rate = _TOP__OUTPUT~0.GPCA_SW_OUT.Commanded_Flow_Rate);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__30 = (_TOP__OUTPUT~0.IM_IN.New_Infusion = _TOP__OUTPUT~0.GPCA_SW_OUT.New_Infusion);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__31 = (_TOP__OUTPUT~0.IM_IN.Is_Locked_Out = _TOP__OUTPUT~0.GPCA_SW_OUT.Is_Locked_Out);
+
+  _TOP__OUTPUT~0.__OUTPUT__PROP__32 = (_TOP__OUTPUT~0.LOG_IN.Log = _TOP__OUTPUT~0.GPCA_SW_OUT.Log);
+
+  _TOP__OUTPUT~0.__ASSERT = ((_TOP__OUTPUT~0.__ASSUME__HIST => (_TOP__OUTPUT~0.__OUTPUT__PROP__32 and (_TOP__OUTPUT~0.__OUTPUT__PROP__31 and (_TOP__OUTPUT~0.__OUTPUT__PROP__30 and (_TOP__OUTPUT~0.__OUTPUT__PROP__29 and (_TOP__OUTPUT~0.__OUTPUT__PROP__28 and (_TOP__OUTPUT~0.__OUTPUT__PROP__27 and (_TOP__OUTPUT~0.__OUTPUT__PROP__26 and (_TOP__OUTPUT~0.__OUTPUT__PROP__25 and (_TOP__OUTPUT~0.__OUTPUT__PROP__24 and (_TOP__OUTPUT~0.__OUTPUT__PROP__23 and (_TOP__OUTPUT~0.__OUTPUT__PROP__22 and (_TOP__OUTPUT~0.__OUTPUT__PROP__21 and (_TOP__OUTPUT~0.__OUTPUT__PROP__20 and (_TOP__OUTPUT~0.__OUTPUT__PROP__19 and (_TOP__OUTPUT~0.__OUTPUT__PROP__18 and (_TOP__OUTPUT~0.__OUTPUT__PROP__17 and (_TOP__OUTPUT~0.__OUTPUT__PROP__16 and (_TOP__OUTPUT~0.__OUTPUT__PROP__15 and (_TOP__OUTPUT~0.__OUTPUT__PROP__14 and (_TOP__OUTPUT~0.__OUTPUT__PROP__13 and (_TOP__OUTPUT~0.__OUTPUT__PROP__12 and (_TOP__OUTPUT~0.__OUTPUT__PROP__11 and (_TOP__OUTPUT~0.__OUTPUT__PROP__10 and (_TOP__OUTPUT~0.__OUTPUT__PROP__9 and (_TOP__OUTPUT~0.__OUTPUT__PROP__8 and (_TOP__OUTPUT~0.__OUTPUT__PROP__7 and (_TOP__OUTPUT~0.__OUTPUT__PROP__6 and (_TOP__OUTPUT~0.__OUTPUT__PROP__5 and (_TOP__OUTPUT~0.__OUTPUT__PROP__4 and (_TOP__OUTPUT~0.__OUTPUT__PROP__3 and (_TOP__OUTPUT~0.__OUTPUT__PROP__2 and (_TOP__OUTPUT~0.__OUTPUT__PROP__1 and (_TOP__OUTPUT~0.__OUTPUT__PROP__0 and true)))))))))))))))))))))))))))))))))) and true);
+
+  _TOP__ASSUME__0 = (DB_IN.VTBI_High >= 0);
+
+  _TOP__ASSUME__1 = (CONST_IN.Empty_Reservoir > 0);
+
+  _TOP__ASSUME__2 = (CONST_IN.Empty_Reservoir < CONST_IN.Low_Reservoir);
+
+  _TOP__ASSUME__3 = (not (OP_CMD_IN.System_Start and OP_CMD_IN.System_Stop));
+
+  _TOP__ASSUME__4 = (not (OP_CMD_IN.Infusion_Inhibit and OP_CMD_IN.Infusion_Cancel));
+
+  _TOP__ASSUME__5 = (GPCA_SW_OUT.Max_Number_of_Patient_Bolus >= 0);
+
+  _TOP__ASSERT__0 = (sys_initial = (true -> false));
+
+  _TOP__ASSERT__1 = (Time_FR_Under_Min_Tol = (0 -> (if DEFS__Is_Infusion_below_tolerance~0.under then ((pre Time_FR_Under_Min_Tol) + 1) else 0)));
+
+  _TOP__ASSERT__2 = (is_under_infusion = (((CONST_IN.Max_Duration_Under_Infusion < Time_FR_Under_Min_Tol) or DEFS__Is_Infusion_below_tolerance~1.under) or (SENSOR_IN.Flow_Rate < DB_IN.Flow_Rate_Low)));
+
+  _TOP__ASSERT__3 = (Time_FR_Over_Min_Tol = (0 -> (if DEFS__Is_Infusion_above_tolerance~0.over then ((pre Time_FR_Over_Min_Tol) + 1) else 0)));
+
+  _TOP__ASSERT__4 = (Is_Over_Infusion = (false -> (((CONST_IN.Max_Duration_Over_Infusion < Time_FR_Over_Min_Tol) or DEFS__Is_Infusion_above_tolerance~1.over) or (SENSOR_IN.Flow_Rate > DB_IN.Flow_Rate_High))));
+
+  _TOP__ASSERT__5 = (Paused_Time_Counter = (0 -> (if ((((pre GPCA_SW_OUT.Current_System_Mode) = 6) or ((pre GPCA_SW_OUT.Current_System_Mode) = 7)) or ((pre GPCA_SW_OUT.Current_System_Mode) = 8)) then ((pre Paused_Time_Counter) + 1) else 0)));
+
+  _TOP__ASSERT__6 = (Idle_Time_Counter = (0 -> (if DEFS__is_idle~0._outvar then ((pre Idle_Time_Counter) + 1) else 0)));
+
+  _TOP__ASSERT__7 = (Config_Timer = (0 -> (if ((pre GPCA_SW_OUT.Configured) > 0) then ((pre Config_Timer) + 1) else 0)));
+
+  _TOP__ASSERT__8 = (is_on = DEFS__is_on~0._outvar);
+
+  _TOP__ASSERT__9 = (is_therapy = DEFS__is_therapy~0._outvar);
+
+  _TOP__ASSERT__10 = (is_active = DEFS__is_active~0._outvar);
+
+  _TOP__ASSERT__11 = (level_4_alarm = (OP_CMD_IN.System_Start and (((((((((((GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Empty_Reservoir) and (pre is_therapy)) or SENSOR_IN.Temp) or SENSOR_IN.Air_Pressure) or SENSOR_IN.Humidity) or SENSOR_IN.CPU_Error) or SENSOR_IN.Battery_Depleted) or SENSOR_IN.RTC_Error) or SENSOR_IN.Memory_Corrupted) or SENSOR_IN.Pump_Too_Hot) or SENSOR_IN.Watchdog_Interrupted)));
+
+  _TOP__ASSERT__12 = (level_3_alarm = (OP_CMD_IN.System_Start and ((((((GPCA_SW_OUT.Volume_Infused > DB_IN.VTBI_High) and (pre is_therapy)) or SENSOR_IN.Air_In_Line) or SENSOR_IN.Occlusion) or SENSOR_IN.Door_Open) or Is_Over_Infusion)));
+
+  _TOP__ASSERT__13 = (level_2_alarm = ((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Low_Reservoir)));
+
+  _TOP__ASSERT__14 = (level_1_alarm = (OP_CMD_IN.System_Start and ((((((((SENSOR_IN.Pump_Overheated or SENSOR_IN.Supply_Voltage) or SENSOR_IN.Battery_Low) or SENSOR_IN.Battery_Unable_To_Charge) or ((pre is_therapy) and SENSOR_IN.Flow_Rate_Not_Stable)) or is_under_infusion) or (Idle_Time_Counter > CONST_IN.Max_Idle_Duration)) or (Paused_Time_Counter > CONST_IN.Max_Paused_Duration)) or (Config_Timer > CONST_IN.Config_Warning_Duration))));
+
+  _TOP__ASSERT__15 = (Patient_Bolus_Delivered_Count = (0 -> (if ((GPCA_SW_OUT.Current_System_Mode = 3) and (not ((pre GPCA_SW_OUT.Current_System_Mode) = 3))) then ((pre Patient_Bolus_Delivered_Count) + 1) else (pre Patient_Bolus_Delivered_Count))));
+
+  _TOP__ASSERT__16 = (mode_range = ((((((((GPCA_SW_OUT.Current_System_Mode = 0) or (GPCA_SW_OUT.Current_System_Mode = 1)) or (GPCA_SW_OUT.Current_System_Mode = 2)) or (GPCA_SW_OUT.Current_System_Mode = 4)) or (GPCA_SW_OUT.Current_System_Mode = 3)) or (GPCA_SW_OUT.Current_System_Mode = 7)) or (GPCA_SW_OUT.Current_System_Mode = 6)) or (GPCA_SW_OUT.Current_System_Mode = 8)));
+
+  _TOP__ASSERT__17 = (not_system_start_implies_mode_0 = ((not OP_CMD_IN.System_Start) => (GPCA_SW_OUT.Current_System_Mode = 0)));
+
+  _TOP__ASSERT__18 = (initial_system_start_implies_mode_idle = ((sys_initial and OP_CMD_IN.System_Start) => (GPCA_SW_OUT.Current_System_Mode = 1)));
+
+  _TOP__ASSERT__19 = (off_to_on_implies_mode_idle = ((((not sys_initial) and ((pre GPCA_SW_OUT.Current_System_Mode) = 0)) and OP_CMD_IN.System_Start) => (GPCA_SW_OUT.Current_System_Mode = 1)));
+
+  _TOP__ASSERT__20 = (empty_reservoir_and_In_therapy_implies_no_flow = (true -> (((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Empty_Reservoir)) => (GPCA_SW_OUT.Commanded_Flow_Rate = 0))));
+
+  _TOP__ASSERT__21 = (environmental_error_implies_no_flow = (true -> ((OP_CMD_IN.System_Start and (((SENSOR_IN.Temp or SENSOR_IN.Air_Pressure) or SENSOR_IN.CPU_Error) or SENSOR_IN.Humidity)) => (GPCA_SW_OUT.Commanded_Flow_Rate = 0))));
+
+  _TOP__ASSERT__22 = (hardware_error_implies_no_flow = (true -> ((OP_CMD_IN.System_Start and (((((SENSOR_IN.Battery_Depleted or SENSOR_IN.RTC_Error) or SENSOR_IN.CPU_Error) or SENSOR_IN.Memory_Corrupted) or SENSOR_IN.Pump_Too_Hot) or SENSOR_IN.Watchdog_Interrupted)) => (GPCA_SW_OUT.Commanded_Flow_Rate = 0))));
+
+  _TOP__ASSERT__23 = (volume_infused_exceeds_VTBI_Hi = (true -> (((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Volume_Infused > DB_IN.VTBI_High)) => (GPCA_SW_OUT.Commanded_Flow_Rate <= GPCA_SW_OUT.Flow_Rate_KVO))));
+
+  _TOP__ASSERT__24 = (flow_rate_exceeds_flow_rate_Hi = (true -> (((OP_CMD_IN.System_Start and (pre is_therapy)) and (SENSOR_IN.Flow_Rate > DB_IN.Flow_Rate_High)) => (GPCA_SW_OUT.Commanded_Flow_Rate <= GPCA_SW_OUT.Flow_Rate_KVO))));
+
+  _TOP__ASSERT__25 = (AirInLine_implies_flow_at_most_KVO = ((OP_CMD_IN.System_Start and SENSOR_IN.Air_In_Line) => (GPCA_SW_OUT.Commanded_Flow_Rate <= GPCA_SW_OUT.Flow_Rate_KVO)));
+
+  _TOP__ASSERT__26 = (occlusion_implies_flow_at_most_KVO = ((OP_CMD_IN.System_Start and SENSOR_IN.Occlusion) => (GPCA_SW_OUT.Commanded_Flow_Rate <= GPCA_SW_OUT.Flow_Rate_KVO)));
+
+  _TOP__ASSERT__27 = (door_open_implies_flow_at_most_KVO = (true -> ((OP_CMD_IN.System_Start and SENSOR_IN.Door_Open) => (GPCA_SW_OUT.Commanded_Flow_Rate <= GPCA_SW_OUT.Flow_Rate_KVO))));
+
+  _TOP__ASSERT__28 = ((pre low_reservoir_and_In_therapy_implies_no_bolus) = (true -> (((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Low_Reservoir)) => ((not (GPCA_SW_OUT.Current_System_Mode = 3)) or (not (GPCA_SW_OUT.Current_System_Mode = 4))))));
+
+  _TOP__ASSERT__29 = (infusion_cancel_implies_idle = (true -> ((OP_CMD_IN.System_Start and OP_CMD_IN.Infusion_Cancel) => (GPCA_SW_OUT.Current_System_Mode = 1))));
+
+  _TOP__ASSERT__30 = (infusion_pause_implies_flow_kvo = (true -> ((OP_CMD_IN.System_Start and OP_CMD_IN.Infusion_Inhibit) => (GPCA_SW_OUT.Commanded_Flow_Rate <= GPCA_SW_OUT.Flow_Rate_KVO))));
+
+  _TOP__ASSERT__31 = (no_audio_if_audio_disabled = ((OP_CMD_IN.System_Start and (OP_CMD_IN.Disable_Audio > 0)) => ((GPCA_SW_OUT.Audio_Notification_Command = 0) and (GPCA_SW_OUT.Is_Audio_Disabled = OP_CMD_IN.Disable_Audio))));
+
+  _TOP__ASSERT__32 = (no_config_implies_mode_1 = ((OP_CMD_IN.System_Start and (GPCA_SW_OUT.Configured < 1)) => (GPCA_SW_OUT.Current_System_Mode = 1)));
+
+  _TOP__ASSERT__33 = (empty_reservoir_implies_audio = (true -> ((((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Empty_Reservoir)) and (OP_CMD_IN.Disable_Audio = 0)) => ((GPCA_SW_OUT.Audio_Notification_Command = CONST_IN.Audio_Level) and (GPCA_SW_OUT.Is_Audio_Disabled = OP_CMD_IN.Disable_Audio)))));
+
+  _TOP__ASSERT__34 = (empty_reservoir_implies_visual_1 = (true -> (((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Empty_Reservoir)) => (GPCA_SW_OUT.Notification_Message = 1))));
+
+  _TOP__ASSERT__35 = (no_patient_request_imples_no_pbolus = (((OP_CMD_IN.System_Start and (not ((pre GPCA_SW_OUT.Current_System_Mode) = 3))) and (not PATIENT_IN.Patient_Bolus_Request)) => (not (GPCA_SW_OUT.Current_System_Mode = 3))));
+
+  _TOP__ASSERT__36 = (off_imples_fr_0 = ((GPCA_SW_OUT.Current_System_Mode = 0) => (GPCA_SW_OUT.Commanded_Flow_Rate = 0)));
+
+  _TOP__ASSERT__37 = (idle_imples_fr_0 = ((GPCA_SW_OUT.Current_System_Mode = 1) => (GPCA_SW_OUT.Commanded_Flow_Rate = 0)));
+
+  _TOP__ASSERT__38 = (system_stop_implies_off = (true -> ((((pre is_on) and OP_CMD_IN.System_Stop) and (not OP_CMD_IN.Infusion_Inhibit)) => (GPCA_SW_OUT.Current_System_Mode = 0))));
+
+  _TOP__ASSERT__39 = (infusion_initiation_requires_prescription = ((is_on and GPCA_SW_OUT.New_Infusion) => (GPCA_SW_OUT.Configured > 0)));
+
+  _TOP__ASSERT__40 = (basal_fr = ((GPCA_SW_OUT.Current_System_Mode = 2) => (GPCA_SW_OUT.Commanded_Flow_Rate = GPCA_SW_OUT.Flow_Rate_Basal)));
+
+  _TOP__ASSERT__41 = (ignore_patient_bolus_request = (true -> ((PATIENT_IN.Patient_Bolus_Request and (((((level_4_alarm or level_3_alarm) or level_2_alarm) or (Patient_Bolus_Delivered_Count > GPCA_SW_OUT.Max_Number_of_Patient_Bolus)) or GPCA_SW_OUT.Is_Locked_Out) or ((pre GPCA_SW_OUT.Current_System_Mode) = 3))) => (not (GPCA_SW_OUT.Current_System_Mode = 3)))));
+
+  _TOP__ASSERT__42 = (infusion_complete_implies_idle = (true -> ((((OP_CMD_IN.System_Start and (pre is_active)) and ((GPCA_SW_OUT.Actual_Infusion_Duration >= GPCA_SW_OUT.Infusion_Total_Duration) or (GPCA_SW_OUT.Volume_Infused >= GPCA_SW_OUT.VTBI_Total))) and (not OP_CMD_IN.Infusion_Inhibit)) => (GPCA_SW_OUT.Current_System_Mode = 1))));
+
+  _TOP__ASSERT__43 = (infusion_inhibit_implies_paused = (true -> (((((pre is_active) and OP_CMD_IN.Infusion_Inhibit) and OP_CMD_IN.System_Start) and (GPCA_SW_OUT.Configured > 0)) => (((GPCA_SW_OUT.Current_System_Mode = 8) or (GPCA_SW_OUT.Current_System_Mode = 6)) or (GPCA_SW_OUT.Current_System_Mode = 7)))));
+
+  _TOP__ASSERT__44 = (basal_transition_to_pbolus = (true -> (((((pre GPCA_SW_OUT.Current_System_Mode) = 2) and PATIENT_IN.Patient_Bolus_Request) and (not ((((level_4_alarm or level_3_alarm) or level_2_alarm) or (Patient_Bolus_Delivered_Count > GPCA_SW_OUT.Max_Number_of_Patient_Bolus)) or GPCA_SW_OUT.Is_Locked_Out))) => (GPCA_SW_OUT.Current_System_Mode = 3))));
+
+  _TOP__ASSERT__45 = (sbolus_transition_to_pbolus = (true -> (((((pre GPCA_SW_OUT.Current_System_Mode) = 4) and PATIENT_IN.Patient_Bolus_Request) and (not ((((level_4_alarm or level_3_alarm) or level_2_alarm) or (Patient_Bolus_Delivered_Count > GPCA_SW_OUT.Max_Number_of_Patient_Bolus)) or GPCA_SW_OUT.Is_Locked_Out))) => (GPCA_SW_OUT.Current_System_Mode = 3))));
+
+  _TOP__ASSERT__46 = (level_4_alarm_visual = (true -> (level_4_alarm => (((GPCA_SW_OUT.Notification_Message = 1) or (GPCA_SW_OUT.Notification_Message = 2)) or (GPCA_SW_OUT.Notification_Message = 3)))));
+
+  _TOP__ASSERT__47 = (empty_res_visual_implies_error = (true -> ((GPCA_SW_OUT.Notification_Message = 1) => ((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Empty_Reservoir)))));
+
+  _TOP__ASSERT__48 = (enviro_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 2) => (((SENSOR_IN.Temp or SENSOR_IN.Air_Pressure) or SENSOR_IN.CPU_Error) or SENSOR_IN.Humidity)));
+
+  _TOP__ASSERT__49 = (hardware_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 3) => (((((SENSOR_IN.Battery_Depleted or SENSOR_IN.RTC_Error) or SENSOR_IN.CPU_Error) or SENSOR_IN.Memory_Corrupted) or SENSOR_IN.Pump_Too_Hot) or SENSOR_IN.Watchdog_Interrupted)));
+
+  _TOP__ASSERT__50 = (level_3_alarm_visual = (true -> ((level_3_alarm and (not level_4_alarm)) => (((((GPCA_SW_OUT.Notification_Message = 4) or (GPCA_SW_OUT.Notification_Message = 5)) or (GPCA_SW_OUT.Notification_Message = 6)) or (GPCA_SW_OUT.Notification_Message = 7)) or (GPCA_SW_OUT.Notification_Message = 8)))));
+
+  _TOP__ASSERT__51 = (over_fr_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 4) => Is_Over_Infusion));
+
+  _TOP__ASSERT__52 = (over_vtbi_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 5) => ((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Volume_Infused > DB_IN.VTBI_High))));
+
+  _TOP__ASSERT__53 = (air_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 6) => SENSOR_IN.Air_In_Line));
+
+  _TOP__ASSERT__54 = (occlusion_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 7) => SENSOR_IN.Occlusion));
+
+  _TOP__ASSERT__55 = (door_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 8) => SENSOR_IN.Door_Open));
+
+  _TOP__ASSERT__56 = (level_2_alarm_visual = (true -> (((level_2_alarm and (not level_3_alarm)) and (not level_4_alarm)) => (GPCA_SW_OUT.Notification_Message = 9))));
+
+  _TOP__ASSERT__57 = (low_res_visial_implies_error = ((GPCA_SW_OUT.Notification_Message = 9) => ((OP_CMD_IN.System_Start and (pre is_therapy)) and (GPCA_SW_OUT.Reservoir_Volume < CONST_IN.Low_Reservoir))));
+
+  _TOP__ASSERT__58 = (level_1_alarm_visual = (true -> ((((level_1_alarm and (not level_2_alarm)) and (not level_3_alarm)) and (not level_4_alarm)) => (((((((((GPCA_SW_OUT.Notification_Message = 10) or (GPCA_SW_OUT.Notification_Message = 11)) or (GPCA_SW_OUT.Notification_Message = 12)) or (GPCA_SW_OUT.Notification_Message = 13)) or (GPCA_SW_OUT.Notification_Message = 14)) or (GPCA_SW_OUT.Notification_Message = 15)) or (GPCA_SW_OUT.Notification_Message = 16)) or (GPCA_SW_OUT.Notification_Message = 17)) or (GPCA_SW_OUT.Notification_Message = 18)))));
+
+  _TOP__ASSERT__59 = (under_fr_visual_implies_error = (true -> ((GPCA_SW_OUT.Notification_Message = 10) => is_under_infusion)));
+
+  _TOP__ASSERT__60 = (unstable_fr_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 11) => SENSOR_IN.Flow_Rate_Not_Stable));
+
+  _TOP__ASSERT__61 = (idle_time_visual_implies_error = (true -> ((GPCA_SW_OUT.Notification_Message = 12) => (Idle_Time_Counter > CONST_IN.Max_Idle_Duration))));
+
+  _TOP__ASSERT__62 = (pause_time_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 13) => (Paused_Time_Counter > CONST_IN.Max_Paused_Duration)));
+
+  _TOP__ASSERT__63 = (config_time_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 14) => (Config_Timer > CONST_IN.Config_Warning_Duration)));
+
+  _TOP__ASSERT__64 = (battery_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 15) => ((SENSOR_IN.Supply_Voltage or SENSOR_IN.Battery_Low) or SENSOR_IN.Battery_Unable_To_Charge)));
+
+  _TOP__ASSERT__65 = (pump_hot_visual_implies_error = ((GPCA_SW_OUT.Notification_Message = 16) => SENSOR_IN.Pump_Overheated));
+
+  _TOP__ASSERT__66 = (alarm_3_or_4_implies_audio = (true -> (((level_3_alarm or level_4_alarm) and (OP_CMD_IN.Disable_Audio = 0)) => (GPCA_SW_OUT.Audio_Notification_Command = CONST_IN.Audio_Level))));
+
+  _TOP__ASSERT__67 = (configuration_type_request = (OP_CMD_IN.Data_Config => GPCA_SW_OUT.Request_Config_Type));
+
+  _TOP__ASSERT__68 = (validate_configured_patient_drug_info = (((GPCA_SW_OUT.Configured = 1) and (((PRES_IN.Drug_Name = 0) or ((PRES_IN.Drug_Concentration < DB_IN.Drug_Concentration_Low) or (PRES_IN.Drug_Concentration > DB_IN.Drug_Concentration_High))) or (PRES_IN.Entered_Reservoir_Volume < CONST_IN.Empty_Reservoir))) => ((GPCA_SW_OUT.Error_Message_ID = 5) and GPCA_SW_OUT.Request_Patient_Drug_Info)));
+
+  _TOP__ASSERT__69 = (validate_configured_infusion_info = (((GPCA_SW_OUT.Configured > 0) and ((((((((((((PRES_IN.VTBI_Total > DB_IN.VTBI_High) or (PRES_IN.VTBI_Total < DB_IN.VTBI_Low)) or (PRES_IN.Flow_Rate_Basal < DB_IN.Flow_Rate_Low)) or (PRES_IN.Flow_Rate_Basal > DB_IN.Flow_Rate_High)) or (PRES_IN.Flow_Rate_Intermittent_Bolus < DB_IN.Flow_Rate_Low)) or (PRES_IN.Flow_Rate_Intermittent_Bolus > DB_IN.Flow_Rate_High)) or (PRES_IN.Flow_Rate_Patient_Bolus < DB_IN.Flow_Rate_Low)) or (PRES_IN.Flow_Rate_Patient_Bolus > DB_IN.Flow_Rate_High)) or (PRES_IN.Duration_Intermittent_Bolus > PRES_IN.Interval_Intermittent_Bolus)) or (PRES_IN.Max_Number_of_Patient_Bolus > DB_IN.Number_Max_Patient_Bolus)) or (PRES_IN.Flow_Rate_Intermittent_Bolus < PRES_IN.Flow_Rate_Basal)) or (PRES_IN.Flow_Rate_Patient_Bolus < PRES_IN.Flow_Rate_Basal))) => GPCA_SW_OUT.Request_Patient_Drug_Info));
+
+  __GUARANTEE35 = sbolus_transition_to_pbolus;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.actual_flow_rate = _TOP__ALARM~0.SENSOR_IN.Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.desired_flow_rate = _TOP__ALARM~0.IM_IN.Commanded_Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.tol = _TOP__ALARM~0.CONST_IN.Tolerance_Min;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.over = (_TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.actual_flow_rate > (_TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.desired_flow_rate + _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~0.tol));
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.actual_flow_rate = _TOP__ALARM~0.SENSOR_IN.Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.desired_flow_rate = _TOP__ALARM~0.IM_IN.Commanded_Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.tol = _TOP__ALARM~0.CONST_IN.Tolerance_Max;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.over = (_TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.actual_flow_rate > (_TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.desired_flow_rate + _TOP__ALARM~0.DEFS__Is_Infusion_above_tolerance~1.tol));
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.actual_flow_rate = _TOP__ALARM~0.SENSOR_IN.Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.desired_flow_rate = _TOP__ALARM~0.IM_IN.Commanded_Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.tol = _TOP__ALARM~0.CONST_IN.Tolerance_Min;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.under = (_TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.actual_flow_rate < (_TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.desired_flow_rate - _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~0.tol));
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.actual_flow_rate = _TOP__ALARM~0.SENSOR_IN.Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.desired_flow_rate = _TOP__ALARM~0.IM_IN.Commanded_Flow_Rate;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.tol = _TOP__ALARM~0.CONST_IN.Tolerance_Max;
+
+  _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.under = (_TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.actual_flow_rate < (_TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.desired_flow_rate - _TOP__ALARM~0.DEFS__Is_Infusion_below_tolerance~1.tol));
+
+  _TOP__IM~0.DEFS__is_therapy~0.mode = _TOP__IM~0.IM_OUT.Current_System_Mode;
+
+  _TOP__IM~0.DEFS__is_therapy~0._outvar = (_TOP__IM~0.DEFS__is_therapy~0.mode > 1);
+
+  _TOP__IM~0.DEFS__is_active~0.mode = _TOP__IM~0.IM_OUT.Current_System_Mode;
+
+  _TOP__IM~0.DEFS__is_active~0._outvar = (((_TOP__IM~0.DEFS__is_active~0.mode = 2) or (_TOP__IM~0.DEFS__is_active~0.mode = 3)) or (_TOP__IM~0.DEFS__is_active~0.mode = 4));
+
+  DEFS__Is_Infusion_below_tolerance~0.actual_flow_rate = SENSOR_IN.Flow_Rate;
+
+  DEFS__Is_Infusion_below_tolerance~0.desired_flow_rate = (pre GPCA_SW_OUT.Commanded_Flow_Rate);
+
+  DEFS__Is_Infusion_below_tolerance~0.tol = CONST_IN.Tolerance_Min;
+
+  DEFS__Is_Infusion_below_tolerance~0.under = (DEFS__Is_Infusion_below_tolerance~0.actual_flow_rate < (DEFS__Is_Infusion_below_tolerance~0.desired_flow_rate - DEFS__Is_Infusion_below_tolerance~0.tol));
+
+  DEFS__Is_Infusion_below_tolerance~1.actual_flow_rate = SENSOR_IN.Flow_Rate;
+
+  DEFS__Is_Infusion_below_tolerance~1.desired_flow_rate = (pre GPCA_SW_OUT.Commanded_Flow_Rate);
+
+  DEFS__Is_Infusion_below_tolerance~1.tol = CONST_IN.Tolerance_Max;
+
+  DEFS__Is_Infusion_below_tolerance~1.under = (DEFS__Is_Infusion_below_tolerance~1.actual_flow_rate < (DEFS__Is_Infusion_below_tolerance~1.desired_flow_rate - DEFS__Is_Infusion_below_tolerance~1.tol));
+
+  DEFS__Is_Infusion_above_tolerance~0.actual_flow_rate = SENSOR_IN.Flow_Rate;
+
+  DEFS__Is_Infusion_above_tolerance~0.desired_flow_rate = (pre GPCA_SW_OUT.Commanded_Flow_Rate);
+
+  DEFS__Is_Infusion_above_tolerance~0.tol = CONST_IN.Tolerance_Min;
+
+  DEFS__Is_Infusion_above_tolerance~0.over = (DEFS__Is_Infusion_above_tolerance~0.actual_flow_rate > (DEFS__Is_Infusion_above_tolerance~0.desired_flow_rate + DEFS__Is_Infusion_above_tolerance~0.tol));
+
+  DEFS__Is_Infusion_above_tolerance~1.actual_flow_rate = SENSOR_IN.Flow_Rate;
+
+  DEFS__Is_Infusion_above_tolerance~1.desired_flow_rate = (pre GPCA_SW_OUT.Commanded_Flow_Rate);
+
+  DEFS__Is_Infusion_above_tolerance~1.tol = CONST_IN.Tolerance_Max;
+
+  DEFS__Is_Infusion_above_tolerance~1.over = (DEFS__Is_Infusion_above_tolerance~1.actual_flow_rate > (DEFS__Is_Infusion_above_tolerance~1.desired_flow_rate + DEFS__Is_Infusion_above_tolerance~1.tol));
+
+  DEFS__is_idle~0.mode = (pre GPCA_SW_OUT.Current_System_Mode);
+
+  DEFS__is_idle~0._outvar = (DEFS__is_idle~0.mode = 1);
+
+  DEFS__is_on~0.mode = GPCA_SW_OUT.Current_System_Mode;
+
+  DEFS__is_on~0._outvar = (DEFS__is_on~0.mode > 0);
+
+  DEFS__is_therapy~0.mode = GPCA_SW_OUT.Current_System_Mode;
+
+  DEFS__is_therapy~0._outvar = (DEFS__is_therapy~0.mode > 1);
+
+  DEFS__is_active~0.mode = GPCA_SW_OUT.Current_System_Mode;
+
+  DEFS__is_active~0._outvar = (((DEFS__is_active~0.mode = 2) or (DEFS__is_active~0.mode = 3)) or (DEFS__is_active~0.mode = 4));
+
+  assert _TOP__ASSUME__0;
+
+  assert _TOP__ASSUME__1;
+
+  assert _TOP__ASSUME__2;
+
+  assert _TOP__ASSUME__3;
+
+  assert _TOP__ASSUME__4;
+
+  assert _TOP__ASSUME__5;
+
+  assert _TOP__TLM~0.__ASSERT;
+
+  assert _TOP__SYS_STAT~0.__ASSERT;
+
+  assert _TOP__ALARM~0.__ASSERT;
+
+  assert _TOP__CONFIG~0.__ASSERT;
+
+  assert _TOP__IM~0.__ASSERT;
+
+  assert _TOP__OUTPUT~0.__ASSERT;
+
+  assert ((((((((((((((OP_CMD_IN.Back = TLM__OP_CMD_IN.Back) and (OP_CMD_IN.Cancel = TLM__OP_CMD_IN.Cancel)) and (OP_CMD_IN.Configuration_Type = TLM__OP_CMD_IN.Configuration_Type)) and (OP_CMD_IN.Confirm_Stop = TLM__OP_CMD_IN.Confirm_Stop)) and (OP_CMD_IN.Data_Config = TLM__OP_CMD_IN.Data_Config)) and (OP_CMD_IN.Disable_Audio = TLM__OP_CMD_IN.Disable_Audio)) and (OP_CMD_IN.Infusion_Cancel = TLM__OP_CMD_IN.Infusion_Cancel)) and (OP_CMD_IN.Infusion_Inhibit = TLM__OP_CMD_IN.Infusion_Inhibit)) and (OP_CMD_IN.Infusion_Initiate = TLM__OP_CMD_IN.Infusion_Initiate)) and (OP_CMD_IN.Keyboard = TLM__OP_CMD_IN.Keyboard)) and (OP_CMD_IN.Next = TLM__OP_CMD_IN.Next)) and (OP_CMD_IN.Notification_Cancel = TLM__OP_CMD_IN.Notification_Cancel)) and (OP_CMD_IN.System_Start = TLM__OP_CMD_IN.System_Start)) and (OP_CMD_IN.System_Stop = TLM__OP_CMD_IN.System_Stop));
+
+  assert ((((((((((((((((CONST_IN.Audio_Enable_Duration = TLM__CONST_IN.Audio_Enable_Duration) and (CONST_IN.Audio_Level = TLM__CONST_IN.Audio_Level)) and (CONST_IN.Config_Warning_Duration = TLM__CONST_IN.Config_Warning_Duration)) and (CONST_IN.Empty_Reservoir = TLM__CONST_IN.Empty_Reservoir)) and (CONST_IN.Log_Interval = TLM__CONST_IN.Log_Interval)) and (CONST_IN.Low_Reservoir = TLM__CONST_IN.Low_Reservoir)) and (CONST_IN.Max_Config_Duration = TLM__CONST_IN.Max_Config_Duration)) and (CONST_IN.Max_Confirm_Stop_Duration = TLM__CONST_IN.Max_Confirm_Stop_Duration)) and (CONST_IN.Max_Display_Duration = TLM__CONST_IN.Max_Display_Duration)) and (CONST_IN.Max_Duration_Over_Infusion = TLM__CONST_IN.Max_Duration_Over_Infusion)) and (CONST_IN.Max_Duration_Under_Infusion = TLM__CONST_IN.Max_Duration_Under_Infusion)) and (CONST_IN.Max_Idle_Duration = TLM__CONST_IN.Max_Idle_Duration)) and (CONST_IN.Max_Paused_Duration = TLM__CONST_IN.Max_Paused_Duration)) and (CONST_IN.System_Test_Inteval = TLM__CONST_IN.System_Test_Inteval)) and (CONST_IN.Tolerance_Max = TLM__CONST_IN.Tolerance_Max)) and (CONST_IN.Tolerance_Min = TLM__CONST_IN.Tolerance_Min));
+
+  assert (((TLM__TLM_MODE_OUT.Log_Message_ID = OUTPUT__TLM_MODE_IN.Log_Message_ID) and (TLM__TLM_MODE_OUT.Request_Confirm_Stop = OUTPUT__TLM_MODE_IN.Request_Confirm_Stop)) and (TLM__TLM_MODE_OUT.System_On = OUTPUT__TLM_MODE_IN.System_On));
+
+  assert (((((((0 -> (pre IM__IM_OUT.Actual_Infusion_Duration)) = SYS_STAT__IM_IN.Actual_Infusion_Duration) and ((0 -> (pre IM__IM_OUT.Commanded_Flow_Rate)) = SYS_STAT__IM_IN.Commanded_Flow_Rate)) and ((0 -> (pre IM__IM_OUT.Current_System_Mode)) = SYS_STAT__IM_IN.Current_System_Mode)) and ((false -> (pre IM__IM_OUT.Is_Locked_Out)) = SYS_STAT__IM_IN.Is_Locked_Out)) and ((0 -> (pre IM__IM_OUT.Log_Message_ID)) = SYS_STAT__IM_IN.Log_Message_ID)) and ((false -> (pre IM__IM_OUT.New_Infusion)) = SYS_STAT__IM_IN.New_Infusion));
+
+  assert (((TLM__TLM_MODE_OUT.Log_Message_ID = SYS_STAT__TLM_MODE_IN.Log_Message_ID) and (TLM__TLM_MODE_OUT.Request_Confirm_Stop = SYS_STAT__TLM_MODE_IN.Request_Confirm_Stop)) and (TLM__TLM_MODE_OUT.System_On = SYS_STAT__TLM_MODE_IN.System_On));
+
+  assert ((((((((((((((((((((SENSOR_IN.Air_In_Line = SYS_STAT__SENSOR_IN.Air_In_Line) and (SENSOR_IN.Air_Pressure = SYS_STAT__SENSOR_IN.Air_Pressure)) and (SENSOR_IN.Battery_Depleted = SYS_STAT__SENSOR_IN.Battery_Depleted)) and (SENSOR_IN.Battery_Low = SYS_STAT__SENSOR_IN.Battery_Low)) and (SENSOR_IN.Battery_Unable_To_Charge = SYS_STAT__SENSOR_IN.Battery_Unable_To_Charge)) and (SENSOR_IN.CPU_Error = SYS_STAT__SENSOR_IN.CPU_Error)) and (SENSOR_IN.Door_Open = SYS_STAT__SENSOR_IN.Door_Open)) and (SENSOR_IN.Flow_Rate = SYS_STAT__SENSOR_IN.Flow_Rate)) and (SENSOR_IN.Flow_Rate_Not_Stable = SYS_STAT__SENSOR_IN.Flow_Rate_Not_Stable)) and (SENSOR_IN.Humidity = SYS_STAT__SENSOR_IN.Humidity)) and (SENSOR_IN.Memory_Corrupted = SYS_STAT__SENSOR_IN.Memory_Corrupted)) and (SENSOR_IN.Occlusion = SYS_STAT__SENSOR_IN.Occlusion)) and (SENSOR_IN.Post_Successful = SYS_STAT__SENSOR_IN.Post_Successful)) and (SENSOR_IN.Pump_Overheated = SYS_STAT__SENSOR_IN.Pump_Overheated)) and (SENSOR_IN.Pump_Primed = SYS_STAT__SENSOR_IN.Pump_Primed)) and (SENSOR_IN.Pump_Too_Hot = SYS_STAT__SENSOR_IN.Pump_Too_Hot)) and (SENSOR_IN.RTC_Error = SYS_STAT__SENSOR_IN.RTC_Error)) and (SENSOR_IN.Supply_Voltage = SYS_STAT__SENSOR_IN.Supply_Voltage)) and (SENSOR_IN.Temp = SYS_STAT__SENSOR_IN.Temp)) and (SENSOR_IN.Watchdog_Interrupted = SYS_STAT__SENSOR_IN.Watchdog_Interrupted));
+
+  assert ((((((((((((((((CONST_IN.Audio_Enable_Duration = SYS_STAT__CONST_IN.Audio_Enable_Duration) and (CONST_IN.Audio_Level = SYS_STAT__CONST_IN.Audio_Level)) and (CONST_IN.Config_Warning_Duration = SYS_STAT__CONST_IN.Config_Warning_Duration)) and (CONST_IN.Empty_Reservoir = SYS_STAT__CONST_IN.Empty_Reservoir)) and (CONST_IN.Log_Interval = SYS_STAT__CONST_IN.Log_Interval)) and (CONST_IN.Low_Reservoir = SYS_STAT__CONST_IN.Low_Reservoir)) and (CONST_IN.Max_Config_Duration = SYS_STAT__CONST_IN.Max_Config_Duration)) and (CONST_IN.Max_Confirm_Stop_Duration = SYS_STAT__CONST_IN.Max_Confirm_Stop_Duration)) and (CONST_IN.Max_Display_Duration = SYS_STAT__CONST_IN.Max_Display_Duration)) and (CONST_IN.Max_Duration_Over_Infusion = SYS_STAT__CONST_IN.Max_Duration_Over_Infusion)) and (CONST_IN.Max_Duration_Under_Infusion = SYS_STAT__CONST_IN.Max_Duration_Under_Infusion)) and (CONST_IN.Max_Idle_Duration = SYS_STAT__CONST_IN.Max_Idle_Duration)) and (CONST_IN.Max_Paused_Duration = SYS_STAT__CONST_IN.Max_Paused_Duration)) and (CONST_IN.System_Test_Inteval = SYS_STAT__CONST_IN.System_Test_Inteval)) and (CONST_IN.Tolerance_Max = SYS_STAT__CONST_IN.Tolerance_Max)) and (CONST_IN.Tolerance_Min = SYS_STAT__CONST_IN.Tolerance_Min));
+
+  assert ((((((((((((((((((((((((((0 -> (pre CONFIG__CONFIG_OUT.Config_Mode)) = SYS_STAT__CONFIG_IN.Config_Mode) and ((0 -> (pre CONFIG__CONFIG_OUT.Config_Timer)) = SYS_STAT__CONFIG_IN.Config_Timer)) and ((0 -> (pre CONFIG__CONFIG_OUT.Configured)) = SYS_STAT__CONFIG_IN.Configured)) and ((0 -> (pre CONFIG__CONFIG_OUT.Drug_Concentration)) = SYS_STAT__CONFIG_IN.Drug_Concentration)) and ((0 -> (pre CONFIG__CONFIG_OUT.Drug_Name)) = SYS_STAT__CONFIG_IN.Drug_Name)) and ((0 -> (pre CONFIG__CONFIG_OUT.Duration_Intermittent_Bolus)) = SYS_STAT__CONFIG_IN.Duration_Intermittent_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Duration_Patient_Bolus)) = SYS_STAT__CONFIG_IN.Duration_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Entered_Reservoir_Volume)) = SYS_STAT__CONFIG_IN.Entered_Reservoir_Volume)) and ((0 -> (pre CONFIG__CONFIG_OUT.Error_Message_ID)) = SYS_STAT__CONFIG_IN.Error_Message_ID)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_Basal)) = SYS_STAT__CONFIG_IN.Flow_Rate_Basal)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_Intermittent_Bolus)) = SYS_STAT__CONFIG_IN.Flow_Rate_Intermittent_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_KVO)) = SYS_STAT__CONFIG_IN.Flow_Rate_KVO)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_Patient_Bolus)) = SYS_STAT__CONFIG_IN.Flow_Rate_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Infusion_Total_Duration)) = SYS_STAT__CONFIG_IN.Infusion_Total_Duration)) and ((0 -> (pre CONFIG__CONFIG_OUT.Interval_Intermittent_Bolus)) = SYS_STAT__CONFIG_IN.Interval_Intermittent_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Lockout_Period_Patient_Bolus)) = SYS_STAT__CONFIG_IN.Lockout_Period_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Log_Message_ID)) = SYS_STAT__CONFIG_IN.Log_Message_ID)) and ((0 -> (pre CONFIG__CONFIG_OUT.Max_Number_of_Patient_Bolus)) = SYS_STAT__CONFIG_IN.Max_Number_of_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Patient_ID)) = SYS_STAT__CONFIG_IN.Patient_ID)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Config_Type)) = SYS_STAT__CONFIG_IN.Request_Config_Type)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Confirm_Infusion_Initiate)) = SYS_STAT__CONFIG_IN.Request_Confirm_Infusion_Initiate)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Infusion_Info)) = SYS_STAT__CONFIG_IN.Request_Infusion_Info)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Patient_Drug_Info)) = SYS_STAT__CONFIG_IN.Request_Patient_Drug_Info)) and ((0 -> (pre CONFIG__CONFIG_OUT.Reservoir_Volume)) = SYS_STAT__CONFIG_IN.Reservoir_Volume)) and ((0 -> (pre CONFIG__CONFIG_OUT.VTBI_Total)) = SYS_STAT__CONFIG_IN.VTBI_Total));
+
+  assert (((((((SYS_STAT__SYS_STAT_OUT.Idle_Time_Exceeded = OUTPUT__SYS_STAT_IN.Idle_Time_Exceeded) and (SYS_STAT__SYS_STAT_OUT.In_Therapy = OUTPUT__SYS_STAT_IN.In_Therapy)) and (SYS_STAT__SYS_STAT_OUT.Log_Message_ID = OUTPUT__SYS_STAT_IN.Log_Message_ID)) and (SYS_STAT__SYS_STAT_OUT.Paused_Time_Exceeded = OUTPUT__SYS_STAT_IN.Paused_Time_Exceeded)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Empty = OUTPUT__SYS_STAT_IN.Reservoir_Empty)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Volume = OUTPUT__SYS_STAT_IN.Reservoir_Volume)) and (SYS_STAT__SYS_STAT_OUT.Volume_Infused = OUTPUT__SYS_STAT_IN.Volume_Infused));
+
+  assert (((((((0 -> (pre IM__IM_OUT.Actual_Infusion_Duration)) = ALARM__IM_IN.Actual_Infusion_Duration) and ((0 -> (pre IM__IM_OUT.Commanded_Flow_Rate)) = ALARM__IM_IN.Commanded_Flow_Rate)) and ((0 -> (pre IM__IM_OUT.Current_System_Mode)) = ALARM__IM_IN.Current_System_Mode)) and ((false -> (pre IM__IM_OUT.Is_Locked_Out)) = ALARM__IM_IN.Is_Locked_Out)) and ((0 -> (pre IM__IM_OUT.Log_Message_ID)) = ALARM__IM_IN.Log_Message_ID)) and ((false -> (pre IM__IM_OUT.New_Infusion)) = ALARM__IM_IN.New_Infusion));
+
+  assert (((TLM__TLM_MODE_OUT.Log_Message_ID = ALARM__TLM_MODE_IN.Log_Message_ID) and (TLM__TLM_MODE_OUT.Request_Confirm_Stop = ALARM__TLM_MODE_IN.Request_Confirm_Stop)) and (TLM__TLM_MODE_OUT.System_On = ALARM__TLM_MODE_IN.System_On));
+
+  assert ((((((((((((((OP_CMD_IN.Back = ALARM__OP_CMD_IN.Back) and (OP_CMD_IN.Cancel = ALARM__OP_CMD_IN.Cancel)) and (OP_CMD_IN.Configuration_Type = ALARM__OP_CMD_IN.Configuration_Type)) and (OP_CMD_IN.Confirm_Stop = ALARM__OP_CMD_IN.Confirm_Stop)) and (OP_CMD_IN.Data_Config = ALARM__OP_CMD_IN.Data_Config)) and (OP_CMD_IN.Disable_Audio = ALARM__OP_CMD_IN.Disable_Audio)) and (OP_CMD_IN.Infusion_Cancel = ALARM__OP_CMD_IN.Infusion_Cancel)) and (OP_CMD_IN.Infusion_Inhibit = ALARM__OP_CMD_IN.Infusion_Inhibit)) and (OP_CMD_IN.Infusion_Initiate = ALARM__OP_CMD_IN.Infusion_Initiate)) and (OP_CMD_IN.Keyboard = ALARM__OP_CMD_IN.Keyboard)) and (OP_CMD_IN.Next = ALARM__OP_CMD_IN.Next)) and (OP_CMD_IN.Notification_Cancel = ALARM__OP_CMD_IN.Notification_Cancel)) and (OP_CMD_IN.System_Start = ALARM__OP_CMD_IN.System_Start)) and (OP_CMD_IN.System_Stop = ALARM__OP_CMD_IN.System_Stop));
+
+  assert (((((((((((DB_IN.Drug_Concentration_High = ALARM__DB_IN.Drug_Concentration_High) and (DB_IN.Drug_Concentration_Low = ALARM__DB_IN.Drug_Concentration_Low)) and (DB_IN.Drug_Name = ALARM__DB_IN.Drug_Name)) and (DB_IN.Flow_Rate_High = ALARM__DB_IN.Flow_Rate_High)) and (DB_IN.Flow_Rate_KVO = ALARM__DB_IN.Flow_Rate_KVO)) and (DB_IN.Flow_Rate_Low = ALARM__DB_IN.Flow_Rate_Low)) and (DB_IN.Inteval_Patient_Bolus = ALARM__DB_IN.Inteval_Patient_Bolus)) and (DB_IN.Known_Prescription = ALARM__DB_IN.Known_Prescription)) and (DB_IN.Number_Max_Patient_Bolus = ALARM__DB_IN.Number_Max_Patient_Bolus)) and (DB_IN.VTBI_High = ALARM__DB_IN.VTBI_High)) and (DB_IN.VTBI_Low = ALARM__DB_IN.VTBI_Low));
+
+  assert ((((((((((((((((((((SENSOR_IN.Air_In_Line = ALARM__SENSOR_IN.Air_In_Line) and (SENSOR_IN.Air_Pressure = ALARM__SENSOR_IN.Air_Pressure)) and (SENSOR_IN.Battery_Depleted = ALARM__SENSOR_IN.Battery_Depleted)) and (SENSOR_IN.Battery_Low = ALARM__SENSOR_IN.Battery_Low)) and (SENSOR_IN.Battery_Unable_To_Charge = ALARM__SENSOR_IN.Battery_Unable_To_Charge)) and (SENSOR_IN.CPU_Error = ALARM__SENSOR_IN.CPU_Error)) and (SENSOR_IN.Door_Open = ALARM__SENSOR_IN.Door_Open)) and (SENSOR_IN.Flow_Rate = ALARM__SENSOR_IN.Flow_Rate)) and (SENSOR_IN.Flow_Rate_Not_Stable = ALARM__SENSOR_IN.Flow_Rate_Not_Stable)) and (SENSOR_IN.Humidity = ALARM__SENSOR_IN.Humidity)) and (SENSOR_IN.Memory_Corrupted = ALARM__SENSOR_IN.Memory_Corrupted)) and (SENSOR_IN.Occlusion = ALARM__SENSOR_IN.Occlusion)) and (SENSOR_IN.Post_Successful = ALARM__SENSOR_IN.Post_Successful)) and (SENSOR_IN.Pump_Overheated = ALARM__SENSOR_IN.Pump_Overheated)) and (SENSOR_IN.Pump_Primed = ALARM__SENSOR_IN.Pump_Primed)) and (SENSOR_IN.Pump_Too_Hot = ALARM__SENSOR_IN.Pump_Too_Hot)) and (SENSOR_IN.RTC_Error = ALARM__SENSOR_IN.RTC_Error)) and (SENSOR_IN.Supply_Voltage = ALARM__SENSOR_IN.Supply_Voltage)) and (SENSOR_IN.Temp = ALARM__SENSOR_IN.Temp)) and (SENSOR_IN.Watchdog_Interrupted = ALARM__SENSOR_IN.Watchdog_Interrupted));
+
+  assert ((((((((((((((((CONST_IN.Audio_Enable_Duration = ALARM__CONST_IN.Audio_Enable_Duration) and (CONST_IN.Audio_Level = ALARM__CONST_IN.Audio_Level)) and (CONST_IN.Config_Warning_Duration = ALARM__CONST_IN.Config_Warning_Duration)) and (CONST_IN.Empty_Reservoir = ALARM__CONST_IN.Empty_Reservoir)) and (CONST_IN.Log_Interval = ALARM__CONST_IN.Log_Interval)) and (CONST_IN.Low_Reservoir = ALARM__CONST_IN.Low_Reservoir)) and (CONST_IN.Max_Config_Duration = ALARM__CONST_IN.Max_Config_Duration)) and (CONST_IN.Max_Confirm_Stop_Duration = ALARM__CONST_IN.Max_Confirm_Stop_Duration)) and (CONST_IN.Max_Display_Duration = ALARM__CONST_IN.Max_Display_Duration)) and (CONST_IN.Max_Duration_Over_Infusion = ALARM__CONST_IN.Max_Duration_Over_Infusion)) and (CONST_IN.Max_Duration_Under_Infusion = ALARM__CONST_IN.Max_Duration_Under_Infusion)) and (CONST_IN.Max_Idle_Duration = ALARM__CONST_IN.Max_Idle_Duration)) and (CONST_IN.Max_Paused_Duration = ALARM__CONST_IN.Max_Paused_Duration)) and (CONST_IN.System_Test_Inteval = ALARM__CONST_IN.System_Test_Inteval)) and (CONST_IN.Tolerance_Max = ALARM__CONST_IN.Tolerance_Max)) and (CONST_IN.Tolerance_Min = ALARM__CONST_IN.Tolerance_Min));
+
+  assert (((((((SYS_STAT__SYS_STAT_OUT.Idle_Time_Exceeded = ALARM__SYS_STAT_IN.Idle_Time_Exceeded) and (SYS_STAT__SYS_STAT_OUT.In_Therapy = ALARM__SYS_STAT_IN.In_Therapy)) and (SYS_STAT__SYS_STAT_OUT.Log_Message_ID = ALARM__SYS_STAT_IN.Log_Message_ID)) and (SYS_STAT__SYS_STAT_OUT.Paused_Time_Exceeded = ALARM__SYS_STAT_IN.Paused_Time_Exceeded)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Empty = ALARM__SYS_STAT_IN.Reservoir_Empty)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Volume = ALARM__SYS_STAT_IN.Reservoir_Volume)) and (SYS_STAT__SYS_STAT_OUT.Volume_Infused = ALARM__SYS_STAT_IN.Volume_Infused));
+
+  assert ((((((((((((((((((((((((((0 -> (pre CONFIG__CONFIG_OUT.Config_Mode)) = ALARM__CONFIG_IN.Config_Mode) and ((0 -> (pre CONFIG__CONFIG_OUT.Config_Timer)) = ALARM__CONFIG_IN.Config_Timer)) and ((0 -> (pre CONFIG__CONFIG_OUT.Configured)) = ALARM__CONFIG_IN.Configured)) and ((0 -> (pre CONFIG__CONFIG_OUT.Drug_Concentration)) = ALARM__CONFIG_IN.Drug_Concentration)) and ((0 -> (pre CONFIG__CONFIG_OUT.Drug_Name)) = ALARM__CONFIG_IN.Drug_Name)) and ((0 -> (pre CONFIG__CONFIG_OUT.Duration_Intermittent_Bolus)) = ALARM__CONFIG_IN.Duration_Intermittent_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Duration_Patient_Bolus)) = ALARM__CONFIG_IN.Duration_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Entered_Reservoir_Volume)) = ALARM__CONFIG_IN.Entered_Reservoir_Volume)) and ((0 -> (pre CONFIG__CONFIG_OUT.Error_Message_ID)) = ALARM__CONFIG_IN.Error_Message_ID)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_Basal)) = ALARM__CONFIG_IN.Flow_Rate_Basal)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_Intermittent_Bolus)) = ALARM__CONFIG_IN.Flow_Rate_Intermittent_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_KVO)) = ALARM__CONFIG_IN.Flow_Rate_KVO)) and ((0 -> (pre CONFIG__CONFIG_OUT.Flow_Rate_Patient_Bolus)) = ALARM__CONFIG_IN.Flow_Rate_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Infusion_Total_Duration)) = ALARM__CONFIG_IN.Infusion_Total_Duration)) and ((0 -> (pre CONFIG__CONFIG_OUT.Interval_Intermittent_Bolus)) = ALARM__CONFIG_IN.Interval_Intermittent_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Lockout_Period_Patient_Bolus)) = ALARM__CONFIG_IN.Lockout_Period_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Log_Message_ID)) = ALARM__CONFIG_IN.Log_Message_ID)) and ((0 -> (pre CONFIG__CONFIG_OUT.Max_Number_of_Patient_Bolus)) = ALARM__CONFIG_IN.Max_Number_of_Patient_Bolus)) and ((0 -> (pre CONFIG__CONFIG_OUT.Patient_ID)) = ALARM__CONFIG_IN.Patient_ID)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Config_Type)) = ALARM__CONFIG_IN.Request_Config_Type)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Confirm_Infusion_Initiate)) = ALARM__CONFIG_IN.Request_Confirm_Infusion_Initiate)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Infusion_Info)) = ALARM__CONFIG_IN.Request_Infusion_Info)) and ((false -> (pre CONFIG__CONFIG_OUT.Request_Patient_Drug_Info)) = ALARM__CONFIG_IN.Request_Patient_Drug_Info)) and ((0 -> (pre CONFIG__CONFIG_OUT.Reservoir_Volume)) = ALARM__CONFIG_IN.Reservoir_Volume)) and ((0 -> (pre CONFIG__CONFIG_OUT.VTBI_Total)) = ALARM__CONFIG_IN.VTBI_Total));
+
+  assert (((((ALARM__ALARM_OUT.Audio_Notification_Command = OUTPUT__ALARM_IN.Audio_Notification_Command) and (ALARM__ALARM_OUT.Highest_Level_Alarm = OUTPUT__ALARM_IN.Highest_Level_Alarm)) and (ALARM__ALARM_OUT.Is_Audio_Disabled = OUTPUT__ALARM_IN.Is_Audio_Disabled)) and (ALARM__ALARM_OUT.Log_Message_ID = OUTPUT__ALARM_IN.Log_Message_ID)) and (ALARM__ALARM_OUT.Notification_Message = OUTPUT__ALARM_IN.Notification_Message));
+
+  assert (((TLM__TLM_MODE_OUT.Log_Message_ID = CONFIG__TLM_MODE_IN.Log_Message_ID) and (TLM__TLM_MODE_OUT.Request_Confirm_Stop = CONFIG__TLM_MODE_IN.Request_Confirm_Stop)) and (TLM__TLM_MODE_OUT.System_On = CONFIG__TLM_MODE_IN.System_On));
+
+  assert ((((((((((((((PRES_IN.Drug_Concentration = CONFIG__PRES_IN.Drug_Concentration) and (PRES_IN.Drug_Name = CONFIG__PRES_IN.Drug_Name)) and (PRES_IN.Duration_Intermittent_Bolus = CONFIG__PRES_IN.Duration_Intermittent_Bolus)) and (PRES_IN.Duration_Patient_Bolus = CONFIG__PRES_IN.Duration_Patient_Bolus)) and (PRES_IN.Entered_Reservoir_Volume = CONFIG__PRES_IN.Entered_Reservoir_Volume)) and (PRES_IN.Flow_Rate_Basal = CONFIG__PRES_IN.Flow_Rate_Basal)) and (PRES_IN.Flow_Rate_Intermittent_Bolus = CONFIG__PRES_IN.Flow_Rate_Intermittent_Bolus)) and (PRES_IN.Flow_Rate_Patient_Bolus = CONFIG__PRES_IN.Flow_Rate_Patient_Bolus)) and (PRES_IN.Interval_Intermittent_Bolus = CONFIG__PRES_IN.Interval_Intermittent_Bolus)) and (PRES_IN.Lockout_Period_Patient_Bolus = CONFIG__PRES_IN.Lockout_Period_Patient_Bolus)) and (PRES_IN.Max_Number_of_Patient_Bolus = CONFIG__PRES_IN.Max_Number_of_Patient_Bolus)) and (PRES_IN.Patient_ID = CONFIG__PRES_IN.Patient_ID)) and (PRES_IN.Total_Duration = CONFIG__PRES_IN.Total_Duration)) and (PRES_IN.VTBI_Total = CONFIG__PRES_IN.VTBI_Total));
+
+  assert ((((((((((((((OP_CMD_IN.Back = CONFIG__OP_CMD_IN.Back) and (OP_CMD_IN.Cancel = CONFIG__OP_CMD_IN.Cancel)) and (OP_CMD_IN.Configuration_Type = CONFIG__OP_CMD_IN.Configuration_Type)) and (OP_CMD_IN.Confirm_Stop = CONFIG__OP_CMD_IN.Confirm_Stop)) and (OP_CMD_IN.Data_Config = CONFIG__OP_CMD_IN.Data_Config)) and (OP_CMD_IN.Disable_Audio = CONFIG__OP_CMD_IN.Disable_Audio)) and (OP_CMD_IN.Infusion_Cancel = CONFIG__OP_CMD_IN.Infusion_Cancel)) and (OP_CMD_IN.Infusion_Inhibit = CONFIG__OP_CMD_IN.Infusion_Inhibit)) and (OP_CMD_IN.Infusion_Initiate = CONFIG__OP_CMD_IN.Infusion_Initiate)) and (OP_CMD_IN.Keyboard = CONFIG__OP_CMD_IN.Keyboard)) and (OP_CMD_IN.Next = CONFIG__OP_CMD_IN.Next)) and (OP_CMD_IN.Notification_Cancel = CONFIG__OP_CMD_IN.Notification_Cancel)) and (OP_CMD_IN.System_Start = CONFIG__OP_CMD_IN.System_Start)) and (OP_CMD_IN.System_Stop = CONFIG__OP_CMD_IN.System_Stop));
+
+  assert (((((((((((DB_IN.Drug_Concentration_High = CONFIG__DB_IN.Drug_Concentration_High) and (DB_IN.Drug_Concentration_Low = CONFIG__DB_IN.Drug_Concentration_Low)) and (DB_IN.Drug_Name = CONFIG__DB_IN.Drug_Name)) and (DB_IN.Flow_Rate_High = CONFIG__DB_IN.Flow_Rate_High)) and (DB_IN.Flow_Rate_KVO = CONFIG__DB_IN.Flow_Rate_KVO)) and (DB_IN.Flow_Rate_Low = CONFIG__DB_IN.Flow_Rate_Low)) and (DB_IN.Inteval_Patient_Bolus = CONFIG__DB_IN.Inteval_Patient_Bolus)) and (DB_IN.Known_Prescription = CONFIG__DB_IN.Known_Prescription)) and (DB_IN.Number_Max_Patient_Bolus = CONFIG__DB_IN.Number_Max_Patient_Bolus)) and (DB_IN.VTBI_High = CONFIG__DB_IN.VTBI_High)) and (DB_IN.VTBI_Low = CONFIG__DB_IN.VTBI_Low));
+
+  assert ((((((((((((((((CONST_IN.Audio_Enable_Duration = CONFIG__CONST_IN.Audio_Enable_Duration) and (CONST_IN.Audio_Level = CONFIG__CONST_IN.Audio_Level)) and (CONST_IN.Config_Warning_Duration = CONFIG__CONST_IN.Config_Warning_Duration)) and (CONST_IN.Empty_Reservoir = CONFIG__CONST_IN.Empty_Reservoir)) and (CONST_IN.Log_Interval = CONFIG__CONST_IN.Log_Interval)) and (CONST_IN.Low_Reservoir = CONFIG__CONST_IN.Low_Reservoir)) and (CONST_IN.Max_Config_Duration = CONFIG__CONST_IN.Max_Config_Duration)) and (CONST_IN.Max_Confirm_Stop_Duration = CONFIG__CONST_IN.Max_Confirm_Stop_Duration)) and (CONST_IN.Max_Display_Duration = CONFIG__CONST_IN.Max_Display_Duration)) and (CONST_IN.Max_Duration_Over_Infusion = CONFIG__CONST_IN.Max_Duration_Over_Infusion)) and (CONST_IN.Max_Duration_Under_Infusion = CONFIG__CONST_IN.Max_Duration_Under_Infusion)) and (CONST_IN.Max_Idle_Duration = CONFIG__CONST_IN.Max_Idle_Duration)) and (CONST_IN.Max_Paused_Duration = CONFIG__CONST_IN.Max_Paused_Duration)) and (CONST_IN.System_Test_Inteval = CONFIG__CONST_IN.System_Test_Inteval)) and (CONST_IN.Tolerance_Max = CONFIG__CONST_IN.Tolerance_Max)) and (CONST_IN.Tolerance_Min = CONFIG__CONST_IN.Tolerance_Min));
+
+  assert (((((((SYS_STAT__SYS_STAT_OUT.Idle_Time_Exceeded = CONFIG__SYS_STAT_IN.Idle_Time_Exceeded) and (SYS_STAT__SYS_STAT_OUT.In_Therapy = CONFIG__SYS_STAT_IN.In_Therapy)) and (SYS_STAT__SYS_STAT_OUT.Log_Message_ID = CONFIG__SYS_STAT_IN.Log_Message_ID)) and (SYS_STAT__SYS_STAT_OUT.Paused_Time_Exceeded = CONFIG__SYS_STAT_IN.Paused_Time_Exceeded)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Empty = CONFIG__SYS_STAT_IN.Reservoir_Empty)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Volume = CONFIG__SYS_STAT_IN.Reservoir_Volume)) and (SYS_STAT__SYS_STAT_OUT.Volume_Infused = CONFIG__SYS_STAT_IN.Volume_Infused));
+
+  assert (((((((((((((((((((((((((CONFIG__CONFIG_OUT.Config_Mode = OUTPUT__CONFIG_IN.Config_Mode) and (CONFIG__CONFIG_OUT.Config_Timer = OUTPUT__CONFIG_IN.Config_Timer)) and (CONFIG__CONFIG_OUT.Configured = OUTPUT__CONFIG_IN.Configured)) and (CONFIG__CONFIG_OUT.Drug_Concentration = OUTPUT__CONFIG_IN.Drug_Concentration)) and (CONFIG__CONFIG_OUT.Drug_Name = OUTPUT__CONFIG_IN.Drug_Name)) and (CONFIG__CONFIG_OUT.Duration_Intermittent_Bolus = OUTPUT__CONFIG_IN.Duration_Intermittent_Bolus)) and (CONFIG__CONFIG_OUT.Duration_Patient_Bolus = OUTPUT__CONFIG_IN.Duration_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Entered_Reservoir_Volume = OUTPUT__CONFIG_IN.Entered_Reservoir_Volume)) and (CONFIG__CONFIG_OUT.Error_Message_ID = OUTPUT__CONFIG_IN.Error_Message_ID)) and (CONFIG__CONFIG_OUT.Flow_Rate_Basal = OUTPUT__CONFIG_IN.Flow_Rate_Basal)) and (CONFIG__CONFIG_OUT.Flow_Rate_Intermittent_Bolus = OUTPUT__CONFIG_IN.Flow_Rate_Intermittent_Bolus)) and (CONFIG__CONFIG_OUT.Flow_Rate_KVO = OUTPUT__CONFIG_IN.Flow_Rate_KVO)) and (CONFIG__CONFIG_OUT.Flow_Rate_Patient_Bolus = OUTPUT__CONFIG_IN.Flow_Rate_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Infusion_Total_Duration = OUTPUT__CONFIG_IN.Infusion_Total_Duration)) and (CONFIG__CONFIG_OUT.Interval_Intermittent_Bolus = OUTPUT__CONFIG_IN.Interval_Intermittent_Bolus)) and (CONFIG__CONFIG_OUT.Lockout_Period_Patient_Bolus = OUTPUT__CONFIG_IN.Lockout_Period_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Log_Message_ID = OUTPUT__CONFIG_IN.Log_Message_ID)) and (CONFIG__CONFIG_OUT.Max_Number_of_Patient_Bolus = OUTPUT__CONFIG_IN.Max_Number_of_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Patient_ID = OUTPUT__CONFIG_IN.Patient_ID)) and (CONFIG__CONFIG_OUT.Request_Config_Type = OUTPUT__CONFIG_IN.Request_Config_Type)) and (CONFIG__CONFIG_OUT.Request_Confirm_Infusion_Initiate = OUTPUT__CONFIG_IN.Request_Confirm_Infusion_Initiate)) and (CONFIG__CONFIG_OUT.Request_Infusion_Info = OUTPUT__CONFIG_IN.Request_Infusion_Info)) and (CONFIG__CONFIG_OUT.Request_Patient_Drug_Info = OUTPUT__CONFIG_IN.Request_Patient_Drug_Info)) and (CONFIG__CONFIG_OUT.Reservoir_Volume = OUTPUT__CONFIG_IN.Reservoir_Volume)) and (CONFIG__CONFIG_OUT.VTBI_Total = OUTPUT__CONFIG_IN.VTBI_Total));
+
+  assert (((TLM__TLM_MODE_OUT.Log_Message_ID = IM__TLM_MODE_IN.Log_Message_ID) and (TLM__TLM_MODE_OUT.Request_Confirm_Stop = IM__TLM_MODE_IN.Request_Confirm_Stop)) and (TLM__TLM_MODE_OUT.System_On = IM__TLM_MODE_IN.System_On));
+
+  assert ((((((((((((((OP_CMD_IN.Back = IM__OP_CMD_IN.Back) and (OP_CMD_IN.Cancel = IM__OP_CMD_IN.Cancel)) and (OP_CMD_IN.Configuration_Type = IM__OP_CMD_IN.Configuration_Type)) and (OP_CMD_IN.Confirm_Stop = IM__OP_CMD_IN.Confirm_Stop)) and (OP_CMD_IN.Data_Config = IM__OP_CMD_IN.Data_Config)) and (OP_CMD_IN.Disable_Audio = IM__OP_CMD_IN.Disable_Audio)) and (OP_CMD_IN.Infusion_Cancel = IM__OP_CMD_IN.Infusion_Cancel)) and (OP_CMD_IN.Infusion_Inhibit = IM__OP_CMD_IN.Infusion_Inhibit)) and (OP_CMD_IN.Infusion_Initiate = IM__OP_CMD_IN.Infusion_Initiate)) and (OP_CMD_IN.Keyboard = IM__OP_CMD_IN.Keyboard)) and (OP_CMD_IN.Next = IM__OP_CMD_IN.Next)) and (OP_CMD_IN.Notification_Cancel = IM__OP_CMD_IN.Notification_Cancel)) and (OP_CMD_IN.System_Start = IM__OP_CMD_IN.System_Start)) and (OP_CMD_IN.System_Stop = IM__OP_CMD_IN.System_Stop));
+
+  assert (PATIENT_IN.Patient_Bolus_Request = IM__PATIENT_IN.Patient_Bolus_Request);
+
+  assert (((((((((((((((((((((((((CONFIG__CONFIG_OUT.Config_Mode = IM__CONFIG_IN.Config_Mode) and (CONFIG__CONFIG_OUT.Config_Timer = IM__CONFIG_IN.Config_Timer)) and (CONFIG__CONFIG_OUT.Configured = IM__CONFIG_IN.Configured)) and (CONFIG__CONFIG_OUT.Drug_Concentration = IM__CONFIG_IN.Drug_Concentration)) and (CONFIG__CONFIG_OUT.Drug_Name = IM__CONFIG_IN.Drug_Name)) and (CONFIG__CONFIG_OUT.Duration_Intermittent_Bolus = IM__CONFIG_IN.Duration_Intermittent_Bolus)) and (CONFIG__CONFIG_OUT.Duration_Patient_Bolus = IM__CONFIG_IN.Duration_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Entered_Reservoir_Volume = IM__CONFIG_IN.Entered_Reservoir_Volume)) and (CONFIG__CONFIG_OUT.Error_Message_ID = IM__CONFIG_IN.Error_Message_ID)) and (CONFIG__CONFIG_OUT.Flow_Rate_Basal = IM__CONFIG_IN.Flow_Rate_Basal)) and (CONFIG__CONFIG_OUT.Flow_Rate_Intermittent_Bolus = IM__CONFIG_IN.Flow_Rate_Intermittent_Bolus)) and (CONFIG__CONFIG_OUT.Flow_Rate_KVO = IM__CONFIG_IN.Flow_Rate_KVO)) and (CONFIG__CONFIG_OUT.Flow_Rate_Patient_Bolus = IM__CONFIG_IN.Flow_Rate_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Infusion_Total_Duration = IM__CONFIG_IN.Infusion_Total_Duration)) and (CONFIG__CONFIG_OUT.Interval_Intermittent_Bolus = IM__CONFIG_IN.Interval_Intermittent_Bolus)) and (CONFIG__CONFIG_OUT.Lockout_Period_Patient_Bolus = IM__CONFIG_IN.Lockout_Period_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Log_Message_ID = IM__CONFIG_IN.Log_Message_ID)) and (CONFIG__CONFIG_OUT.Max_Number_of_Patient_Bolus = IM__CONFIG_IN.Max_Number_of_Patient_Bolus)) and (CONFIG__CONFIG_OUT.Patient_ID = IM__CONFIG_IN.Patient_ID)) and (CONFIG__CONFIG_OUT.Request_Config_Type = IM__CONFIG_IN.Request_Config_Type)) and (CONFIG__CONFIG_OUT.Request_Confirm_Infusion_Initiate = IM__CONFIG_IN.Request_Confirm_Infusion_Initiate)) and (CONFIG__CONFIG_OUT.Request_Infusion_Info = IM__CONFIG_IN.Request_Infusion_Info)) and (CONFIG__CONFIG_OUT.Request_Patient_Drug_Info = IM__CONFIG_IN.Request_Patient_Drug_Info)) and (CONFIG__CONFIG_OUT.Reservoir_Volume = IM__CONFIG_IN.Reservoir_Volume)) and (CONFIG__CONFIG_OUT.VTBI_Total = IM__CONFIG_IN.VTBI_Total));
+
+  assert (((((ALARM__ALARM_OUT.Audio_Notification_Command = IM__ALARM_IN.Audio_Notification_Command) and (ALARM__ALARM_OUT.Highest_Level_Alarm = IM__ALARM_IN.Highest_Level_Alarm)) and (ALARM__ALARM_OUT.Is_Audio_Disabled = IM__ALARM_IN.Is_Audio_Disabled)) and (ALARM__ALARM_OUT.Log_Message_ID = IM__ALARM_IN.Log_Message_ID)) and (ALARM__ALARM_OUT.Notification_Message = IM__ALARM_IN.Notification_Message));
+
+  assert (((((((SYS_STAT__SYS_STAT_OUT.Idle_Time_Exceeded = IM__SYS_STAT_IN.Idle_Time_Exceeded) and (SYS_STAT__SYS_STAT_OUT.In_Therapy = IM__SYS_STAT_IN.In_Therapy)) and (SYS_STAT__SYS_STAT_OUT.Log_Message_ID = IM__SYS_STAT_IN.Log_Message_ID)) and (SYS_STAT__SYS_STAT_OUT.Paused_Time_Exceeded = IM__SYS_STAT_IN.Paused_Time_Exceeded)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Empty = IM__SYS_STAT_IN.Reservoir_Empty)) and (SYS_STAT__SYS_STAT_OUT.Reservoir_Volume = IM__SYS_STAT_IN.Reservoir_Volume)) and (SYS_STAT__SYS_STAT_OUT.Volume_Infused = IM__SYS_STAT_IN.Volume_Infused));
+
+  assert ((((((IM__IM_OUT.Actual_Infusion_Duration = OUTPUT__IM_IN.Actual_Infusion_Duration) and (IM__IM_OUT.Commanded_Flow_Rate = OUTPUT__IM_IN.Commanded_Flow_Rate)) and (IM__IM_OUT.Current_System_Mode = OUTPUT__IM_IN.Current_System_Mode)) and (IM__IM_OUT.Is_Locked_Out = OUTPUT__IM_IN.Is_Locked_Out)) and (IM__IM_OUT.Log_Message_ID = OUTPUT__IM_IN.Log_Message_ID)) and (IM__IM_OUT.New_Infusion = OUTPUT__IM_IN.New_Infusion));
+
+  assert (((((((((((((((((((((((((((((((((OUTPUT__GPCA_SW_OUT.Actual_Infusion_Duration = GPCA_SW_OUT.Actual_Infusion_Duration) and (OUTPUT__GPCA_SW_OUT.Audio_Notification_Command = GPCA_SW_OUT.Audio_Notification_Command)) and (OUTPUT__GPCA_SW_OUT.Commanded_Flow_Rate = GPCA_SW_OUT.Commanded_Flow_Rate)) and (OUTPUT__GPCA_SW_OUT.Configured = GPCA_SW_OUT.Configured)) and (OUTPUT__GPCA_SW_OUT.Current_System_Mode = GPCA_SW_OUT.Current_System_Mode)) and (OUTPUT__GPCA_SW_OUT.Drug_Concentration = GPCA_SW_OUT.Drug_Concentration)) and (OUTPUT__GPCA_SW_OUT.Drug_Name = GPCA_SW_OUT.Drug_Name)) and (OUTPUT__GPCA_SW_OUT.Duration_Intermittent_Bolus = GPCA_SW_OUT.Duration_Intermittent_Bolus)) and (OUTPUT__GPCA_SW_OUT.Duration_Patient_Bolus = GPCA_SW_OUT.Duration_Patient_Bolus)) and (OUTPUT__GPCA_SW_OUT.Entered_Reservoir_Volume = GPCA_SW_OUT.Entered_Reservoir_Volume)) and (OUTPUT__GPCA_SW_OUT.Error_Message_ID = GPCA_SW_OUT.Error_Message_ID)) and (OUTPUT__GPCA_SW_OUT.Flow_Rate_Basal = GPCA_SW_OUT.Flow_Rate_Basal)) and (OUTPUT__GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus = GPCA_SW_OUT.Flow_Rate_Intermittent_Bolus)) and (OUTPUT__GPCA_SW_OUT.Flow_Rate_KVO = GPCA_SW_OUT.Flow_Rate_KVO)) and (OUTPUT__GPCA_SW_OUT.Flow_Rate_Patient_Bolus = GPCA_SW_OUT.Flow_Rate_Patient_Bolus)) and (OUTPUT__GPCA_SW_OUT.Infusion_Total_Duration = GPCA_SW_OUT.Infusion_Total_Duration)) and (OUTPUT__GPCA_SW_OUT.Interval_Intermittent_Bolus = GPCA_SW_OUT.Interval_Intermittent_Bolus)) and (OUTPUT__GPCA_SW_OUT.Is_Audio_Disabled = GPCA_SW_OUT.Is_Audio_Disabled)) and (OUTPUT__GPCA_SW_OUT.Is_Locked_Out = GPCA_SW_OUT.Is_Locked_Out)) and (OUTPUT__GPCA_SW_OUT.Lockout_Period_Patient_Bolus = GPCA_SW_OUT.Lockout_Period_Patient_Bolus)) and (OUTPUT__GPCA_SW_OUT.Log = GPCA_SW_OUT.Log)) and (OUTPUT__GPCA_SW_OUT.Max_Number_of_Patient_Bolus = GPCA_SW_OUT.Max_Number_of_Patient_Bolus)) and (OUTPUT__GPCA_SW_OUT.New_Infusion = GPCA_SW_OUT.New_Infusion)) and (OUTPUT__GPCA_SW_OUT.Notification_Message = GPCA_SW_OUT.Notification_Message)) and (OUTPUT__GPCA_SW_OUT.Patient_ID = GPCA_SW_OUT.Patient_ID)) and (OUTPUT__GPCA_SW_OUT.Request_Config_Type = GPCA_SW_OUT.Request_Config_Type)) and (OUTPUT__GPCA_SW_OUT.Request_Confirm_Infusion_Initiate = GPCA_SW_OUT.Request_Confirm_Infusion_Initiate)) and (OUTPUT__GPCA_SW_OUT.Request_Confirm_Stop = GPCA_SW_OUT.Request_Confirm_Stop)) and (OUTPUT__GPCA_SW_OUT.Request_Infusion_Info = GPCA_SW_OUT.Request_Infusion_Info)) and (OUTPUT__GPCA_SW_OUT.Request_Patient_Drug_Info = GPCA_SW_OUT.Request_Patient_Drug_Info)) and (OUTPUT__GPCA_SW_OUT.Reservoir_Volume = GPCA_SW_OUT.Reservoir_Volume)) and (OUTPUT__GPCA_SW_OUT.VTBI_Total = GPCA_SW_OUT.VTBI_Total)) and (OUTPUT__GPCA_SW_OUT.Volume_Infused = GPCA_SW_OUT.Volume_Infused));
+
+  assert _TOP__ASSERT__0;
+
+  assert _TOP__ASSERT__1;
+
+  assert _TOP__ASSERT__2;
+
+  assert _TOP__ASSERT__3;
+
+  assert _TOP__ASSERT__4;
+
+  assert _TOP__ASSERT__5;
+
+  assert _TOP__ASSERT__6;
+
+  assert _TOP__ASSERT__7;
+
+  assert _TOP__ASSERT__8;
+
+  assert _TOP__ASSERT__9;
+
+  assert _TOP__ASSERT__10;
+
+  assert _TOP__ASSERT__11;
+
+  assert _TOP__ASSERT__12;
+
+  assert _TOP__ASSERT__13;
+
+  assert _TOP__ASSERT__14;
+
+  assert _TOP__ASSERT__15;
+
+  assert _TOP__ASSERT__16;
+
+  assert _TOP__ASSERT__17;
+
+  assert _TOP__ASSERT__18;
+
+  assert _TOP__ASSERT__19;
+
+  assert _TOP__ASSERT__20;
+
+  assert _TOP__ASSERT__21;
+
+  assert _TOP__ASSERT__22;
+
+  assert _TOP__ASSERT__23;
+
+  assert _TOP__ASSERT__24;
+
+  assert _TOP__ASSERT__25;
+
+  assert _TOP__ASSERT__26;
+
+  assert _TOP__ASSERT__27;
+
+  assert _TOP__ASSERT__28;
+
+  assert _TOP__ASSERT__29;
+
+  assert _TOP__ASSERT__30;
+
+  assert _TOP__ASSERT__31;
+
+  assert _TOP__ASSERT__32;
+
+  assert _TOP__ASSERT__33;
+
+  assert _TOP__ASSERT__34;
+
+  assert _TOP__ASSERT__35;
+
+  assert _TOP__ASSERT__36;
+
+  assert _TOP__ASSERT__37;
+
+  assert _TOP__ASSERT__38;
+
+  assert _TOP__ASSERT__39;
+
+  assert _TOP__ASSERT__40;
+
+  assert _TOP__ASSERT__41;
+
+  assert _TOP__ASSERT__42;
+
+  assert _TOP__ASSERT__43;
+
+  assert _TOP__ASSERT__44;
+
+  assert _TOP__ASSERT__45;
+
+  assert _TOP__ASSERT__46;
+
+  assert _TOP__ASSERT__47;
+
+  assert _TOP__ASSERT__48;
+
+  assert _TOP__ASSERT__49;
+
+  assert _TOP__ASSERT__50;
+
+  assert _TOP__ASSERT__51;
+
+  assert _TOP__ASSERT__52;
+
+  assert _TOP__ASSERT__53;
+
+  assert _TOP__ASSERT__54;
+
+  assert _TOP__ASSERT__55;
+
+  assert _TOP__ASSERT__56;
+
+  assert _TOP__ASSERT__57;
+
+  assert _TOP__ASSERT__58;
+
+  assert _TOP__ASSERT__59;
+
+  assert _TOP__ASSERT__60;
+
+  assert _TOP__ASSERT__61;
+
+  assert _TOP__ASSERT__62;
+
+  assert _TOP__ASSERT__63;
+
+  assert _TOP__ASSERT__64;
+
+  assert _TOP__ASSERT__65;
+
+  assert _TOP__ASSERT__66;
+
+  assert _TOP__ASSERT__67;
+
+  assert _TOP__ASSERT__68;
+
+  assert _TOP__ASSERT__69;
+
+  assert true;
+
+  --%PROPERTY __GUARANTEE35;
+
+tel;

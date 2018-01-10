@@ -1,0 +1,175 @@
+node top(
+  e01 : bool;
+  e02 : bool;
+  e03 : bool;
+  e04 : bool;
+  e05 : bool;
+  e06 : bool;
+  e07 : bool;
+  e08 : bool;
+  e09 : bool;
+  e10 : bool;
+  e11 : bool;
+  e12 : bool;
+  init_invalid : int
+) returns (
+  OK : bool
+);
+var
+  dirty : int;
+  env : bool;
+  DRAGON~0.e01 : bool;
+  DRAGON~0.e02 : bool;
+  DRAGON~0.e03 : bool;
+  DRAGON~0.e04 : bool;
+  DRAGON~0.e05 : bool;
+  DRAGON~0.e06 : bool;
+  DRAGON~0.e07 : bool;
+  DRAGON~0.e08 : bool;
+  DRAGON~0.e09 : bool;
+  DRAGON~0.e10 : bool;
+  DRAGON~0.e11 : bool;
+  DRAGON~0.e12 : bool;
+  DRAGON~0.init_invalid : int;
+  DRAGON~0.exclusive : int;
+  DRAGON~0.shared : int;
+  DRAGON~0.shared_dirty : int;
+  DRAGON~0.dirty : int;
+  DRAGON~0.invalid : int;
+  DRAGON~0.g01 : bool;
+  DRAGON~0.g02 : bool;
+  DRAGON~0.g03 : bool;
+  DRAGON~0.g04 : bool;
+  DRAGON~0.g05 : bool;
+  DRAGON~0.g06 : bool;
+  DRAGON~0.g07 : bool;
+  DRAGON~0.g08 : bool;
+  DRAGON~0.g09 : bool;
+  DRAGON~0.g10 : bool;
+  DRAGON~0.g11 : bool;
+  DRAGON~0.g12 : bool;
+  DRAGON~0.mem_init : int;
+  Sofar~0.X : bool;
+  Sofar~0.Sofar : bool;
+  First~0.X : int;
+  First~0.First : int;
+  excludes12~0.X1 : bool;
+  excludes12~0.X2 : bool;
+  excludes12~0.X3 : bool;
+  excludes12~0.X4 : bool;
+  excludes12~0.X5 : bool;
+  excludes12~0.X6 : bool;
+  excludes12~0.X7 : bool;
+  excludes12~0.X8 : bool;
+  excludes12~0.X9 : bool;
+  excludes12~0.X10 : bool;
+  excludes12~0.X11 : bool;
+  excludes12~0.X12 : bool;
+  excludes12~0.excludes : bool;
+let
+  --%MAIN;
+  dirty = DRAGON~0.dirty;
+
+  env = Sofar~0.Sofar;
+
+  OK = (env => (dirty <= First~0.First));
+
+  DRAGON~0.e01 = e01;
+
+  DRAGON~0.e02 = e02;
+
+  DRAGON~0.e03 = e03;
+
+  DRAGON~0.e04 = e04;
+
+  DRAGON~0.e05 = e05;
+
+  DRAGON~0.e06 = e06;
+
+  DRAGON~0.e07 = e07;
+
+  DRAGON~0.e08 = e08;
+
+  DRAGON~0.e09 = e09;
+
+  DRAGON~0.e10 = e10;
+
+  DRAGON~0.e11 = e11;
+
+  DRAGON~0.e12 = e12;
+
+  DRAGON~0.init_invalid = init_invalid;
+
+  DRAGON~0.mem_init = (DRAGON~0.init_invalid -> (pre DRAGON~0.mem_init));
+
+  DRAGON~0.g01 = ((((((pre DRAGON~0.invalid) >= 1) and ((pre DRAGON~0.dirty) = 0)) and ((pre DRAGON~0.shared) = 0)) and ((pre DRAGON~0.exclusive) = 0)) and ((pre DRAGON~0.shared_dirty) = 0));
+
+  DRAGON~0.g02 = (((pre DRAGON~0.invalid) >= 1) and (((((pre DRAGON~0.dirty) + (pre DRAGON~0.shared)) + (pre DRAGON~0.exclusive)) + (pre DRAGON~0.shared_dirty)) >= 1));
+
+  DRAGON~0.g03 = ((pre DRAGON~0.exclusive) >= 1);
+
+  DRAGON~0.g04 = (((pre DRAGON~0.shared_dirty) = 1) and ((pre DRAGON~0.shared) = 0));
+
+  DRAGON~0.g05 = (((pre DRAGON~0.shared_dirty) = 0) and ((pre DRAGON~0.shared) = 1));
+
+  DRAGON~0.g06 = (((pre DRAGON~0.shared_dirty) + (pre DRAGON~0.shared)) >= 2);
+
+  DRAGON~0.g07 = ((((((pre DRAGON~0.invalid) >= 1) and ((pre DRAGON~0.dirty) = 0)) and ((pre DRAGON~0.shared) = 0)) and ((pre DRAGON~0.exclusive) = 0)) and ((pre DRAGON~0.shared_dirty) = 0));
+
+  DRAGON~0.g08 = (((pre DRAGON~0.invalid) >= 1) and (((((pre DRAGON~0.dirty) + (pre DRAGON~0.shared)) + (pre DRAGON~0.exclusive)) + (pre DRAGON~0.shared_dirty)) >= 1));
+
+  DRAGON~0.g09 = ((pre DRAGON~0.dirty) >= 1);
+
+  DRAGON~0.g10 = ((pre DRAGON~0.shared) >= 1);
+
+  DRAGON~0.g11 = ((pre DRAGON~0.shared_dirty) >= 1);
+
+  DRAGON~0.g12 = ((pre DRAGON~0.exclusive) >= 1);
+
+  DRAGON~0.exclusive = (0 -> (if DRAGON~0.e01 then (if DRAGON~0.g01 then ((pre DRAGON~0.exclusive) + 1) else (pre DRAGON~0.exclusive)) else (if DRAGON~0.e02 then (if DRAGON~0.g02 then 0 else (pre DRAGON~0.exclusive)) else (if DRAGON~0.e03 then (if DRAGON~0.g03 then ((pre DRAGON~0.exclusive) - 1) else (pre DRAGON~0.exclusive)) else (if DRAGON~0.e08 then (if DRAGON~0.g08 then 0 else (pre DRAGON~0.exclusive)) else (if DRAGON~0.e12 then (if DRAGON~0.g12 then ((pre DRAGON~0.exclusive) - 1) else (pre DRAGON~0.exclusive)) else (pre DRAGON~0.exclusive)))))));
+
+  DRAGON~0.shared = (0 -> (if DRAGON~0.e02 then (if DRAGON~0.g02 then (((pre DRAGON~0.shared) + (pre DRAGON~0.exclusive)) + 1) else (pre DRAGON~0.shared)) else (if DRAGON~0.e05 then (if DRAGON~0.g05 then 0 else (pre DRAGON~0.shared)) else (if DRAGON~0.e06 then (if DRAGON~0.g06 then (((pre DRAGON~0.shared) + (pre DRAGON~0.shared_dirty)) - 1) else (pre DRAGON~0.shared)) else (if DRAGON~0.e08 then (if DRAGON~0.g08 then ((((pre DRAGON~0.shared) + (pre DRAGON~0.exclusive)) + (pre DRAGON~0.shared_dirty)) + (pre DRAGON~0.dirty)) else (pre DRAGON~0.shared)) else (if DRAGON~0.e10 then (if DRAGON~0.g10 then ((pre DRAGON~0.shared) - 1) else (pre DRAGON~0.shared)) else (pre DRAGON~0.shared)))))));
+
+  DRAGON~0.shared_dirty = (0 -> (if DRAGON~0.e02 then (if DRAGON~0.g02 then ((pre DRAGON~0.shared_dirty) + (pre DRAGON~0.dirty)) else (pre DRAGON~0.shared_dirty)) else (if DRAGON~0.e04 then (if DRAGON~0.g04 then 0 else (pre DRAGON~0.shared_dirty)) else (if DRAGON~0.e06 then (if DRAGON~0.g06 then 1 else (pre DRAGON~0.shared_dirty)) else (if DRAGON~0.e08 then (if DRAGON~0.g08 then 1 else (pre DRAGON~0.shared_dirty)) else (if DRAGON~0.e11 then (if DRAGON~0.g11 then ((pre DRAGON~0.shared_dirty) - 1) else (pre DRAGON~0.shared_dirty)) else (pre DRAGON~0.shared_dirty)))))));
+
+  DRAGON~0.dirty = (0 -> (if DRAGON~0.e02 then (if DRAGON~0.g02 then 0 else (pre DRAGON~0.dirty)) else (if DRAGON~0.e03 then (if DRAGON~0.g03 then ((pre DRAGON~0.dirty) + 1) else (pre DRAGON~0.dirty)) else (if DRAGON~0.e04 then (if DRAGON~0.g04 then ((pre DRAGON~0.dirty) + 1) else (pre DRAGON~0.dirty)) else (if DRAGON~0.e05 then (if DRAGON~0.g05 then ((pre DRAGON~0.dirty) + 1) else (pre DRAGON~0.dirty)) else (if DRAGON~0.e07 then (if DRAGON~0.g07 then ((pre DRAGON~0.dirty) + 1) else (pre DRAGON~0.dirty)) else (if DRAGON~0.e08 then (if DRAGON~0.g08 then 0 else (pre DRAGON~0.dirty)) else (if DRAGON~0.e09 then (if DRAGON~0.g09 then ((pre DRAGON~0.dirty) - 1) else (pre DRAGON~0.dirty)) else (pre DRAGON~0.dirty)))))))));
+
+  DRAGON~0.invalid = (DRAGON~0.mem_init -> (if DRAGON~0.e01 then (if DRAGON~0.g01 then ((pre DRAGON~0.invalid) - 1) else (pre DRAGON~0.invalid)) else (if DRAGON~0.e02 then (if DRAGON~0.g02 then ((pre DRAGON~0.invalid) - 1) else (pre DRAGON~0.invalid)) else (if DRAGON~0.e07 then (if DRAGON~0.g07 then ((pre DRAGON~0.invalid) - 1) else (pre DRAGON~0.invalid)) else (if DRAGON~0.e08 then (if DRAGON~0.g08 then ((pre DRAGON~0.invalid) - 1) else (pre DRAGON~0.invalid)) else (if DRAGON~0.e09 then (if DRAGON~0.g09 then ((pre DRAGON~0.invalid) + 1) else (pre DRAGON~0.invalid)) else (if DRAGON~0.e10 then (if DRAGON~0.g10 then ((pre DRAGON~0.invalid) + 1) else (pre DRAGON~0.invalid)) else (if DRAGON~0.e11 then (if DRAGON~0.g11 then ((pre DRAGON~0.invalid) + 1) else (pre DRAGON~0.invalid)) else (if DRAGON~0.e12 then (if DRAGON~0.g12 then ((pre DRAGON~0.invalid) + 1) else (pre DRAGON~0.invalid)) else (pre DRAGON~0.invalid))))))))));
+
+  Sofar~0.X = (excludes12~0.excludes and (init_invalid > 0));
+
+  Sofar~0.Sofar = (Sofar~0.X -> (Sofar~0.X and (pre Sofar~0.Sofar)));
+
+  First~0.X = init_invalid;
+
+  First~0.First = (First~0.X -> (pre First~0.First));
+
+  excludes12~0.X1 = e01;
+
+  excludes12~0.X2 = e02;
+
+  excludes12~0.X3 = e03;
+
+  excludes12~0.X4 = e04;
+
+  excludes12~0.X5 = e05;
+
+  excludes12~0.X6 = e06;
+
+  excludes12~0.X7 = e07;
+
+  excludes12~0.X8 = e08;
+
+  excludes12~0.X9 = e09;
+
+  excludes12~0.X10 = e10;
+
+  excludes12~0.X11 = e11;
+
+  excludes12~0.X12 = e12;
+
+  excludes12~0.excludes = ((((((((((((((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12)) or (((((((((((excludes12~0.X1 and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and excludes12~0.X2) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and excludes12~0.X3) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and excludes12~0.X4) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and excludes12~0.X5) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and excludes12~0.X6) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and excludes12~0.X7) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and excludes12~0.X8) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and excludes12~0.X9) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not (pre excludes12~0.X8))) and (not excludes12~0.X9)) and excludes12~0.X10) and (not excludes12~0.X11)) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and excludes12~0.X11) and (not excludes12~0.X12))) or ((((((((((((not excludes12~0.X1) and (not excludes12~0.X2)) and (not excludes12~0.X3)) and (not excludes12~0.X4)) and (not excludes12~0.X5)) and (not excludes12~0.X6)) and (not excludes12~0.X7)) and (not excludes12~0.X8)) and (not excludes12~0.X9)) and (not excludes12~0.X10)) and (not excludes12~0.X11)) and excludes12~0.X12));
+
+  --%PROPERTY OK;
+
+tel;
